@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pilot Studies</title>
+  <meta name="description" content="">
+  <meta name="author" content="Steve Lane">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="../libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="../libraries/frameworks/revealjs/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "../assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h1>Pilot Studies</h1>
+  <h2>(What they are, and what they aren&#39;t)</h2>
+
+<h3>Steve Lane</h3>
+
+<h5>stephen.lane &#39;at&#39; barwonhealth.org.au</h5>
+
+<h5>Barwon Health Biostatistics Unit</h5>
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>This talk was motivated by a &#39;robust&#39; discussion in RRC</li>
+<li>Something that is generally misunderstood, primarily due to a lack of
+knowledge surrounding power/sample size issues.</li>
+</ul>
+
+<p></aside></p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>tl;dr</h2>
+  <ul>
+<li><p>Pilot (feasibility, proof of concept) studies are:</p>
+
+<ul>
+<li>  Studies designed to test the feasibility of the methods and
+procedures to be used in the larger study</li>
+</ul></li>
+<li><p>Pilot studies are not:</p>
+
+<ul>
+<li>  Studies for which available funding limits the number of
+participants</li>
+<li>  Studies that test hypotheses</li>
+<li>  Studies that estimate differences between groups (effect sizes)
+for use in sample size calculations</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Outline</h2>
+  
+</section>
+<section class='' data-state='' id='slide-4'>
+  
+  <p><section></p>
+
+<h1>Regulatory statements</h1>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Note for guidance on GCP (CPMP/ICH/135/95, TGA)</h2>
+  <ul>
+<li><p>Clinical trials should be scientifically sound, and described in a
+clear, detailed protocol</p>
+
+<ul>
+<li>  Item 2.5, $\S$2, `The principles of ICH GCP&#39;</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h2>General considerations for clinical trials (ICH E8)</h2>
+  <ul>
+<li><p>Clinical trials should be designed, conducted and analysed according
+to sound scientific principles to achieve their objectives; and
+should be reported appropriately.</p>
+
+<ul>
+<li>  $\S$2.2, `Scientific approach in design and analysis&#39;</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h2>Australian code for the responsible conduct of research</h2>
+  <ul>
+<li><p>Researchers must foster and maintain a research environment of
+intellectual honesty and integrity, and scholarly and scientific
+rigour. Researchers must:</p>
+
+<ul>
+<li>  \(\cdots\)</li>
+<li>  adopt methods appropriate for achieving the aims of each
+research proposal</li>
+<li><p>\(\cdots\)</p>
+
+<ul>
+<li>  $\S$1.6, `Maintain high standards of responsible research&#39;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h2>National statement on ethical conduct in human research ($\S$3.3.3)</h2>
+  <ul>
+<li><p>Researchers should show that:</p>
+
+<ul>
+<li>  the research is directed to answering a specific question or
+questions;</li>
+<li>  there is a scientifically valid hypothesis being tested that
+offers a realistic possibility that the interventions being
+studied will be at least as beneficial overall as standard
+treatment, taking into account effectiveness, burdens, costs and
+risks;</li>
+<li>  the size and profile of the sample to be recruited is adequate
+to answer the research question; and</li>
+<li>  the research meets the relevant requirements of the CPMP/ICH
+Note for Guidance on Good Clinical Practice (CPMP/ICH-135/95),
+ISO 14155 Clinical Investigation of Medical Devices, and the
+TGA.</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h2>Institution responsibilities</h2>
+  <ul>
+<li><p>It is important that institutions provide induction, formal training
+and continuing education for all research staff, including research
+trainees. Training should cover research methods, ethics,
+confidentiality, data storage and records retention, as well as
+regulation and governance.</p>
+
+<ul>
+<li>  $\S$1.3, `Train staff&#39;, Australian code</li>
+</ul></li>
+<li><p>Institutions must see that any human research they conduct or for
+which they are responsible is: designed and conducted in accordance
+with the Australian code for the responsible conduct of research</p>
+
+<ul>
+<li>  $\S$5.5.1(a), `Research governance&#39;, National statement</li>
+</ul></li>
+</ul>
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  
+  <p><section></p>
+
+<h1>Pilot studies: what they aren&#39;t</h1>
+
+</section>
+<section class='' data-state='' id='slide-11'>
+  <h2>Commonly used rationales</h2>
+  <ul>
+<li><p>I can only get a small number of participants</p></li>
+<li><p>I did a similar study a couple of years ago and it got published</p></li>
+<li><p><span>[Author name]</span> published a study with only 10
+participants, we&#39;re going to get 20!</p></li>
+<li><p>It&#39;s only a student project</p></li>
+<li><p>It&#39;s low risk</p></li>
+<li><p>My funding doesn&#39;t cover extending timelines/multi-centre studies</p></li>
+<li><p>My supervisor told me to run it as a pilot</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-12'>
+  <h2>A common theme</h2>
+  <ul>
+<li><p>Sample sizes are too small</p>
+
+<p>--- and ---</p>
+
+<p>testing of hypotheses is proposed in the study protocol</p></li>
+<li><p>Resulting in a severe lack of power (in most cases)</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-13'>
+  <h2>Power example</h2>
+  <ul>
+<li>  Fixed \(n = 20\) (\(10\) per group), testing the difference between
+means</li>
+</ul>
+
+<p><img src="Power1.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-14'>
+  <h2>Power example (cont&#39;d.)</h2>
+  <ul>
+<li>  Fixed \(\delta = 0.5\), \(n\) varies by \(\pm20\%\)</li>
+</ul>
+
+<p><img src="PowerNComp.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-15'>
+  <h2>Sample size estimation</h2>
+  <ul>
+<li><p>Pilot studies are often used to estimate the sample size for the
+full study</p>
+
+<ul>
+<li>  This is incorrect if performed `blindly&#39;</li>
+</ul></li>
+<li><p>For a two-sample difference in means, the effect size \(\delta\) is</p>
+
+<p>\[\begin{aligned}
+      \delta & = \frac{\mu_{1} - \mu_{2}}{\sigma}
+          \end{aligned}\]</p>
+
+<p>with the sample size (per group):</p>
+
+<p>\[\begin{aligned}
+      n_{1} & = n_{2} = n \geq 2(z_{1-\alpha/2} + z_{1-\beta})^{2} \times \left(
+        \frac{\sigma}{\mu_{1} - \mu_{2}} \right)^{2}
+    \end{aligned}\]</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-16'>
+  <h2>Sample size estimation (cont&#39;d.)</h2>
+  <ul>
+<li><p>The issue is that the effect size is itself unknown, and hence needs
+to be estimated; it has variance:</p>
+
+<p>\[\begin{aligned}
+      \text{Var}(\hat{\delta}) & \approx \frac{2}{n}
+    \end{aligned}\]</p></li>
+<li><p>Example: \(\hat{\delta} = 0.50\), \(n_{1} = n_{2} = n = 10\) ;</p>
+
+<p>\[\begin{aligned}
+      95\% \text{ CI } (\delta) & : (-0.39, 1.39)
+    \end{aligned}\]</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-17'>
+  <h2>Power and effect size</h2>
+  <ul>
+<li>  Fixed \(n = 64\), \(\delta\) varies by \(\pm20\%\)</li>
+</ul>
+
+<p><img src="PowerDComp.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-18'>
+  <h2>The poorly productive pilot cycle</h2>
+  <p><img src="Flow" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-19'>
+  <h2>Errors in decision making</h2>
+  <ul>
+<li>  Continue to full study if the <em>point</em> estimate \(d > 0\)</li>
+</ul>
+
+<p><img src="Decision1.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-20'>
+  <h2>Errors in decision making</h2>
+  <ul>
+<li>  Continue to full study if the <em>point</em> estimate \(d > 0.1\)</li>
+</ul>
+
+<p><img src="Decision2.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-21'>
+  <h2>Errors in decision making</h2>
+  <ul>
+<li>  Continue to full study if the <em>point</em> estimate \(d > 0.2\)</li>
+</ul>
+
+<p><img src="Decision3.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-22'>
+  <h2>Errors in decision making (cont&#39;d.)</h2>
+  <ul>
+<li><p>This leads to bias in the expected effect size</p>
+
+<ul>
+<li>  I.e. the expected effect size is larger than the true effect
+size</li>
+</ul></li>
+<li><p>\(\Rightarrow\) Sample sizes are smaller for the main study</p></li>
+</ul>
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-23'>
+  
+  <p><section></p>
+
+<h1>Pilot studies: what they are</h1>
+
+</section>
+<section class='' data-state='' id='slide-24'>
+  <h2>What they are</h2>
+  <ul>
+<li><p>Studies designed to test the feasibility of the methods and
+procedures to be used in the larger study</p>
+
+<ul>
+<li>  Recruitment rates</li>
+<li>  Retention rates</li>
+<li>  Compliance</li>
+<li>  Assessment time</li>
+<li>  Time to fill out forms</li>
+<li>  Data issues</li>
+<li>  Willingness to be randomised</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-25'>
+  <h2>What they are (cont&#39;d.)</h2>
+  <ul>
+<li><p>Part of a bigger research project</p></li>
+<li><p>There should be clear decision criteria surrounding:</p>
+
+<ul>
+<li>  When the project is abandoned</li>
+<li>  What will be the key decision points for change</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-26'>
+  <h2>Sample size requirements of a pilot study</h2>
+  <ul>
+<li><p>Sample size of a pilot study should not be neglected</p></li>
+<li><p>It should be sufficient to estimate key <em>feasibility</em> parameters</p>
+
+<ul>
+<li>  This can be done so that a margin of error is guaranteed:</li>
+<li>  For example, to estimate a proportion to within \(\pm 0.2\) with
+\(95\%\) confidence, (at most) 24 participants would be required</li>
+</ul></li>
+</ul>
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-27'>
+  
+  <p><section></p>
+
+<h1>Alternatives/extensions of pilot studies</h1>
+
+</section>
+<section class='' data-state='' id='slide-28'>
+  <h2>Internal pilot studies</h2>
+  <ul>
+<li><p>Advantage:</p>
+
+<ul>
+<li>  Forms part of the main study\
+(we can use the `pilot&#39; participants in the final analysis)</li>
+</ul></li>
+<li><p>Disadvantage:</p>
+
+<ul>
+<li>  Forms part of the main study\
+(we can&#39;t make other adaptations)</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-29'>
+  <h2>Restricted design</h2>
+  <ul>
+<li><p>Only allows upwards revision of sample size</p></li>
+<li><p>If \(n_{0}\) denotes the original planned sample size and \(\hat{n}\)
+denotes the revised sample size from the internal pilot of \(n_{1}\)
+participants, then:</p>
+
+<p>\[\begin{aligned}
+      n_{2} & = \max \left\{n_{0}, \hat{n}\right\} - n_{1}
+    \end{aligned}\]</p>
+
+<p>denotes the extra participants required in the second stage</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-30'>
+  <h3>Issues with the restricted design</h3>
+  <ul>
+<li><p>Blinding/masking</p>
+
+<ul>
+<li><p>E.g. a \(t\)-test requires calculation of the pooled variance:</p>
+
+<p>\[\begin{aligned}
+        S^{2} & = \frac{(n_{11} - 1)S_{11}^{2} + (n_{12} - 1)S_{12}^{2}}{n_{11}
+          + n_{12} - 2}
+      \end{aligned}\]</p>
+
+<p>where \(n_{1i}\) and \(S_{1i}\) are the sample size and sample
+standard deviation after the pilot stage in group \(i\)</p></li>
+<li><p>A DSMB is then needed to run the unblinded calculations</p>
+
+<ul>
+<li>  Prefer a blinded assessment (no DSMB needed)</li>
+<li>  Use a `lumped&#39; variance</li>
+</ul></li>
+</ul></li>
+<li><p>Effect on Type I error[<sup>1]</sup></p>
+
+<ul>
+<li>  Generally small for superiority trials</li>
+<li>  Should demonstrate possible effects in the protocol</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-31'>
+  <h2>Trials with efficacy monitoring</h2>
+  <ul>
+<li><p>Can include both IPS and efficacy/futility monitoring</p></li>
+<li><p>Advantage:</p>
+
+<ul>
+<li>  Sample size adjustment</li>
+<li>  Early stopping (saving participants/resources)</li>
+</ul></li>
+<li><p>Disadvantage:</p>
+
+<ul>
+<li>  Complex</li>
+<li>  DSMB required</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-32'>
+  <h2>Trials with efficacy monitoring (cont&#39;d.)</h2>
+  <ul>
+<li><p>A multitude of possible designs</p></li>
+<li><p>If including IPS, probably easiest to perform this before efficacy
+monitoring</p></li>
+<li><p>E.g. plan IPS at \(1/3n\), and efficacy monitoring at \(1/2n, 3/4n\)</p>
+
+<ul>
+<li>  Initial sample size based on the interim monitoring schedule</li>
+<li>  But, monitoring times and boundaries updated after sample size
+adjustment</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-33'>
+  <h2>Final thoughts</h2>
+  <ul>
+<li><p>Don&#39;t be naive!</p>
+
+<ul>
+<li>  Don&#39;t use point estimates for decisions</li>
+<li>  Don&#39;t base continuance decisions on effect sizes</li>
+</ul></li>
+<li><p>Inform participants in the PICF of the pilot nature of the trial</p>
+
+<ul>
+<li>  c.f. $\S$2.2 and 3.3 of the National Statement</li>
+</ul></li>
+<li><p>Make decision points explicit in the trial protocol</p>
+
+<ul>
+<li>  e.g. under what circumstances will the main trial not proceed</li>
+</ul></li>
+<li><p>Publish!</p>
+
+<ul>
+<li>  It is important to inform the scientific community about the
+feasibility of your trial</li>
+<li>  Pre-publication and post-publication peer review</li>
+</ul></li>
+</ul>
+
+<p>[<sup>1]:</sup> Occurs with any study involving interim analyses</p>
+
+</section>
+<section class='' data-state='' id='slide-34'>
+  <h2>Read-And-Delete</h2>
+  <ol>
+<li>Edit YAML front matter</li>
+<li>Write using R Markdown</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+<h3>What if I don&#39;t use the 3 dashes?</h3>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Slide 2</h2>
+  <ul>
+<li>Testing whether I can get my speaker notes sorted out</li>
+<li>Doesn&#39;t understand my speaker notes?
+\begin{align}
+  a &amp; = b
+\end{align}</li>
+</ul>
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>This is a test
+
+<ul>
+<li>Another test</li>
+</ul></li>
+</ul>
+
+<p></aside></p>
+
+</section>
+<section class='' data-state='' id='slide-36'>
+  <h2>Slide 3</h2>
+  <ul>
+<li>Go again!
+\begin{align}
+  a &amp; = b
+\end{align}</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-37'>
+  
+  <p><section></p>
+
+<h2>Slide 4</h2>
+
+<ul>
+<li>Lower hierarchy</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-38'>
+  <h2>Slide 5</h2>
+  <ul>
+<li>Going down?</li>
+</ul>
+
+<p></section></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="../libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="../libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'sky', 
+    transition: Reveal.getQueryHash().transition || 'linear', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: '../libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: '../libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: '../libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: '../libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>

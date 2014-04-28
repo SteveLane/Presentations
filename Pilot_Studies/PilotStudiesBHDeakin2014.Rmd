@@ -17,13 +17,14 @@ widgets		:
 mode		: selfcontained
 theme		: sky
 url		:
- url: assests
+ assets: ../assets
+ lib: ../libraries
 ---
 
 # Pilot Studies
 ## (What they are, and what they aren't)
 ### Steve Lane
-##### [stephen.lane@barwonhealth.org.au](mailto:stephen.lane@barwonhealth.org.au)
+##### stephen.lane 'at' barwonhealth.org.au
 ##### Barwon Health Biostatistics Unit
 
 <aside class="notes">
