@@ -56,7 +56,9 @@ url		:
         for use in sample size calculations
 
 <aside class="notes">
+
 - This talk will have a statistical focus
+
 </aside>
 
 ---
