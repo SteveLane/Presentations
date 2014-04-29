@@ -10,6 +10,7 @@ revealjs    :
  history: false
  width: 1024
  height: 768
+ center: "false"
 highlighter	: highlight.js
 hitheme		: tomorrow
 widgets		:
@@ -37,7 +38,7 @@ url		:
 
 ---
 
-## tl;dr
+### tl;dr
 
 -   Pilot (feasibility, proof of concept) studies are:
 
@@ -54,28 +55,35 @@ url		:
     -   Studies that estimate differences between groups (effect sizes)
         for use in sample size calculations
 
----
+<aside class="notes">
 
-## Outline
+- This talk will have a statistical focus
+
+</aside>
 
 ---
 
 <section>
 
-# Regulatory statements
+## Regulatory statements
 
 ---
 
-## Note for guidance on GCP (CPMP/ICH/135/95, TGA)
+### Note for guidance on GCP (CPMP/ICH/135/95, TGA)
 
 -   Clinical trials should be scientifically sound, and described in a
     clear, detailed protocol
 
     -   Item 2.5, $\S$2, `The principles of ICH GCP'
 
+<aside class="notes">
+- ICH: International Conference on Harmonisation of Technical Requirements for
+Registration of Pharmaceuticals for Human Use
+<aside>
+
 ---
 
-## General considerations for clinical trials (ICH E8)
+### General considerations for clinical trials (ICH E8)
 
 -   Clinical trials should be designed, conducted and analysed according
     to sound scientific principles to achieve their objectives; and
@@ -83,9 +91,17 @@ url		:
 
     -   $\S$2.2, `Scientific approach in design and analysis'
 
+<aside class="notes">
+- If the objective is to test a hypothesis (e.g. difference in means), then
+there should exist:
+	- Sufficient power
+	- Correct endpoint
+	- Correct statistical test
+</aside>
+
 ---
 
-## Australian code for the responsible conduct of research
+### Australian code for the responsible conduct of research
 
 -   Researchers must foster and maintain a research environment of
     intellectual honesty and integrity, and scholarly and scientific
@@ -102,7 +118,7 @@ url		:
 
 ---
 
-## National statement on ethical conduct in human research ($\S$3.3.3)
+### National statement on ethical conduct in human research ($\S$3.3.3)
 
 -   Researchers should show that:
 
@@ -123,9 +139,17 @@ url		:
         ISO 14155 Clinical Investigation of Medical Devices, and the
         TGA.
 
+<aside class="notes">
+- Size and profile of the sample:
+  - size means power statement or a discussion on probable standard errors
+  - profile means who you're recruiting (inclusion/exclusion)
+	- what is the chance of getting good balance in a 'pilot' study with say, 10
+	in each arm?
+<aside>
+
 ---
 
-## Institution responsibilities
+### Institution responsibilities
 
 -   It is important that institutions provide induction, formal training
     and continuing education for all research staff, including research
@@ -141,17 +165,23 @@ url		:
 
     -   $\S$5.5.1(a), `Research governance', National statement
 
+<aside class="notes">
+- So basically any study must be 'scientifically' sound (whatever that means!)
+  - Biology and hypothese must make sense
+  - Statistically: we must have measureable/testable hypothese/aims
+</aside>
+
 </section>
 
 ---
 
 <section>
 
-# Pilot studies: what they aren't
+## Pilot studies: what they aren't
 
 ---
 
-## Commonly used rationales
+### Commonly used rationales
 
 -   I can only get a small number of participants
 
@@ -168,9 +198,21 @@ url		:
 
 -   My supervisor told me to run it as a pilot
 
+<aside class="notes">
+- To counter each of these:
+  - Will we learn anything?
+  - Peer review is not infallible
+  - As above, and the sample size is still small (double nothing is nothing)!
+  - So student's should be held to lesser standards?
+	- Design projects that are suitable for students
+  - Still a waste of participant's goodwill/time/money
+  - Then design a study your funding will cover
+  - Difficult: supervisor in a position of power and thus needs to be educated
+</aside>
+
 ---
 
-## A common theme
+### A common theme
 
 -   Sample sizes are too small
 
@@ -180,26 +222,50 @@ url		:
 
 -   Resulting in a severe lack of power (in most cases)
 
+<aside class="notes">
+- Can compare these to Type 'S' and Type 'M' errors (Gelman) for sign and
+magnitude
+</aside>
+
 ---
 
-## Power example
+### Power example
 
 -   Fixed $n = 20$ ($10$ per group), testing the difference between
     means
 
 ![image](Power1.png)
 
+<aside class="notes">
+- Context is obviously really important
+- What this slide is howing is that to have a power of 0.8, with 10 in each
+  group, the effect of the intervention would have to raise (lower) the outcome
+  by 1.3 standard deviations
+- It may be that in some areas an effect size of 1.3 is true
+  - But not in many!
+- E.g. IQ scores: mean 100, sd 15
+  - We'd need to have an intervention that raised IQ by 20 for a sample size
+  this small to have 0.8 power!
+<aside>
+
 ---
 
-## Power example (cont'd.)
+### Power example (cont'd.)
 
 -   Fixed $\delta = 0.5$, $n$ varies by $\pm20\%$
 
 ![image](PowerNComp.png)
 
+<aside class="notes">
+- Asymmetric
+- So now what? If we don't have reasonable power to test differences, what do we
+  do?
+  - What about estimating differences for the true study?
+</aside>
+
 ---
 
-## Sample size estimation
+### Sample size estimation
 
 -   Pilot studies are often used to estimate the sample size for the
     full study
@@ -221,7 +287,7 @@ url		:
 
 ---
 
-## Sample size estimation (cont'd.)
+### Sample size estimation (cont'd.)
 
 -   The issue is that the effect size is itself unknown, and hence needs
     to be estimated; it has variance:
@@ -238,29 +304,41 @@ url		:
 
 ---
 
-## Power and effect size
+### Power and effect size
 
 -   Fixed $n = 64$, $\delta$ varies by $\pm20\%$
 
 ![image](PowerDComp.png)
 
+<aside class="notes">
+- So following from earlier, still asymmetric, but much more sensitive to
+changes in effect size
+- This figure is for moderate n
+- So, thinking about these curves, and variation in effect sizes, you can
+hopefully see why taking the 'naive' route is silly
+</aside>
+
 ---
 
-## The poorly productive pilot cycle
+### The poorly productive pilot cycle
 
 ![image](Flow)
 
 ---
 
-## Errors in decision making
+### Errors in decision making
 
 -   Continue to full study if the *point* estimate $d > 0$
 
 ![image](Decision1.png)
 
+<aside class="notes">
+- Significant proportion of the curve below 0
+</aside>
+
 ---
 
-## Errors in decision making
+### Errors in decision making
 
 -   Continue to full study if the *point* estimate $d > 0.1$
 
@@ -268,7 +346,7 @@ url		:
 
 ---
 
-## Errors in decision making
+### Errors in decision making
 
 -   Continue to full study if the *point* estimate $d > 0.2$
 
@@ -276,7 +354,7 @@ url		:
 
 ---
 
-## Errors in decision making (cont'd.)
+### Errors in decision making (cont'd.)
 
 -   This leads to bias in the expected effect size
 
@@ -291,11 +369,11 @@ url		:
 
 <section>
 
-# Pilot studies: what they are
+## Pilot studies: what they are
 
 ---
 
-## What they are
+### What they are
 
 -   Studies designed to test the feasibility of the methods and
     procedures to be used in the larger study
@@ -314,9 +392,22 @@ url		:
 
     -   Willingness to be randomised
 
+<aside class="notes">
+- The obvious example here is a new questionnaire
+  - How long does it take to answer?
+  - Do the Qs 'work'?
+  - Do participants answer in the way we expected?
+  - We wouldn't use data from these tests for analysis, so what's the difference
+	with an experiment?
+- Compliance
+  - Big issue with trials, especially with complex interventions
+- Data issues
+  - Do my CRFs collect the 'right' data?
+</aside>
+
 ---
 
-## What they are (cont'd.)
+### What they are (cont'd.)
 
 -   Part of a bigger research project
 
@@ -326,9 +417,15 @@ url		:
 
     -   What will be the key decision points for change
 
+<aside class="notes">
+- Key decision points
+  - This is similar to how we declare an intervention 'successful' in an RCT (it
+  is stated a priori in the protocol)
+</aside>
+
 ---
 
-## Sample size requirements of a pilot study
+### Sample size requirements of a pilot study
 
 -   Sample size of a pilot study should not be neglected
 
@@ -345,25 +442,27 @@ url		:
 
 <section>
 
-# Alternatives/extensions of pilot studies
+## Alternatives/extensions of pilot studies
 
 ---
 
-## Internal pilot studies
+### Internal pilot studies
 
 -   Advantage:
 
-    -   Forms part of the main study\
-        (we can use the `pilot' participants in the final analysis)
+    -   Forms part of the main study
+	
+        (we can use the 'pilot' participants in the final analysis)
 
 -   Disadvantage:
 
-    -   Forms part of the main study\
+    -   Forms part of the main study
+	
         (we can't make other adaptations)
 
 ---
 
-## Restricted design
+### Restricted design
 
 -   Only allows upwards revision of sample size
 
@@ -376,6 +475,11 @@ url		:
         \end{aligned}$$
 
     denotes the extra participants required in the second stage
+
+<aside class="notes">
+- Sample size needs to be large enough so that variance/control rates are
+estimated well
+</aside>
 
 ---
 
@@ -399,15 +503,19 @@ url		:
 
         -   Use a `lumped' variance
 
--   Effect on Type I error[^1]
+-   Effect on Type I error
 
     -   Generally small for superiority trials
 
     -   Should demonstrate possible effects in the protocol
 
+<aside class="notes">
+- Effect on Type I error for a documents
+</aside>
+
 ---
 
-## Trials with efficacy monitoring
+### Trials with efficacy monitoring
 
 -   Can include both IPS and efficacy/futility monitoring
 
@@ -425,7 +533,7 @@ url		:
 
 ---
 
-## Trials with efficacy monitoring (cont'd.)
+### Trials with efficacy monitoring (cont'd.)
 
 -   A multitude of possible designs
 
@@ -441,7 +549,7 @@ url		:
 
 ---
 
-## Final thoughts
+### Final thoughts
 
 -   Don't be naive!
 
@@ -464,11 +572,13 @@ url		:
 
     -   Pre-publication and post-publication peer review
 
-[^1]: Occurs with any study involving interim analyses
+<aside class="notes">
+- post-pub peer review (and pre) can be difficult because of timelines
+</aside>
 
 ---
 
-## Read-And-Delete
+### Read-And-Delete
 
 1. Edit YAML front matter
 2. Write using R Markdown
@@ -478,7 +588,7 @@ url		:
 
 --- .class #id 
 
-## Slide 2
+### Slide 2
 
 - Testing whether I can get my speaker notes sorted out
 - Doesn't understand my speaker notes?
@@ -495,7 +605,7 @@ url		:
 
 ---
 
-## Slide 3
+### Slide 3
 
 - Go again!
   \begin{align}
@@ -506,13 +616,13 @@ url		:
 
 <section>
 
-## Slide 4
+### Slide 4
 
 - Lower hierarchy
 
 ---
 
-## Slide 5
+### Slide 5
 
 - Going down?
 
