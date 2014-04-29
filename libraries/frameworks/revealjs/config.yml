@@ -1,4 +1,7 @@
 revealjs:
-  theme: default
-  transition: default
+  theme: sky
+  transition: linear
   center: "true"
+  width: "1024"
+  height: "768"
+  history: "false"

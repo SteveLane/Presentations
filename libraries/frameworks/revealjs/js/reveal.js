@@ -19,8 +19,8 @@ var Reveal = (function(){
 
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions
-			width: 960,
-			height: 700,
+			width: 1280,
+			height: 960,
 
 			// Factor of the display size that should remain empty around the content
 			margin: 0.1,
@@ -68,10 +68,10 @@ var Reveal = (function(){
 			rollingLinks: true,
 
 			// Theme (see /css/theme)
-			theme: null,
+			theme: sky,
 
 			// Transition style
-			transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+			transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 			// Transition speed
 			transitionSpeed: 'default', // default/fast/slow
