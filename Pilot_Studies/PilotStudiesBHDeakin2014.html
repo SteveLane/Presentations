@@ -235,6 +235,10 @@ participants, we&#39;re going to get 20!</p></li>
 <li><p>My supervisor told me to run it as a pilot</p></li>
 </ul>
 
+<div class="footer">
+<p> This is a footer! What happens if it is much longer?</p>
+</div>
+
 <p><aside class="notes"></p>
 
 <ul>
@@ -409,7 +413,7 @@ hopefully see why taking the &#39;naive&#39; route is silly
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-19'>
+<section class='' data-state='' id='slide-19' data-transition='none'>
   <h3>Errors in decision making</h3>
   <ul>
 <li>  Continue to full study if the <em>point</em> estimate \(d > 0.1\)</li>
@@ -418,7 +422,7 @@ hopefully see why taking the &#39;naive&#39; route is silly
 <p><img src="Decision2.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-20'>
+<section class='' data-state='' id='slide-20' data-transition='none'>
   <h3>Errors in decision making</h3>
   <ul>
 <li>  Continue to full study if the <em>point</em> estimate \(d > 0.2\)</li>
@@ -692,68 +696,6 @@ feasibility of your trial</li>
 </aside></li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-33'>
-  <h3>Read-And-Delete</h3>
-  <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
-
-<h3>What if I don&#39;t use the 3 dashes?</h3>
-
-</section>
-<section class='class' data-state='' id='id'>
-  <h3>Slide 2</h3>
-  <ul>
-<li>Testing whether I can get my speaker notes sorted out</li>
-<li>Doesn&#39;t understand my speaker notes?
-\begin{align}
-  a &amp; = b
-\end{align}</li>
-</ul>
-
-<p><aside class="notes"></p>
-
-<ul>
-<li>This is a test
-
-<ul>
-<li>Another test</li>
-</ul></li>
-</ul>
-
-<p></aside></p>
-
-</section>
-<section class='' data-state='' id='slide-35'>
-  <h3>Slide 3</h3>
-  <ul>
-<li>Go again!
-\begin{align}
-  a &amp; = b
-\end{align}</li>
-</ul>
-
-</section>
-<section class='' data-state='' id='slide-36'>
-  
-  <p><section></p>
-
-<h3>Slide 4</h3>
-
-<ul>
-<li>Lower hierarchy</li>
-</ul>
-
-</section>
-<section class='' data-state='' id='slide-37'>
-  <h3>Slide 5</h3>
-  <ul>
-<li>Going down?</li>
-</ul>
-
 <p></section></p>
 
 </section>
@@ -770,8 +712,10 @@ feasibility of your trial</li>
     progress: true,
     history: true,
     center: false,
+    width: 1280,
+    height: 960,
     theme: Reveal.getQueryHash().theme || 'sky', 
-    transition: Reveal.getQueryHash().transition || 'linear', 
+    transition: Reveal.getQueryHash().transition || 'convex', 
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
