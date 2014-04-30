@@ -8,8 +8,8 @@ revealjs    :
  transition: linear
  transitionSpeed: fast
  history: false
- width: 1024
- height: 768
+ width: 1280
+ height: 960
  center: "false"
 highlighter	: highlight.js
 hitheme		: tomorrow
@@ -79,7 +79,7 @@ url		:
 <aside class="notes">
 - ICH: International Conference on Harmonisation of Technical Requirements for
 Registration of Pharmaceuticals for Human Use
-<aside>
+</aside>
 
 ---
 
@@ -145,7 +145,7 @@ there should exist:
   - profile means who you're recruiting (inclusion/exclusion)
 	- what is the chance of getting good balance in a 'pilot' study with say, 10
 	in each arm?
-<aside>
+</aside>
 
 ---
 
@@ -217,7 +217,7 @@ there should exist:
 -   Sample sizes are too small
 
     --- and ---
-	
+
     testing of hypotheses is proposed in the study protocol
 
 -   Resulting in a severe lack of power (in most cases)
@@ -246,7 +246,7 @@ magnitude
 - E.g. IQ scores: mean 100, sd 15
   - We'd need to have an intervention that raised IQ by 20 for a sample size
   this small to have 0.8 power!
-<aside>
+</aside>
 
 ---
 
@@ -322,7 +322,7 @@ hopefully see why taking the 'naive' route is silly
 
 ### The poorly productive pilot cycle
 
-![image](Flow)
+![image](Flow.png)
 
 ---
 
@@ -451,13 +451,13 @@ hopefully see why taking the 'naive' route is silly
 -   Advantage:
 
     -   Forms part of the main study
-	
+
         (we can use the 'pilot' participants in the final analysis)
 
 -   Disadvantage:
 
     -   Forms part of the main study
-	
+
         (we can't make other adaptations)
 
 ---
@@ -586,7 +586,7 @@ estimated well
 
 ### What if I don't use the 3 dashes?
 
---- .class #id 
+--- .class #id
 
 ### Slide 2
 
