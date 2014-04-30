@@ -5,7 +5,7 @@ author		: Steve Lane
 framework	: revealjs
 revealjs    :
  theme: sky
- transition: linear
+ transition: convex
  transitionSpeed: fast
  history: false
  width: 1280
@@ -198,6 +198,10 @@ there should exist:
 
 -   My supervisor told me to run it as a pilot
 
+<div class="footer">
+<p> This is a footer! What happens if it is much longer?</p>
+</div>
+
 <aside class="notes">
 - To counter each of these:
   - Will we learn anything?
@@ -336,7 +340,7 @@ hopefully see why taking the 'naive' route is silly
 - Significant proportion of the curve below 0
 </aside>
 
----
+--- {data-transition: "none"}
 
 ### Errors in decision making
 
@@ -575,55 +579,5 @@ estimated well
 <aside class="notes">
 - post-pub peer review (and pre) can be difficult because of timelines
 </aside>
-
----
-
-### Read-And-Delete
-
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
-### What if I don't use the 3 dashes?
-
---- .class #id
-
-### Slide 2
-
-- Testing whether I can get my speaker notes sorted out
-- Doesn't understand my speaker notes?
-  \begin{align}
-	  a & = b
-  \end{align}
-
-<aside class="notes">
-
-- This is a test
-  - Another test
-
-</aside>
-
----
-
-### Slide 3
-
-- Go again!
-  \begin{align}
-	  a & = b
-  \end{align}
-
----
-
-<section>
-
-### Slide 4
-
-- Lower hierarchy
-
----
-
-### Slide 5
-
-- Going down?
 
 </section>
