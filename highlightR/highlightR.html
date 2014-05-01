@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>highlightR</title>
+  <meta name="description" content="">
+  <meta name="author" content="Steve Lane">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="../libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="../libraries/frameworks/revealjs/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "../assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h1>highlightR</h1>
+  <h2>Highlighting <a href="http://r-project.org">R</a> and associated software</h2>
+
+<h3>Steve Lane</h3>
+
+<h5>stephen.lane &#39;at&#39; barwonhealth.org.au</h5>
+
+<h5>Barwon Health Biostatistics Unit</h5>
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>Kept here as a placeholder</li>
+</ul>
+
+<p></aside></p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  
+  <p><section></p>
+
+<h2>Reproducible research</h2>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h3>What is it?</h3>
+  <iframe src="http://en.wikipedia.org/wiki/Reproducibility"
+width="1280" height="960" seamless="seamless"></iframe>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h3>Why?</h3>
+  <ul>
+<li>Quality</li>
+<li>Openess</li>
+<li>Collaboration</li>
+</ul>
+
+<p><aside class="notes"></p>
+
+<ul>
+<li>Collaboration point really important: it&#39;s hard to collaborate effectively if
+each member of the collaboration does not know all the previous steps
+</aside></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h3>Version control</h3>
+  <ul>
+<li><a href="https://github.com/SteveLane">My github page</a></li>
+</ul>
+
+<iframe src="https://SteveLane.github.io/Presentations" width="1280" height="960"
+seamles="seamless"></iframe>
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  
+  <p><section></p>
+
+<h2>R</h2>
+
+<!-- Include R logo? -->
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h3>What is R?</h3>
+  <ul>
+<li>A software environment for statistical computing and graphics</li>
+</ul>
+
+<iframe src="http://r-project.org" width="1280" height="960"
+seamless="seamless"></iframe>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h3>What does it &#39;look&#39; like?</h3>
+  <pre><code class="r">################################################################################
+################################################################################
+## Title: Analysis, Part One
+## Author: Steve Lane
+## Date: Thu 02/05/2013
+## Synopsis: Analysis of part one.
+################################################################################
+################################################################################
+rm(list = ls())
+require(reshape)
+require(lubridate)
+require(ggplot2)
+require(gridExtra)
+require(xtable)
+require(forecast)
+require(scales)
+source(&quot;C:/Documents and Settings/slane/My
+Documents/Code_Library/Agresti_Two_Proportions.r&quot;)
+load(&quot;../Data/HS_Trop_Part_2.RData&quot;)
+load(&quot;../Data/Post_HS_Trop_Part_2.RData&quot;)
+post.hs.trop2$Period &lt;- &quot;C&quot;
+hs.trop2 &lt;- rbind.fill(hs.trop2, post.hs.trop2)
+
+################################################################################
+################################################################################
+## Begin Section: Look at monthly stats
+################################################################################
+################################################################################
+hs.trop2 &lt;- within(hs.trop2, Month &lt;- month(ED.Arrival.Time, label = TRUE))
+hs.trop2 &lt;- within(hs.trop2, Year &lt;- year(ED.Arrival.Time))
+with(hs.trop2, table(Year, Month))
+## Could do this by periods. First, set the origin
+origin &lt;- dmy(&quot;23/04/2010&quot;)
+## Now the cutpoints
+cutpoints &lt;- origin + months(0:36)
+hs.trop2 &lt;- within(hs.trop2, Month &lt;- cut(ED.Arrival.Time, breaks = cutpoints,
+                                          right = FALSE, include.lowest = TRUE,
+                                          labels = paste(&quot;Month&quot;, 1:36, sep =
+                                          &quot;&quot;), ordered_result = TRUE))
+hs.counts &lt;- aggregate(hs.trop2[, &quot;Month&quot;], by = list(hs.trop2$Month), &quot;length&quot;)
+hs.counts &lt;- rename(hs.counts, c(Group.1 = &quot;Month&quot;, x = &quot;Count&quot;))
+hs.counts$Admitted &lt;- with(hs.trop2, table(Admitted.Total, Month))[2,]
+hs.counts$Admitted.BH &lt;- with(hs.trop2, table(Admitted, Month))[2,]
+hs.counts &lt;- within(hs.counts, Admitted.Rate &lt;- Admitted/Count*100)
+hs.counts &lt;- within(hs.counts, Admitted.Rate.BH &lt;- Admitted.BH/Count*100)
+hs.counts$Discharge.ACS.BH &lt;- with(subset(hs.trop2, Admitted == 1),
+                                   table(Discharge.ACS, Month))[2,]
+hs.counts &lt;- within(hs.counts, Discharge.ACS.Rate.BH &lt;- Discharge.ACS.BH/
+                    Admitted.BH*100)
+hs.counts$Date &lt;- as.Date(cutpoints[-1])
+hs.counts$Period &lt;- rep(c(&quot;pre-hscTnI&quot;, &quot;post-hscTnI&quot;), times = c(24, 12))
+## Plot of rate of admission for suspected ACS (show raw admission numbers as
+## well).
+pl1 &lt;- ggplot(hs.counts, aes(Date, Admitted.Rate, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab(&quot;Month&quot;) +
+    ylab(&quot;Admission rate per 1000 suspected ACS in ED&quot;) +
+    theme_bw() +
+    stat_smooth(method = &quot;lm&quot;)
+pl2 &lt;- ggplot(hs.counts, aes(Date, Admitted, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab(&quot;Month&quot;) +
+    ylab(&quot;Number admitted after suspected ACS in ED&quot;) +
+    theme_bw() +
+    stat_smooth(method = &quot;lm&quot;)
+pl3 &lt;- ggplot(hs.counts, aes(Date, Count, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab(&quot;Month&quot;) +
+    ylab(&quot;Number with suspected ACS in ED&quot;) +
+    theme_bw() +
+    stat_smooth(method = &quot;lm&quot;)
+pl.side &lt;- grid.arrange(pl1, pl2, pl3, nrow = 3)
+pdf(file = &quot;../Papers/Images_and_Tables/Suspected_ACS_2010_2013.pdf&quot;, width =
+    30, height = 30)
+pl.side &lt;- grid.arrange(pl1, pl2, pl3, nrow = 3)
+dev.off()
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h3>What does it &#39;look&#39; like?</h3>
+  <ul>
+<li>Hard to say!</li>
+<li>R is the environment/language</li>
+<li>You need an IDE (integrated development environment)</li>
+</ul>
+
+<iframe src="https://www.rstudio.com" width="1280" height="960"
+seamless="seamless"></iframe>
+
+<p></section></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="../libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="../libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme || 'sky', 
+    transition: Reveal.getQueryHash().transition || 'convex', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: '../libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: '../libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: '../libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: '../libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
