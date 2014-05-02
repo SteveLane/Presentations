@@ -1,0 +1,188 @@
+---
+title		: highlightR
+subtitle	: Highlighting R and associated software
+author		: Steve Lane
+framework	: revealjs
+revealjs    :
+ theme: sky
+ transition: convex
+ transitionSpeed: fast
+ history: false
+ width: 1280
+ height: 960
+ center: "false"
+highlighter	: highlight.js
+hitheme		: tomorrow
+widgets		:
+- mathjax
+mode		: selfcontained
+theme		: sky
+url		:
+ assets: ../assets
+ lib: ../libraries
+---
+
+# highlightR
+## Highlighting [R](http://r-project.org) and associated software
+### Steve Lane
+##### stephen.lane 'at' barwonhealth.org.au
+##### Barwon Health Biostatistics Unit
+
+<aside class="notes">
+
+- Kept here as a placeholder
+
+</aside>
+
+---
+
+<section>
+
+## Reproducible research
+
+---
+
+### What is it?
+
+<iframe src="http://en.wikipedia.org/wiki/Reproducibility"
+width="1280" height="960" seamless="seamless"></iframe>
+
+---
+
+### Why?
+
+- Quality
+- Openess
+- Collaboration
+
+<aside class="notes">
+- Collaboration point really important: it's hard to collaborate effectively if
+each member of the collaboration does not know all the previous steps
+</aside>
+
+---
+
+### Version control
+
+- [My github page](https://github.com/SteveLane)
+
+<iframe src="https://SteveLane.github.io/Presentations" width="1280" height="960"
+seamles="seamless"></iframe>
+
+</section>
+
+---
+
+<section>
+
+## R
+
+<!-- Include R logo? -->
+
+---
+
+### What is R?
+
+- A software environment for statistical computing and graphics
+
+<iframe src="http://r-project.org" width="1280" height="960"
+seamless="seamless"></iframe>
+
+---
+
+### What does it 'look' like?
+
+```{r eval=FALSE,tidy=FALSE}
+################################################################################
+################################################################################
+## Title: Analysis, Part One
+## Author: Steve Lane
+## Date: Thu 02/05/2013
+## Synopsis: Analysis of part one.
+################################################################################
+################################################################################
+rm(list = ls())
+require(reshape)
+require(lubridate)
+require(ggplot2)
+require(gridExtra)
+require(xtable)
+require(forecast)
+require(scales)
+source("C:/Documents and Settings/slane/My
+Documents/Code_Library/Agresti_Two_Proportions.r")
+load("../Data/HS_Trop_Part_2.RData")
+load("../Data/Post_HS_Trop_Part_2.RData")
+post.hs.trop2$Period <- "C"
+hs.trop2 <- rbind.fill(hs.trop2, post.hs.trop2)
+
+################################################################################
+################################################################################
+## Begin Section: Look at monthly stats
+################################################################################
+################################################################################
+hs.trop2 <- within(hs.trop2, Month <- month(ED.Arrival.Time, label = TRUE))
+hs.trop2 <- within(hs.trop2, Year <- year(ED.Arrival.Time))
+with(hs.trop2, table(Year, Month))
+## Could do this by periods. First, set the origin
+origin <- dmy("23/04/2010")
+## Now the cutpoints
+cutpoints <- origin + months(0:36)
+hs.trop2 <- within(hs.trop2, Month <- cut(ED.Arrival.Time, breaks = cutpoints,
+                                          right = FALSE, include.lowest = TRUE,
+                                          labels = paste("Month", 1:36, sep =
+                                          ""), ordered_result = TRUE))
+hs.counts <- aggregate(hs.trop2[, "Month"], by = list(hs.trop2$Month), "length")
+hs.counts <- rename(hs.counts, c(Group.1 = "Month", x = "Count"))
+hs.counts$Admitted <- with(hs.trop2, table(Admitted.Total, Month))[2,]
+hs.counts$Admitted.BH <- with(hs.trop2, table(Admitted, Month))[2,]
+hs.counts <- within(hs.counts, Admitted.Rate <- Admitted/Count*100)
+hs.counts <- within(hs.counts, Admitted.Rate.BH <- Admitted.BH/Count*100)
+hs.counts$Discharge.ACS.BH <- with(subset(hs.trop2, Admitted == 1),
+                                   table(Discharge.ACS, Month))[2,]
+hs.counts <- within(hs.counts, Discharge.ACS.Rate.BH <- Discharge.ACS.BH/
+                    Admitted.BH*100)
+hs.counts$Date <- as.Date(cutpoints[-1])
+hs.counts$Period <- rep(c("pre-hscTnI", "post-hscTnI"), times = c(24, 12))
+## Plot of rate of admission for suspected ACS (show raw admission numbers as
+## well).
+pl1 <- ggplot(hs.counts, aes(Date, Admitted.Rate, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab("Month") +
+    ylab("Admission rate per 1000 suspected ACS in ED") +
+    theme_bw() +
+    stat_smooth(method = "lm")
+pl2 <- ggplot(hs.counts, aes(Date, Admitted, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab("Month") +
+    ylab("Number admitted after suspected ACS in ED") +
+    theme_bw() +
+    stat_smooth(method = "lm")
+pl3 <- ggplot(hs.counts, aes(Date, Count, colour = Period)) +
+    geom_line() +
+    geom_point() +
+    xlab("Month") +
+    ylab("Number with suspected ACS in ED") +
+    theme_bw() +
+    stat_smooth(method = "lm")
+pl.side <- grid.arrange(pl1, pl2, pl3, nrow = 3)
+pdf(file = "../Papers/Images_and_Tables/Suspected_ACS_2010_2013.pdf", width =
+    30, height = 30)
+pl.side <- grid.arrange(pl1, pl2, pl3, nrow = 3)
+dev.off()
+```
+
+---
+
+### What does it 'look' like?
+
+- Hard to say!
+- R is the environment/language
+- You need an IDE (integrated development environment)
+
+<iframe src="https://www.rstudio.com" width="1280" height="960"
+seamless="seamless"></iframe>
+
+</section>
