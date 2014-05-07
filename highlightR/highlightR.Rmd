@@ -185,6 +185,8 @@ dev.off()
 <iframe src="https://www.rstudio.com" width="1280" height="960"
 seamless="seamless"></iframe>
 
+---
+
 ### What can R do?
 
 - A lot!
@@ -194,5 +196,7 @@ seamless="seamless"></iframe>
 - Recently:
   - HTML Presentations
   - Literate programming via knitr
+
+<!-- Perhaps here is where I'll cut out and do a bit of a demo. -->
 
 </section>
