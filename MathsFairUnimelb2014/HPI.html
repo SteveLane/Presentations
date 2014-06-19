@@ -1,0 +1,3239 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/css/nv.d3.css'>
+    <link rel='stylesheet' href='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/css/rNVD3.css'>
+    
+    <script src='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/js/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/js/d3.v3.min.js' type='text/javascript'></script>
+    <script src='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='c:/Program Files/R/R-3.0.2/library/rCharts/libraries/nvd3/js/fisheye.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 100%;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select  y :</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+              </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart13986f3164a7' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart13986f3164a7",
+"width":    700,
+"height":    400,
+"x": "QtrDate",
+"y": "Index",
+"group": "variable",
+"type": "lineWithFocusChart",
+"id": "chart13986f3164a7" 
+}
+  $scope.data = [
+ {
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Sydney",
+"Index":           85.3,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Sydney",
+"Index":           88.2,
+"Change":            3.4 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Sydney",
+"Index":             87,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Sydney",
+"Index":           84.4,
+"Change":             -3 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Sydney",
+"Index":           84.2,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Sydney",
+"Index":           84.8,
+"Change":            0.7 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Sydney",
+"Index":           83.2,
+"Change":           -1.9 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Sydney",
+"Index":           82.6,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Sydney",
+"Index":           81.4,
+"Change":           -1.5 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Sydney",
+"Index":           81.8,
+"Change":            0.5 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Sydney",
+"Index":           80.8,
+"Change":           -1.2 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Sydney",
+"Index":           82.3,
+"Change":            1.9 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Sydney",
+"Index":             82,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Sydney",
+"Index":           82.7,
+"Change":            0.9 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Sydney",
+"Index":           81.9,
+"Change":             -1 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Sydney",
+"Index":           85.2,
+"Change":              4 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Sydney",
+"Index":           87.3,
+"Change":            2.5 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Sydney",
+"Index":           89.2,
+"Change":            2.2 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Sydney",
+"Index":           88.5,
+"Change":           -0.8 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Sydney",
+"Index":           87.3,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Sydney",
+"Index":           85.7,
+"Change":           -1.8 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Sydney",
+"Index":           84.5,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Sydney",
+"Index":           83.9,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Sydney",
+"Index":           87.5,
+"Change":            4.3 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Sydney",
+"Index":           91.1,
+"Change":            4.1 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Sydney",
+"Index":             96,
+"Change":            5.4 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Sydney",
+"Index":           98.9,
+"Change":              3 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Sydney",
+"Index":          101.4,
+"Change":            2.5 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Sydney",
+"Index":          101.1,
+"Change":           -0.3 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Sydney",
+"Index":          101.3,
+"Change":            0.2 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Sydney",
+"Index":            101,
+"Change":           -0.3 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Sydney",
+"Index":          101.4,
+"Change":            0.4 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Sydney",
+"Index":           99.9,
+"Change":           -1.5 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Sydney",
+"Index":           98.4,
+"Change":           -1.5 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Sydney",
+"Index":          100.3,
+"Change":            1.9 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Sydney",
+"Index":          101.4,
+"Change":            1.1 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Sydney",
+"Index":          100.9,
+"Change":           -0.5 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Sydney",
+"Index":          103.7,
+"Change":            2.8 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Sydney",
+"Index":          104.7,
+"Change":              1 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Sydney",
+"Index":          108.7,
+"Change":            3.8 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Sydney",
+"Index":          112.8,
+"Change":            3.8 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Sydney",
+"Index":          118.4,
+"Change":              5 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Sydney",
+"Index":          121.1,
+"Change":            2.3 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Melbourne",
+"Index":           60.7,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Melbourne",
+"Index":           62.1,
+"Change":            2.3 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Melbourne",
+"Index":           60.8,
+"Change":           -2.1 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Melbourne",
+"Index":           60.9,
+"Change":            0.2 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Melbourne",
+"Index":           60.9,
+"Change":              0 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Melbourne",
+"Index":           62.4,
+"Change":            2.5 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Melbourne",
+"Index":           62.5,
+"Change":            0.2 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Melbourne",
+"Index":           63.2,
+"Change":            1.1 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Melbourne",
+"Index":           63.1,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Melbourne",
+"Index":             64,
+"Change":            1.4 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Melbourne",
+"Index":           65.4,
+"Change":            2.2 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Melbourne",
+"Index":           67.2,
+"Change":            2.8 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Melbourne",
+"Index":           68.1,
+"Change":            1.3 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Melbourne",
+"Index":           69.5,
+"Change":            2.1 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Melbourne",
+"Index":             71,
+"Change":            2.2 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Melbourne",
+"Index":             76,
+"Change":              7 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Melbourne",
+"Index":           79.5,
+"Change":            4.6 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Melbourne",
+"Index":           84.7,
+"Change":            6.5 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Melbourne",
+"Index":           85.7,
+"Change":            1.2 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Melbourne",
+"Index":           85.5,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Melbourne",
+"Index":             83,
+"Change":           -2.9 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Melbourne",
+"Index":           82.3,
+"Change":           -0.8 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Melbourne",
+"Index":           82.5,
+"Change":            0.2 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Melbourne",
+"Index":           86.9,
+"Change":            5.3 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Melbourne",
+"Index":           92.5,
+"Change":            6.4 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Melbourne",
+"Index":           98.6,
+"Change":            6.6 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Melbourne",
+"Index":          103.3,
+"Change":            4.8 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Melbourne",
+"Index":          106.2,
+"Change":            2.8 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Melbourne",
+"Index":          104.3,
+"Change":           -1.8 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Melbourne",
+"Index":          105.7,
+"Change":            1.3 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Melbourne",
+"Index":          104.7,
+"Change":           -0.9 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Melbourne",
+"Index":          103.5,
+"Change":           -1.1 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Melbourne",
+"Index":          101.3,
+"Change":           -2.1 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Melbourne",
+"Index":            100,
+"Change":           -1.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Melbourne",
+"Index":           99.4,
+"Change":           -0.6 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Melbourne",
+"Index":           99.3,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Melbourne",
+"Index":           98.6,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Melbourne",
+"Index":          100.4,
+"Change":            1.8 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Melbourne",
+"Index":          100.8,
+"Change":            0.4 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Melbourne",
+"Index":          102.7,
+"Change":            1.9 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Melbourne",
+"Index":          105.9,
+"Change":            3.1 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Melbourne",
+"Index":          109.5,
+"Change":            3.4 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Melbourne",
+"Index":          111.8,
+"Change":            2.1 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Brisbane",
+"Index":           64.2,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Brisbane",
+"Index":           69.4,
+"Change":            8.1 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Brisbane",
+"Index":           70.7,
+"Change":            1.9 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Brisbane",
+"Index":           71.7,
+"Change":            1.4 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Brisbane",
+"Index":           71.2,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Brisbane",
+"Index":             72,
+"Change":            1.1 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Brisbane",
+"Index":           72.6,
+"Change":            0.8 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Brisbane",
+"Index":           73.3,
+"Change":              1 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Brisbane",
+"Index":           73.6,
+"Change":            0.4 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Brisbane",
+"Index":             75,
+"Change":            1.9 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Brisbane",
+"Index":           75.6,
+"Change":            0.8 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Brisbane",
+"Index":           77.5,
+"Change":            2.5 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Brisbane",
+"Index":           78.5,
+"Change":            1.3 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Brisbane",
+"Index":           80.5,
+"Change":            2.5 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Brisbane",
+"Index":           83.6,
+"Change":            3.9 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Brisbane",
+"Index":             89,
+"Change":            6.5 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Brisbane",
+"Index":           93.4,
+"Change":            4.9 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Brisbane",
+"Index":           98.1,
+"Change":              5 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Brisbane",
+"Index":          100.6,
+"Change":            2.5 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Brisbane",
+"Index":          101.3,
+"Change":            0.7 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Brisbane",
+"Index":           97.5,
+"Change":           -3.8 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Brisbane",
+"Index":           95.8,
+"Change":           -1.7 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Brisbane",
+"Index":             96,
+"Change":            0.2 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Brisbane",
+"Index":           98.8,
+"Change":            2.9 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Brisbane",
+"Index":          102.1,
+"Change":            3.3 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Brisbane",
+"Index":          105.3,
+"Change":            3.1 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Brisbane",
+"Index":          106.4,
+"Change":              1 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Brisbane",
+"Index":            107,
+"Change":            0.6 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Brisbane",
+"Index":          105.3,
+"Change":           -1.6 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Brisbane",
+"Index":            105,
+"Change":           -0.3 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Brisbane",
+"Index":          102.9,
+"Change":             -2 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Brisbane",
+"Index":          102.5,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Brisbane",
+"Index":           99.9,
+"Change":           -2.5 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Brisbane",
+"Index":          100.2,
+"Change":            0.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Brisbane",
+"Index":            100,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Brisbane",
+"Index":           99.9,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Brisbane",
+"Index":          100.8,
+"Change":            0.9 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Brisbane",
+"Index":          101.7,
+"Change":            0.9 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Brisbane",
+"Index":          101.9,
+"Change":            0.2 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Brisbane",
+"Index":          103.2,
+"Change":            1.3 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Brisbane",
+"Index":          104.5,
+"Change":            1.3 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Brisbane",
+"Index":          107.2,
+"Change":            2.6 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Brisbane",
+"Index":          108.1,
+"Change":            0.8 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Adelaide",
+"Index":           62.2,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Adelaide",
+"Index":           63.9,
+"Change":            2.7 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Adelaide",
+"Index":           64.8,
+"Change":            1.4 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Adelaide",
+"Index":           65.9,
+"Change":            1.7 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Adelaide",
+"Index":           67.1,
+"Change":            1.8 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Adelaide",
+"Index":           68.6,
+"Change":            2.2 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Adelaide",
+"Index":           68.6,
+"Change":              0 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Adelaide",
+"Index":           69.3,
+"Change":              1 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Adelaide",
+"Index":             70,
+"Change":              1 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Adelaide",
+"Index":           71.6,
+"Change":            2.3 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Adelaide",
+"Index":           72.2,
+"Change":            0.8 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Adelaide",
+"Index":           73.4,
+"Change":            1.7 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Adelaide",
+"Index":           73.8,
+"Change":            0.5 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Adelaide",
+"Index":           75.7,
+"Change":            2.6 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Adelaide",
+"Index":           77.2,
+"Change":              2 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Adelaide",
+"Index":           81.9,
+"Change":            6.1 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Adelaide",
+"Index":           86.9,
+"Change":            6.1 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Adelaide",
+"Index":           91.9,
+"Change":            5.8 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Adelaide",
+"Index":           94.9,
+"Change":            3.3 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Adelaide",
+"Index":           93.8,
+"Change":           -1.2 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Adelaide",
+"Index":           94.1,
+"Change":            0.3 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Adelaide",
+"Index":           93.6,
+"Change":           -0.5 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Adelaide",
+"Index":           93.2,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Adelaide",
+"Index":           95.8,
+"Change":            2.8 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Adelaide",
+"Index":           97.2,
+"Change":            1.5 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Adelaide",
+"Index":          101.1,
+"Change":              4 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Adelaide",
+"Index":          102.8,
+"Change":            1.7 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Adelaide",
+"Index":          104.7,
+"Change":            1.8 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Adelaide",
+"Index":          103.9,
+"Change":           -0.8 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Adelaide",
+"Index":          104.8,
+"Change":            0.9 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Adelaide",
+"Index":          103.3,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Adelaide",
+"Index":            101,
+"Change":           -2.2 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Adelaide",
+"Index":          100.4,
+"Change":           -0.6 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Adelaide",
+"Index":          100.7,
+"Change":            0.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Adelaide",
+"Index":           99.3,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Adelaide",
+"Index":           99.6,
+"Change":            0.3 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Adelaide",
+"Index":           99.2,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Adelaide",
+"Index":          100.2,
+"Change":              1 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Adelaide",
+"Index":           99.8,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Adelaide",
+"Index":          100.9,
+"Change":            1.1 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Adelaide",
+"Index":          101.3,
+"Change":            0.4 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Adelaide",
+"Index":            104,
+"Change":            2.7 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Adelaide",
+"Index":          104.7,
+"Change":            0.7 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Perth",
+"Index":           48.3,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Perth",
+"Index":           50.6,
+"Change":            4.8 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Perth",
+"Index":           52.5,
+"Change":            3.8 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Perth",
+"Index":           53.7,
+"Change":            2.3 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Perth",
+"Index":           54.7,
+"Change":            1.9 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Perth",
+"Index":           57.1,
+"Change":            4.4 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Perth",
+"Index":           59.4,
+"Change":              4 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Perth",
+"Index":           62.6,
+"Change":            5.4 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Perth",
+"Index":           65.2,
+"Change":            4.2 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Perth",
+"Index":             70,
+"Change":            7.4 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Perth",
+"Index":           75.6,
+"Change":              8 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Perth",
+"Index":           86.4,
+"Change":           14.3 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Perth",
+"Index":           95.1,
+"Change":           10.1 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Perth",
+"Index":           98.4,
+"Change":            3.5 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Perth",
+"Index":             99,
+"Change":            0.6 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Perth",
+"Index":           97.7,
+"Change":           -1.3 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Perth",
+"Index":           99.4,
+"Change":            1.7 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Perth",
+"Index":          100.6,
+"Change":            1.2 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Perth",
+"Index":           99.5,
+"Change":           -1.1 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Perth",
+"Index":           97.6,
+"Change":           -1.9 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Perth",
+"Index":           95.3,
+"Change":           -2.4 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Perth",
+"Index":           92.9,
+"Change":           -2.5 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Perth",
+"Index":           92.5,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Perth",
+"Index":           95.1,
+"Change":            2.8 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Perth",
+"Index":           97.6,
+"Change":            2.6 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Perth",
+"Index":          103.5,
+"Change":              6 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Perth",
+"Index":          106.5,
+"Change":            2.9 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Perth",
+"Index":          106.6,
+"Change":            0.1 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Perth",
+"Index":          103.8,
+"Change":           -2.6 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Perth",
+"Index":          103.9,
+"Change":            0.1 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Perth",
+"Index":            103,
+"Change":           -0.9 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Perth",
+"Index":          100.2,
+"Change":           -2.7 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Perth",
+"Index":           99.1,
+"Change":           -1.1 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Perth",
+"Index":           99.4,
+"Change":            0.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Perth",
+"Index":          100.5,
+"Change":            1.1 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Perth",
+"Index":            101,
+"Change":            0.5 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Perth",
+"Index":          102.1,
+"Change":            1.1 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Perth",
+"Index":          105.2,
+"Change":              3 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Perth",
+"Index":          107.5,
+"Change":            2.2 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Perth",
+"Index":          110.6,
+"Change":            2.9 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Perth",
+"Index":          110.7,
+"Change":            0.1 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Perth",
+"Index":          114.1,
+"Change":            3.1 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Perth",
+"Index":          115.3,
+"Change":            1.1 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Hobart",
+"Index":           61.2,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Hobart",
+"Index":           66.5,
+"Change":            8.7 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Hobart",
+"Index":           68.7,
+"Change":            3.3 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Hobart",
+"Index":           71.8,
+"Change":            4.5 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Hobart",
+"Index":           72.3,
+"Change":            0.7 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Hobart",
+"Index":           74.6,
+"Change":            3.2 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Hobart",
+"Index":           75.8,
+"Change":            1.6 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Hobart",
+"Index":           76.9,
+"Change":            1.5 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Hobart",
+"Index":           76.7,
+"Change":           -0.3 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Hobart",
+"Index":           79.1,
+"Change":            3.1 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Hobart",
+"Index":             81,
+"Change":            2.4 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Hobart",
+"Index":           83.4,
+"Change":              3 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Hobart",
+"Index":           84.6,
+"Change":            1.4 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Hobart",
+"Index":           86.1,
+"Change":            1.8 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Hobart",
+"Index":           88.5,
+"Change":            2.8 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Hobart",
+"Index":           89.6,
+"Change":            1.2 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Hobart",
+"Index":           92.3,
+"Change":              3 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Hobart",
+"Index":             96,
+"Change":              4 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Hobart",
+"Index":           93.9,
+"Change":           -2.2 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Hobart",
+"Index":           95.2,
+"Change":            1.4 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Hobart",
+"Index":           93.3,
+"Change":             -2 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Hobart",
+"Index":           93.9,
+"Change":            0.6 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Hobart",
+"Index":           93.4,
+"Change":           -0.5 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Hobart",
+"Index":           96.4,
+"Change":            3.2 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Hobart",
+"Index":           98.6,
+"Change":            2.3 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Hobart",
+"Index":          104.2,
+"Change":            5.7 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Hobart",
+"Index":          105.9,
+"Change":            1.6 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Hobart",
+"Index":          103.6,
+"Change":           -2.2 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Hobart",
+"Index":          103.5,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Hobart",
+"Index":          106.6,
+"Change":              3 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Hobart",
+"Index":          105.9,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Hobart",
+"Index":          102.9,
+"Change":           -2.8 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Hobart",
+"Index":          100.6,
+"Change":           -2.2 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Hobart",
+"Index":          101.9,
+"Change":            1.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Hobart",
+"Index":           99.4,
+"Change":           -2.5 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Hobart",
+"Index":           98.2,
+"Change":           -1.2 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Hobart",
+"Index":           98.1,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Hobart",
+"Index":           98.4,
+"Change":            0.3 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Hobart",
+"Index":            100,
+"Change":            1.6 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Hobart",
+"Index":            100,
+"Change":              0 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Hobart",
+"Index":            101,
+"Change":              1 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Hobart",
+"Index":          103.4,
+"Change":            2.4 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Hobart",
+"Index":          104.8,
+"Change":            1.4 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Darwin",
+"Index":           40.5,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Darwin",
+"Index":           43.3,
+"Change":            6.9 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Darwin",
+"Index":           45.5,
+"Change":            5.1 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Darwin",
+"Index":           45.2,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Darwin",
+"Index":           46.8,
+"Change":            3.5 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Darwin",
+"Index":           49.7,
+"Change":            6.2 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Darwin",
+"Index":           53.6,
+"Change":            7.8 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Darwin",
+"Index":           54.7,
+"Change":            2.1 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Darwin",
+"Index":           56.1,
+"Change":            2.6 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Darwin",
+"Index":           60.2,
+"Change":            7.3 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Darwin",
+"Index":           63.2,
+"Change":              5 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Darwin",
+"Index":           67.1,
+"Change":            6.2 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Darwin",
+"Index":           67.3,
+"Change":            0.3 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Darwin",
+"Index":           70.5,
+"Change":            4.8 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Darwin",
+"Index":           72.2,
+"Change":            2.4 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Darwin",
+"Index":           74.1,
+"Change":            2.6 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Darwin",
+"Index":           76.3,
+"Change":              3 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Darwin",
+"Index":           78.3,
+"Change":            2.6 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Darwin",
+"Index":           77.7,
+"Change":           -0.8 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Darwin",
+"Index":           78.5,
+"Change":              1 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Darwin",
+"Index":           81.8,
+"Change":            4.2 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Darwin",
+"Index":           84.3,
+"Change":            3.1 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Darwin",
+"Index":           87.2,
+"Change":            3.4 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Darwin",
+"Index":             89,
+"Change":            2.1 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Darwin",
+"Index":           92.3,
+"Change":            3.7 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Darwin",
+"Index":           98.7,
+"Change":            6.9 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Darwin",
+"Index":           99.4,
+"Change":            0.7 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Darwin",
+"Index":          100.9,
+"Change":            1.5 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Darwin",
+"Index":          101.1,
+"Change":            0.2 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Darwin",
+"Index":          101.9,
+"Change":            0.8 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Darwin",
+"Index":           99.5,
+"Change":           -2.4 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Darwin",
+"Index":           96.5,
+"Change":             -3 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Darwin",
+"Index":           96.9,
+"Change":            0.4 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Darwin",
+"Index":           98.2,
+"Change":            1.3 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Darwin",
+"Index":          100.8,
+"Change":            2.6 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Darwin",
+"Index":          104.1,
+"Change":            3.3 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Darwin",
+"Index":          105.5,
+"Change":            1.3 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Darwin",
+"Index":          107.8,
+"Change":            2.2 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Darwin",
+"Index":          109.6,
+"Change":            1.7 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Darwin",
+"Index":            111,
+"Change":            1.3 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Darwin",
+"Index":          111.3,
+"Change":            0.3 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Darwin",
+"Index":          112.9,
+"Change":            1.4 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Darwin",
+"Index":          114.1,
+"Change":            1.1 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Canberra",
+"Index":           68.3,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Canberra",
+"Index":           70.9,
+"Change":            3.8 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Canberra",
+"Index":           69.9,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Canberra",
+"Index":           70.1,
+"Change":            0.3 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Canberra",
+"Index":           68.6,
+"Change":           -2.1 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Canberra",
+"Index":           69.7,
+"Change":            1.6 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Canberra",
+"Index":           70.3,
+"Change":            0.9 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Canberra",
+"Index":           69.9,
+"Change":           -0.6 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Canberra",
+"Index":           70.1,
+"Change":            0.3 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Canberra",
+"Index":           71.7,
+"Change":            2.3 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Canberra",
+"Index":           72.5,
+"Change":            1.1 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Canberra",
+"Index":           74.3,
+"Change":            2.5 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Canberra",
+"Index":             76,
+"Change":            2.3 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Canberra",
+"Index":           77.1,
+"Change":            1.4 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Canberra",
+"Index":           78.6,
+"Change":            1.9 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Canberra",
+"Index":             82,
+"Change":            4.3 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Canberra",
+"Index":           86.3,
+"Change":            5.2 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Canberra",
+"Index":           88.6,
+"Change":            2.7 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Canberra",
+"Index":           89.3,
+"Change":            0.8 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Canberra",
+"Index":           87.7,
+"Change":           -1.8 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Canberra",
+"Index":           85.2,
+"Change":           -2.9 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Canberra",
+"Index":           84.8,
+"Change":           -0.5 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Canberra",
+"Index":           85.8,
+"Change":            1.2 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Canberra",
+"Index":           88.7,
+"Change":            3.4 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Canberra",
+"Index":           92.1,
+"Change":            3.8 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Canberra",
+"Index":           97.6,
+"Change":              6 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Canberra",
+"Index":          101.7,
+"Change":            4.2 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Canberra",
+"Index":          101.6,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Canberra",
+"Index":          101.6,
+"Change":              0 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Canberra",
+"Index":          102.5,
+"Change":            0.9 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Canberra",
+"Index":          102.3,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Canberra",
+"Index":          101.9,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Canberra",
+"Index":           98.7,
+"Change":           -3.1 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Canberra",
+"Index":          100.9,
+"Change":            2.2 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Canberra",
+"Index":          100.8,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Canberra",
+"Index":           99.5,
+"Change":           -1.3 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Canberra",
+"Index":           99.5,
+"Change":              0 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Canberra",
+"Index":          101.8,
+"Change":            2.3 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Canberra",
+"Index":          100.3,
+"Change":           -1.5 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Canberra",
+"Index":            101,
+"Change":            0.7 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Canberra",
+"Index":          101.1,
+"Change":            0.1 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Canberra",
+"Index":          101.5,
+"Change":            0.4 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Canberra",
+"Index":          101.4,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1062374400,
+"Qtr":         2003.3,
+"QtrDate":          12296,
+"variable": "Average",
+"Index":             69,
+"Change": null 
+},
+{
+ "Quarter":     1070236800,
+"Qtr":         2003.4,
+"QtrDate":          12387,
+"variable": "Average",
+"Index":           71.6,
+"Change":            3.8 
+},
+{
+ "Quarter":     1078099200,
+"Qtr":         2004.1,
+"QtrDate":          12478,
+"variable": "Average",
+"Index":           71.3,
+"Change":           -0.4 
+},
+{
+ "Quarter":     1086048000,
+"Qtr":         2004.2,
+"QtrDate":          12570,
+"variable": "Average",
+"Index":           70.6,
+"Change":             -1 
+},
+{
+ "Quarter":     1093996800,
+"Qtr":         2004.3,
+"QtrDate":          12662,
+"variable": "Average",
+"Index":           70.6,
+"Change":              0 
+},
+{
+ "Quarter":     1101859200,
+"Qtr":         2004.4,
+"QtrDate":          12753,
+"variable": "Average",
+"Index":           71.8,
+"Change":            1.7 
+},
+{
+ "Quarter":     1109635200,
+"Qtr":         2005.1,
+"QtrDate":          12843,
+"variable": "Average",
+"Index":           71.7,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1117584000,
+"Qtr":         2005.2,
+"QtrDate":          12935,
+"variable": "Average",
+"Index":           72.2,
+"Change":            0.7 
+},
+{
+ "Quarter":     1125532800,
+"Qtr":         2005.3,
+"QtrDate":          13027,
+"variable": "Average",
+"Index":           72.1,
+"Change":           -0.1 
+},
+{
+ "Quarter":     1133395200,
+"Qtr":         2005.4,
+"QtrDate":          13118,
+"variable": "Average",
+"Index":           73.5,
+"Change":            1.9 
+},
+{
+ "Quarter":     1141171200,
+"Qtr":         2006.1,
+"QtrDate":          13208,
+"variable": "Average",
+"Index":           74.3,
+"Change":            1.1 
+},
+{
+ "Quarter":     1149120000,
+"Qtr":         2006.2,
+"QtrDate":          13300,
+"variable": "Average",
+"Index":             77,
+"Change":            3.6 
+},
+{
+ "Quarter":     1157068800,
+"Qtr":         2006.3,
+"QtrDate":          13392,
+"variable": "Average",
+"Index":           78.4,
+"Change":            1.8 
+},
+{
+ "Quarter":     1164931200,
+"Qtr":         2006.4,
+"QtrDate":          13483,
+"variable": "Average",
+"Index":           79.8,
+"Change":            1.8 
+},
+{
+ "Quarter":     1172707200,
+"Qtr":         2007.1,
+"QtrDate":          13573,
+"variable": "Average",
+"Index":           80.5,
+"Change":            0.9 
+},
+{
+ "Quarter":     1180656000,
+"Qtr":         2007.2,
+"QtrDate":          13665,
+"variable": "Average",
+"Index":           84.1,
+"Change":            4.5 
+},
+{
+ "Quarter":     1188604800,
+"Qtr":         2007.3,
+"QtrDate":          13757,
+"variable": "Average",
+"Index":           87.1,
+"Change":            3.6 
+},
+{
+ "Quarter":     1196467200,
+"Qtr":         2007.4,
+"QtrDate":          13848,
+"variable": "Average",
+"Index":           90.4,
+"Change":            3.8 
+},
+{
+ "Quarter":     1204329600,
+"Qtr":         2008.1,
+"QtrDate":          13939,
+"variable": "Average",
+"Index":           90.8,
+"Change":            0.4 
+},
+{
+ "Quarter":     1212278400,
+"Qtr":         2008.2,
+"QtrDate":          14031,
+"variable": "Average",
+"Index":             90,
+"Change":           -0.9 
+},
+{
+ "Quarter":     1220227200,
+"Qtr":         2008.3,
+"QtrDate":          14123,
+"variable": "Average",
+"Index":             88,
+"Change":           -2.2 
+},
+{
+ "Quarter":     1228089600,
+"Qtr":         2008.4,
+"QtrDate":          14214,
+"variable": "Average",
+"Index":           86.8,
+"Change":           -1.4 
+},
+{
+ "Quarter":     1235865600,
+"Qtr":         2009.1,
+"QtrDate":          14304,
+"variable": "Average",
+"Index":           86.6,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1243814400,
+"Qtr":         2009.2,
+"QtrDate":          14396,
+"variable": "Average",
+"Index":           90.2,
+"Change":            4.2 
+},
+{
+ "Quarter":     1251763200,
+"Qtr":         2009.3,
+"QtrDate":          14488,
+"variable": "Average",
+"Index":             94,
+"Change":            4.2 
+},
+{
+ "Quarter":     1259625600,
+"Qtr":         2009.4,
+"QtrDate":          14579,
+"variable": "Average",
+"Index":           99.2,
+"Change":            5.5 
+},
+{
+ "Quarter":     1267401600,
+"Qtr":         2010.1,
+"QtrDate":          14669,
+"variable": "Average",
+"Index":          102.3,
+"Change":            3.1 
+},
+{
+ "Quarter":     1275350400,
+"Qtr":         2010.2,
+"QtrDate":          14761,
+"variable": "Average",
+"Index":          104.3,
+"Change":              2 
+},
+{
+ "Quarter":     1283299200,
+"Qtr":         2010.3,
+"QtrDate":          14853,
+"variable": "Average",
+"Index":            103,
+"Change":           -1.2 
+},
+{
+ "Quarter":     1291161600,
+"Qtr":         2010.4,
+"QtrDate":          14944,
+"variable": "Average",
+"Index":          103.6,
+"Change":            0.6 
+},
+{
+ "Quarter":     1298937600,
+"Qtr":         2011.1,
+"QtrDate":          15034,
+"variable": "Average",
+"Index":          102.7,
+"Change":           -0.9 
+},
+{
+ "Quarter":     1306886400,
+"Qtr":         2011.2,
+"QtrDate":          15126,
+"variable": "Average",
+"Index":            102,
+"Change":           -0.7 
+},
+{
+ "Quarter":     1314835200,
+"Qtr":         2011.3,
+"QtrDate":          15218,
+"variable": "Average",
+"Index":          100.2,
+"Change":           -1.8 
+},
+{
+ "Quarter":     1322697600,
+"Qtr":         2011.4,
+"QtrDate":          15309,
+"variable": "Average",
+"Index":           99.4,
+"Change":           -0.8 
+},
+{
+ "Quarter":     1330560000,
+"Qtr":         2012.1,
+"QtrDate":          15400,
+"variable": "Average",
+"Index":            100,
+"Change":            0.6 
+},
+{
+ "Quarter":     1338508800,
+"Qtr":         2012.2,
+"QtrDate":          15492,
+"variable": "Average",
+"Index":          100.4,
+"Change":            0.4 
+},
+{
+ "Quarter":     1346457600,
+"Qtr":         2012.3,
+"QtrDate":          15584,
+"variable": "Average",
+"Index":          100.2,
+"Change":           -0.2 
+},
+{
+ "Quarter":     1354320000,
+"Qtr":         2012.4,
+"QtrDate":          15675,
+"variable": "Average",
+"Index":          102.4,
+"Change":            2.2 
+},
+{
+ "Quarter":     1362096000,
+"Qtr":         2013.1,
+"QtrDate":          15765,
+"variable": "Average",
+"Index":          103.1,
+"Change":            0.7 
+},
+{
+ "Quarter":     1370044800,
+"Qtr":         2013.2,
+"QtrDate":          15857,
+"variable": "Average",
+"Index":          105.7,
+"Change":            2.5 
+},
+{
+ "Quarter":     1377993600,
+"Qtr":         2013.3,
+"QtrDate":          15949,
+"variable": "Average",
+"Index":          108.3,
+"Change":            2.5 
+},
+{
+ "Quarter":     1385856000,
+"Qtr":         2013.4,
+"QtrDate":          16040,
+"variable": "Average",
+"Index":          112.4,
+"Change":            3.8 
+},
+{
+ "Quarter":     1393632000,
+"Qtr":         2014.1,
+"QtrDate":          16130,
+"variable": "Average",
+"Index":          114.3,
+"Change":            1.7 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Index",
+"values": [ "Index", "Change" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	
+          
+	chart.xAxis
+  .tickFormat(function(d) {return d3.time.format('%b %Y')(new Date( d * 86400000 ));})
+
+	chart.x2Axis
+  .tickFormat(function(d) {return d3.time.format('%Y')(new Date( d * 86400000 ));})
+	
+	
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+    
+  </body>
+</html>
