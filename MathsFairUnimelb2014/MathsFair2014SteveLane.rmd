@@ -1,5 +1,5 @@
 ---
-title		: 
+title		:
 subtitle	: Some subtitle
 author		: Steve Lane
 framework	: revealjs
@@ -15,6 +15,7 @@ highlighter	: highlight.js
 hitheme		: tomorrow
 widgets		:
 - mathjax
+ext_widgets : {rCharts: [../libraries/widgets/nvd3]}
 mode		: selfcontained
 theme		: sky
 url		:
@@ -56,19 +57,19 @@ url		:
 - Engineering (1999)
 
   &mdash; to &mdash;
-  
+
 - Commerce/Science (B.Com/B.Sci 2003)
 
   &mdash; to &mdash;
-  
+
 - Mathematics (B.Sci 2004)
 
   &mdash; to &mdash;
-  
+
 - Honours in statistics (2007)
 
   &mdash; to &mdash;
-  
+
 - PhD in statistics (2012)
 
 </section>
@@ -84,30 +85,16 @@ url		:
 ### Positions
 
 - 2007
-  
+
   - ABS (Australian Bureau of Statistics) Cadetship
 
 - 2008
-  
+
   - Senior Research Officer at ABS
 
 - 2012
 
   - Research Fellow, Head of Unit (current)
-
-</section>
-
----
-
-<section>
-
-## House price index
-
----
-
-### HPI whilst at ABS
-
-- Include ABS data?
 
 </section>
 
@@ -122,5 +109,17 @@ url		:
 ### Does a drug work?
 
 - I don't know!
+
+</section>
+
+---
+
+<section>
+
+## House price index
+
+---
+
+<iframe src="HPI.html" width=1280 height=720></iframe>
 
 </section>
