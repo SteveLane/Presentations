@@ -44,4 +44,5 @@ plHPI$xAxis(tickFormat =
 plHPI$x2Axis(tickFormat =
              "#!function(d) {return d3.time.format('%Y')(new Date( d * 86400000 ));}!#")
 plHPI$addControls("y", value = "Index", values = c("Index", "Change"))
+plHPI$LIB$url <- "../libraries/widgets/nvd3"
 plHPI$save("HPI.html")

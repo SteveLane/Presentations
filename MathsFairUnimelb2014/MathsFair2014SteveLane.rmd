@@ -15,7 +15,8 @@ highlighter	: highlight.js
 hitheme		: tomorrow
 widgets		:
 - mathjax
-ext_widgets : {rCharts: [../libraries/widgets/nvd3]}
+- bootstrap
+ext_widgets : {rCharts: [/libraries/nvd3]}
 mode		: selfcontained
 theme		: sky
 url		:
@@ -27,6 +28,14 @@ url		:
 <!-- require(slidify) -->
 <!-- slidify("filename.rmd") -->
 <!-- Post creation need to edit html to adjust height and width. -->
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+library(reshape2)
+library(rCharts)
+library(lubridate)
+library(plyr)
+knitr::opts_chunk$set(comment=NA,results="asis",tidy=FALSE,message=TRUE,echo=FALSE)
+```
 
 # Title Page
 ## Subtitle
