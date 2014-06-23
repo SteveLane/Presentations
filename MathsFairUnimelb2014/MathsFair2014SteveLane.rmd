@@ -1,6 +1,6 @@
 ---
-title		:
-subtitle	: Some subtitle
+title		: Biostatistical consulting
+subtitle	: 
 author		: Steve Lane
 framework	: revealjs
 revealjs    :
@@ -37,8 +37,7 @@ library(plyr)
 knitr::opts_chunk$set(comment=NA,results="asis",tidy=FALSE,message=TRUE,echo=FALSE)
 ```
 
-# Title Page
-## Subtitle
+## Biostatistical consulting
 ### Steve Lane
 ##### stephen.lane 'at' barwonhealth.org.au
 ##### Barwon Health Biostatistics Unit
@@ -57,52 +56,32 @@ knitr::opts_chunk$set(comment=NA,results="asis",tidy=FALSE,message=TRUE,echo=FAL
 
 <!-- To start downwards slides -->
 
-## University
+## Prior to my current role
 
 ---
 
 ### A wandering path...
 
-- Engineering (1999)
-
-  &mdash; to &mdash;
-
-- Commerce/Science (B.Com/B.Sci 2003)
-
-  &mdash; to &mdash;
-
-- Mathematics (B.Sci 2004)
-
-  &mdash; to &mdash;
-
-- Honours in statistics (2007)
-
-  &mdash; to &mdash;
-
-- PhD in statistics (2012)
-
-</section>
+- 1999
+  - Engineering
+- 2003
+  - Commerce/Science
+- 2004
+  - Mathematics
+- 2007
+  - Honours in statistics
+- 2012
+  - PhD in statistics
 
 ---
 
-<section>
-
-## Positions
-
----
-
-### Positions
+### Positions I've held
 
 - 2007
-
   - ABS (Australian Bureau of Statistics) Cadetship
-
 - 2008
-
   - Senior Research Officer at ABS
-
 - 2012
-
   - Research Fellow, Head of Unit (current)
 
 </section>
@@ -111,13 +90,25 @@ knitr::opts_chunk$set(comment=NA,results="asis",tidy=FALSE,message=TRUE,echo=FAL
 
 <section>
 
-## Clinical trials
+## Some projects I've worked on
 
 ---
 
-### Does a drug work?
+### Clinical trials
 
-- I don't know!
+- Short course vs. long course intravenous therapy for cellulitis
+- N-Acetyl-Cysteine as a preventive agent for Post-operative cognitive decline
+- What does a biostatistician do?
+  - Look at all things 'measurement'
+  - How many participants do we need?
+  - How long do we need to run the trial for?
+  - Are we collecting the data we need? (And at the right time)?
+
+---
+
+### House price index
+
+<iframe src="HPI.html" width=960 height=720></iframe>
 
 </section>
 
@@ -125,10 +116,14 @@ knitr::opts_chunk$set(comment=NA,results="asis",tidy=FALSE,message=TRUE,echo=FAL
 
 <section>
 
-## House price index
+## And finally...
 
 ---
 
-<iframe src="HPI.html" width=1280 height=720></iframe>
+### What skills do you need to develop?
+
+- Communication
+- Programming (multiple languages)
+- A critical eye
 
 </section>
