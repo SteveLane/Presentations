@@ -24,15 +24,15 @@
 
 <!-- require(slidify) -->
 
-<!-- slidify("filename.rmd") -->
+<!-- slidify("BiosDayDeakin2014.rmd") -->
 
 <!-- Post creation need to edit html to adjust height and width. -->
 
-<h1>Title Page</h1>
+<h2>Prediction of bone mineral density trajectories</h2>
 
-<h2>Subtitle</h2>
+<h3>Functional data analytic approach</h3>
 
-<h3>Steve Lane</h3>
+<h4>Steve Lane</h4>
 
 <h5>stephen.lane &#39;at&#39; barwonhealth.org.au</h5>
 
@@ -57,7 +57,7 @@
 
 <!-- To start downwards slides -->
 
-<h2>Section header</h2>
+<h2>About me</h2>
 
 </section>
 <section class='' data-state='' id='slide-3'>
@@ -80,16 +80,110 @@
   
   <p><section></p>
 
-<h2>Section header</h2>
+<h2>What is functional data analysis?</h2>
 
 <!-- Include R logo? -->
 
 </section>
 <section class='' data-state='' id='slide-6'>
-  <h3>Slide header</h3>
+  <h3>Two scenarios</h3>
   <ul>
-<li>Go downwards</li>
+<li>But one theme!</li>
+<li>Object of analysis is a curve observed on a:
+
+<ul>
+<li>dense grid, over the full domain of interest</li>
+<li>sparse grid, within a subset of the domain of interest</li>
+</ul></li>
 </ul>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h3>Fine grid, full measurement domain</h3>
+  <!-- Example from my regression tree paper? Cool interactive graph! -->
+
+<ul>
+<li><a href="http://www.psych.mcgill.ca/misc/fda/">Handwriting example</a></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h3>Sparse grid, subset of measurement domain</h3>
+  <!-- (Interactive?) graphic of BMD measurements, highlighting a couple of -->
+
+<!-- different individuals with varying numbers of measurements. -->
+
+<ul>
+<li>Bone mineral density measurements</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h3>(Some) mathematical/statistical details</h3>
+<ul>
+<li>Point</li>
+</ul>
+
+<div class="footer">
+  <p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
+Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
+(2)</i>: 405-423.
+</p>
+</div>
+
+</section>
+
+</section>
+
+<section class='' data-state='' id='slide-10'>
+  
+  <p><section></p>
+
+<h2>Application to a longitudinal cohort study</h2>
+
+</section>
+<section class='' data-state='' id='slide-11'>
+  <h3>Geelong Osteoporosis Study (GOS)</h3>
+  <!-- Slides (perhaps multiple) of GOS description -->
+
+</section>
+<section class='' data-state='' id='slide-12'>
+  <h3>Can we use FDA to fit and then predict future BMD trajectories?</h3>
+  <!-- Details of process, cross-validation study, metrics used to see if it works -->
+
+</section>
+<section class='' data-state='' id='slide-13'>
+  <h3>Is this information useful?</h3>
+  <!-- Probably more useful is to give intervals and probabilities of events -->
+
+<!-- happening, e.g. the probability of losing more than 5% BMD in a given -->
+
+<!-- period. Can get this using posterior simulations. -->
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-14'>
+  
+  <p><section></p>
+
+<h2>Where to from here?</h2>
+
+</section>
+<section class='' data-state='' id='slide-15'>
+  <h3>What is the impact of an acute event?</h3>
+  <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
+
+<!-- note the landmarking work, and the Stat. Med. paper just out -->
+
+</section>
+<section class='' data-state='' id='slide-16'>
+  <h3>Are those with an acute event just &#39;different&#39;?</h3>
+  <!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
+
+<!-- either try and 'discover' two clusters and see if more ICU guys fell into -->
+
+<!-- either, or label them and calculate differences? -->
 
 <p></section></p>
 
@@ -106,7 +200,9 @@
     controls: true,
     progress: true,
     history: true,
-    center: false,
+    center: true,
+    width: 1280,
+    height: 960,
     theme: Reveal.getQueryHash().theme || 'sky', 
     transition: Reveal.getQueryHash().transition || 'convex', 
     dependencies: [

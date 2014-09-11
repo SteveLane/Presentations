@@ -5,12 +5,12 @@ author		: Steve Lane
 framework	: revealjs
 revealjs    :
  theme: sky
- transition: convex
+ transition: cube
  transitionSpeed: fast
  history: false
  width: 1280
  height: 960
- center: "false"
+ center: "true"
 highlighter	: highlight.js
 hitheme		: tomorrow
 widgets		:
@@ -27,9 +27,9 @@ url		:
 <!-- slidify("BiosDayDeakin2014.rmd") -->
 <!-- Post creation need to edit html to adjust height and width. -->
 
-# Title Page
-## Subtitle
-### Steve Lane
+## Prediction of bone mineral density trajectories
+### Functional data analytic approach
+#### Steve Lane
 ##### stephen.lane 'at' barwonhealth.org.au
 ##### Barwon Health Biostatistics Unit
 <!-- Date (if required): -->
@@ -47,7 +47,7 @@ url		:
 
 <!-- To start downwards slides -->
 
-## Section header
+## About me
 
 ---
 
@@ -67,14 +67,103 @@ url		:
 
 <section>
 
-## Section header
+## What is functional data analysis?
 
 <!-- Include R logo? -->
 
 ---
 
-### Slide header
+### Two scenarios
 
-- Go downwards
+- But one theme!
+- Object of analysis is a curve observed on a:
+  - dense grid, over the full domain of interest
+  - sparse grid, within a subset of the domain of interest
+
+---
+
+### Fine grid, full measurement domain
+<!-- Example from my regression tree paper? Cool interactive graph! -->
+- [Handwriting example](http://www.psych.mcgill.ca/misc/fda/)
+
+---
+
+### Sparse grid, subset of measurement domain
+<!-- (Interactive?) graphic of BMD measurements, highlighting a couple of -->
+<!-- different individuals with varying numbers of measurements. -->
+- Bone mineral density measurements
+
+---
+
+### (Some) mathematical/statistical details
+
+<!-- Slide (or a couple) to include the nuts and bolts -->
+<!-- Refs as footers, as it doesn't work with pandoc yet. -->
+
+- Point
+
+<div class="footer">
+<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
+Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
+(2)</i>: 405-423.</p>
+<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
+Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
+(2)</i>: 405-423.</p>
+</div>
+
+---
+
+### Another slide?
+
+</section>
+
+---
+
+<section>
+
+## Application to a longitudinal cohort study
+
+---
+
+### Geelong Osteoporosis Study (GOS)
+
+<!-- Slides (perhaps multiple) of GOS description -->
+
+---
+
+### Can we use FDA to fit and then predict future BMD trajectories?
+
+<!-- Details of process, cross-validation study, metrics used to see if it works -->
+
+---
+
+### Is this information useful?
+
+<!-- Probably more useful is to give intervals and probabilities of events -->
+<!-- happening, e.g. the probability of losing more than 5% BMD in a given -->
+<!-- period. Can get this using posterior simulations. -->
+
+</section>
+
+---
+
+<section>
+
+## Where to from here?
+
+---
+
+### What is the impact of an acute event?
+
+<!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
+<!-- note the landmarking work, and the Stat. Med. paper just out -->
+
+---
+
+### Are those with an acute event just 'different'?
+
+<!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
+<!-- either try and 'discover' two clusters and see if more ICU guys fell into -->
+<!-- either, or label them and calculate differences? -->
 
 </section>
