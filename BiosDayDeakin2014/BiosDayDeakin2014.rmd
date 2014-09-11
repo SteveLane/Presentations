@@ -1,0 +1,80 @@
+---
+title		: FDA and BMD Prediction
+subtitle	: Application to GOS cohort
+author		: Steve Lane
+framework	: revealjs
+revealjs    :
+ theme: sky
+ transition: convex
+ transitionSpeed: fast
+ history: false
+ width: 1280
+ height: 960
+ center: "false"
+highlighter	: highlight.js
+hitheme		: tomorrow
+widgets		:
+- mathjax
+mode		: selfcontained
+theme		: sky
+url		:
+ assets: ../assets
+ lib: ../libraries
+---
+
+<!-- To compile: -->
+<!-- require(slidify) -->
+<!-- slidify("BiosDayDeakin2014.rmd") -->
+<!-- Post creation need to edit html to adjust height and width. -->
+
+# Title Page
+## Subtitle
+### Steve Lane
+##### stephen.lane 'at' barwonhealth.org.au
+##### Barwon Health Biostatistics Unit
+<!-- Date (if required): -->
+<!-- ##### `r format(Sys.time(), "%A %B %d, %Y")` -->
+
+<aside class="notes">
+
+- Kept here as a placeholder
+
+</aside>
+
+---
+
+<section>
+
+<!-- To start downwards slides -->
+
+## Section header
+
+---
+
+### Slide header
+
+- Go downwards
+
+---
+
+### Slide header
+
+- Go downwards again!
+
+</section>
+
+---
+
+<section>
+
+## Section header
+
+<!-- Include R logo? -->
+
+---
+
+### Slide header
+
+- Go downwards
+
+</section>
