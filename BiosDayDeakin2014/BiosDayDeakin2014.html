@@ -19,7 +19,7 @@
   <div class="reveal">
     <div class="slides">
       <section class='' data-state='' id='slide-1'>
-  
+
   <!-- To compile: -->
 
 <!-- require(slidify) -->
@@ -40,7 +40,7 @@
 
 <!-- Date (if required): -->
 
-<!-- ##### Thursday September 11, 2014 -->
+<!-- ##### Friday September 12, 2014 -->
 
 <p><aside class="notes"></p>
 
@@ -52,7 +52,7 @@
 
 </section>
 <section class='' data-state='' id='slide-2'>
-  
+
   <p><section></p>
 
 <!-- To start downwards slides -->
@@ -77,7 +77,7 @@
 
 </section>
 <section class='' data-state='' id='slide-5'>
-  
+
   <p><section></p>
 
 <h2>What is functional data analysis?</h2>
@@ -113,46 +113,68 @@
 
 <!-- different individuals with varying numbers of measurements. -->
 
-<ul>
-<li>Bone mineral density measurements</li>
-</ul>
+<iframe src="f0.html" width=1280 height=720></iframe>
 
 </section>
 <section class='' data-state='' id='slide-9'>
   <h3>(Some) mathematical/statistical details</h3>
+  <!-- Slide (or a couple) to include the nuts and bolts -->
+
+<!-- Refs as footers, as it doesn't work with pandoc yet. -->
+
 <ul>
 <li>Point</li>
 </ul>
 
 <div class="footer">
-  <p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
+<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
 Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
-(2)</i>: 405-423.
-</p>
+(2)</i>: 405-423.</p>
+<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
+Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
+(2)</i>: 405-423.</p>
 </div>
 
 </section>
+<section class='' data-state='' id='slide-10'>
+  <h3>Another slide?</h3>
+  <p></section></p>
 
 </section>
+<section class='' data-state='' id='slide-11'>
 
-<section class='' data-state='' id='slide-10'>
-  
   <p><section></p>
 
 <h2>Application to a longitudinal cohort study</h2>
 
 </section>
-<section class='' data-state='' id='slide-11'>
+<section class='' data-state='' id='slide-12'>
   <h3>Geelong Osteoporosis Study (GOS)</h3>
   <!-- Slides (perhaps multiple) of GOS description -->
 
 </section>
-<section class='' data-state='' id='slide-12'>
+<section class='' data-state='' id='slide-13'>
+  <h3>The importance of BMD</h3>
+  <!-- This is a bit of an 'aside' slide -->
+
+<ul>
+<li>BMD is used to define osteoporosis</li>
+<li>Much like BMI, this is seemingly arbitrary
+
+<ul>
+<li>Osteoporosis: BMD $&lt;2.5$sd below the reference mean (!)</li>
+</ul></li>
+<li>Predicting individual trajectories hopefully leads to improved planning and
+patient management</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-14'>
   <h3>Can we use FDA to fit and then predict future BMD trajectories?</h3>
   <!-- Details of process, cross-validation study, metrics used to see if it works -->
 
 </section>
-<section class='' data-state='' id='slide-13'>
+<section class='' data-state='' id='slide-15'>
   <h3>Is this information useful?</h3>
   <!-- Probably more useful is to give intervals and probabilities of events -->
 
@@ -163,21 +185,21 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 <p></section></p>
 
 </section>
-<section class='' data-state='' id='slide-14'>
-  
+<section class='' data-state='' id='slide-16'>
+
   <p><section></p>
 
 <h2>Where to from here?</h2>
 
 </section>
-<section class='' data-state='' id='slide-15'>
+<section class='' data-state='' id='slide-17'>
   <h3>What is the impact of an acute event?</h3>
   <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
 
 <!-- note the landmarking work, and the Stat. Med. paper just out -->
 
 </section>
-<section class='' data-state='' id='slide-16'>
+<section class='' data-state='' id='slide-18'>
   <h3>Are those with an acute event just &#39;different&#39;?</h3>
   <!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
 
@@ -201,10 +223,10 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
     progress: true,
     history: true,
     center: true,
-    width: 1280,
-    height: 960,
-    theme: Reveal.getQueryHash().theme || 'sky', 
-    transition: Reveal.getQueryHash().transition || 'convex', 
+    height: 1280,
+    width: 960,
+    theme: Reveal.getQueryHash().theme || 'sky',
+    transition: Reveal.getQueryHash().transition || 'convex',
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
@@ -235,6 +257,6 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <!-- DONE LOADING HIGHLIGHTER JS FILES -->
- 
+
 
 </html>

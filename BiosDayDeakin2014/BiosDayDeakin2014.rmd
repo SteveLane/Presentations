@@ -5,11 +5,11 @@ author		: Steve Lane
 framework	: revealjs
 revealjs    :
  theme: sky
- transition: cube
+ transition: convex
  transitionSpeed: fast
  history: false
- width: 1280
- height: 960
+ width: "1280"
+ height: "960"
  center: "true"
 highlighter	: highlight.js
 hitheme		: tomorrow
@@ -91,7 +91,8 @@ url		:
 ### Sparse grid, subset of measurement domain
 <!-- (Interactive?) graphic of BMD measurements, highlighting a couple of -->
 <!-- different individuals with varying numbers of measurements. -->
-- Bone mineral density measurements
+
+<iframe src="f0.html" width=1280 height=720></iframe>
 
 ---
 
@@ -128,6 +129,16 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 ### Geelong Osteoporosis Study (GOS)
 
 <!-- Slides (perhaps multiple) of GOS description -->
+
+---
+
+### The importance of BMD
+<!-- This is a bit of an 'aside' slide -->
+- BMD is used to define osteoporosis
+- Much like BMI, this is seemingly arbitrary
+  - Osteoporosis: BMD $<2.5$sd below the reference mean (!)
+- Predicting individual trajectories hopefully leads to improved planning and
+  patient management
 
 ---
 
