@@ -118,12 +118,22 @@
 </section>
 <section class='' data-state='' id='slide-9'>
   <h3>(Some) mathematical/statistical details</h3>
-  <!-- Slide (or a couple) to include the nuts and bolts -->
+  <h4>(for the sparse case)</h4>
+
+<!-- Slide (or a couple) to include the nuts and bolts -->
 
 <!-- Refs as footers, as it doesn't work with pandoc yet. -->
 
 <ul>
-<li>Point</li>
+<li>Assume that \(Y_{i}(t_{ij})\) are BMD observations</li>
+<li>\(E[X(t)] = \mu(t)\)</li>
+<li>\(\text{cov}[X(t), X(s)] = G(t, s)\)</li>
+<li>The functional model can be written as
+\[
+\begin{aligned}
+Y_{i}(t) & = X_{i}(t) + \epsilon_{i}(t)
+\end{aligned}
+\]</li>
 </ul>
 
 <div class="footer">
@@ -137,23 +147,52 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 
 </section>
 <section class='' data-state='' id='slide-10'>
-  <h3>Another slide?</h3>
-  <p></section></p>
+  <h3>Mixed models representation</h3>
+  <ul>
+<li>The subject specific curves are considered as deviations from the mean
+\[
+\begin{aligned}
+X_{i}(t) & = \mu(t) + \eta_{i}(t)
+\end{aligned}
+\]
+with \(\eta_{i}(t)\) modelled as a combination of basis functions, to give
+\[
+\begin{aligned}
+Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
+\epsilon_{i}(t_{ij})
+\end{aligned}
+\]</li>
+</ul>
 
 </section>
 <section class='' data-state='' id='slide-11'>
+  <h3>Estimation of parameters</h3>
+  <ul>
+<li>We treat the basis functions \(\psi_{k}(t)\) as fixed</li>
+<li>Two main approaches:
+
+<ul>
+<li>Use the BLUP</li>
+<li>MCMC</li>
+</ul></li>
+</ul>
+
+<p></section></p>
+
+</section>
+<section class='' data-state='' id='slide-12'>
 
   <p><section></p>
 
 <h2>Application to a longitudinal cohort study</h2>
 
 </section>
-<section class='' data-state='' id='slide-12'>
+<section class='' data-state='' id='slide-13'>
   <h3>Geelong Osteoporosis Study (GOS)</h3>
   <!-- Slides (perhaps multiple) of GOS description -->
 
 </section>
-<section class='' data-state='' id='slide-13'>
+<section class='' data-state='' id='slide-14'>
   <h3>The importance of BMD</h3>
   <!-- This is a bit of an 'aside' slide -->
 
@@ -169,12 +208,59 @@ patient management</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-14'>
+<section class='' data-state='' id='slide-15'>
   <h3>Can we use FDA to fit and then predict future BMD trajectories?</h3>
   <!-- Details of process, cross-validation study, metrics used to see if it works -->
 
+<!-- -->
+
+<!-- This could be better as a series of figures, highlighting one trajectory -->
+
+<!-- and looking at where it fits in. -->
+
+<ul>
+<li>Accuracy of fitted curves show via simulated data
+
+<ul>
+<li>We don&#39;t have the true curves (like any data)</li>
+</ul></li>
+<li>Accuracy of future values (predictions/forecasts)
+
+<ul>
+<li>We do have these</li>
+<li>But they&#39;re measured with error as well!</li>
+</ul></li>
+</ul>
+
 </section>
-<section class='' data-state='' id='slide-15'>
+<section class='' data-state='' id='slide-16'>
+  <h3>Cross-validation study</h3>
+  <ol>
+<li>Withhold the last observation from a subset (test set) of individuals</li>
+<li>Fit to the remaining data</li>
+<li>Predict the distribution (MCMC) for future observations of the test set
+individuals</li>
+<li>Rinse and repeat</li>
+</ol>
+
+<ul>
+<li>Data summaries:
+
+<ul>
+<li>Coverage of 95% posterior intervals</li>
+<li>Widths of 95% PIs for forecast lengths \(h \in (0, H]\)</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-17'>
+  <h3>Results</h3>
+  <ul>
+<li>If I have them (!)</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-18'>
   <h3>Is this information useful?</h3>
   <!-- Probably more useful is to give intervals and probabilities of events -->
 
@@ -182,24 +268,85 @@ patient management</li>
 
 <!-- period. Can get this using posterior simulations. -->
 
+<ul>
+<li>I&#39;m talking clinically here</li>
+<li>Patients with osteopenia are advised to have a repeat bone scan every 1-2
+years</li>
+<li>Management could be helped by
+
+<ul>
+<li>Prediction intervals, say 80% and 95%</li>
+<li>Probabilities of crossing a threshold, e.g. loss of more than 5% BMD over
+the next 2 years</li>
+</ul></li>
+</ul>
+
 <p></section></p>
 
 </section>
-<section class='' data-state='' id='slide-16'>
+<section class='' data-state='' id='slide-19'>
 
   <p><section></p>
 
 <h2>Where to from here?</h2>
 
 </section>
-<section class='' data-state='' id='slide-17'>
+<section class='' data-state='' id='slide-20'>
   <h3>What is the impact of an acute event?</h3>
   <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
 
 <!-- note the landmarking work, and the Stat. Med. paper just out -->
 
+<ul>
+<li>There&#39;s some evidence to suggest that an ICU stay has an impact on bone loss
+
+<ul>
+<li>How can we investigate this?</li>
+</ul></li>
+<li>Prospectively?
+
+<ul>
+<li>No pre-ICU BMD baseline (best is 2-4 weeks following, if they come in)</li>
+</ul></li>
+<li>GOS + ICU linkage
+
+<ul>
+<li>Regular measurements before and (hopefully) after</li>
+</ul></li>
+<li>But:
+
+<ul>
+<li>Different ages when the ICU event occurs</li>
+<li>Different stages in terms of the GOS measurement schedule</li>
+</ul></li>
+</ul>
+
 </section>
-<section class='' data-state='' id='slide-18'>
+<section class='' data-state='' id='slide-21'>
+  <h3>Effect of acute events: possible approach</h3>
+  <!-- Definitely early work -->
+
+<ul>
+<li>Take the prediction/forecasting approach outlined previously:</li>
+</ul>
+
+<ol>
+<li>Withhold all BMD measurements post-ICU event</li>
+<li>Fit to the remaining data</li>
+<li>Predict the distribution (MCMC) for future observations of the ICU</li>
+</ol>
+
+<ul>
+<li>What to do with this distribution?
+
+<ul>
+<li>Probability of the known post-ICU measurement given the pre-ICU BMD
+trajectory</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-22'>
   <h3>Are those with an acute event just &#39;different&#39;?</h3>
   <!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
 
@@ -223,10 +370,10 @@ patient management</li>
     progress: true,
     history: true,
     center: true,
-    height: 960,
     width: 1280,
+    height: 960,
     theme: Reveal.getQueryHash().theme || 'sky',
-    transition: Reveal.getQueryHash().transition || 'convex',
+    transition: Reveal.getQueryHash().transition || 'cube',
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/

@@ -5,11 +5,11 @@ author		: Steve Lane
 framework	: revealjs
 revealjs    :
  theme: sky
- transition: convex
+ transition: cube
  transitionSpeed: fast
  history: false
- width: "1280"
- height: "960"
+ width: 1280
+ height: 960
  center: "true"
 highlighter	: highlight.js
 hitheme		: tomorrow
@@ -97,11 +97,19 @@ url		:
 ---
 
 ### (Some) mathematical/statistical details
-
+#### (for the sparse case)
 <!-- Slide (or a couple) to include the nuts and bolts -->
 <!-- Refs as footers, as it doesn't work with pandoc yet. -->
 
-- Point
+- Assume that $Y_{i}(t_{ij})$ are BMD observations
+- $E[X(t)] = \mu(t)$
+- $\text{cov}[X(t), X(s)] = G(t, s)$
+- The functional model can be written as
+$$
+	\begin{aligned}
+	Y_{i}(t) & = X_{i}(t) + \epsilon_{i}(t)
+	\end{aligned}
+$$
 
 <div class="footer">
 <p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
@@ -114,7 +122,30 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 
 ---
 
-### Another slide?
+### Mixed models representation
+
+- The subject specific curves are considered as deviations from the mean
+$$
+	\begin{aligned}
+	X_{i}(t) & = \mu(t) + \eta_{i}(t)
+	\end{aligned}
+$$
+  with $\eta_{i}(t)$ modelled as a combination of basis functions, to give
+$$
+	\begin{aligned}
+	Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
+	\epsilon_{i}(t_{ij})
+	\end{aligned}
+$$
+
+---
+
+### Estimation of parameters
+
+- We treat the basis functions $\psi_{k}(t)$ as fixed
+- Two main approaches:
+  - Use the BLUP
+  - MCMC
 
 </section>
 
@@ -145,6 +176,34 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 ### Can we use FDA to fit and then predict future BMD trajectories?
 
 <!-- Details of process, cross-validation study, metrics used to see if it works -->
+<!-- -->
+<!-- This could be better as a series of figures, highlighting one trajectory -->
+<!-- and looking at where it fits in. -->
+- Accuracy of fitted curves show via simulated data
+  - We don't have the true curves (like any data)
+- Accuracy of future values (predictions/forecasts)
+  - We do have these
+  - But they're measured with error as well!
+
+---
+
+### Cross-validation study
+
+1. Withhold the last observation from a subset (test set) of individuals
+2. Fit to the remaining data
+3. Predict the distribution (MCMC) for future observations of the test set
+   individuals
+4. Rinse and repeat
+
+- Data summaries:
+  - Coverage of 95% posterior intervals
+  - Widths of 95% PIs for forecast lengths $h \in (0, H]$
+
+---
+
+### Results
+
+- If I have them (!)
 
 ---
 
@@ -153,6 +212,14 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 <!-- Probably more useful is to give intervals and probabilities of events -->
 <!-- happening, e.g. the probability of losing more than 5% BMD in a given -->
 <!-- period. Can get this using posterior simulations. -->
+
+- I'm talking clinically here
+- Patients with osteopenia are advised to have a repeat bone scan every 1-2
+  years
+- Management could be helped by
+  - Prediction intervals, say 80% and 95%
+  - Probabilities of crossing a threshold, e.g. loss of more than 5% BMD over
+    the next 2 years
 
 </section>
 
@@ -168,6 +235,30 @@ Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
 
 <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
 <!-- note the landmarking work, and the Stat. Med. paper just out -->
+
+- There's some evidence to suggest that an ICU stay has an impact on bone loss
+  - How can we investigate this?
+- Prospectively?
+  - No pre-ICU BMD baseline (best is 2-4 weeks following, if they come in)
+- GOS + ICU linkage
+  - Regular measurements before and (hopefully) after
+- But:
+  - Different ages when the ICU event occurs
+  - Different stages in terms of the GOS measurement schedule
+
+---
+
+### Effect of acute events: possible approach
+<!-- Definitely early work -->
+- Take the prediction/forecasting approach outlined previously:
+
+1. Withhold all BMD measurements post-ICU event
+2. Fit to the remaining data
+3. Predict the distribution (MCMC) for future observations of the ICU
+
+- What to do with this distribution?
+  - Probability of the known post-ICU measurement given the pre-ICU BMD
+    trajectory
 
 ---
 
