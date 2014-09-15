@@ -19,7 +19,7 @@
   <div class="reveal">
     <div class="slides">
       <section class='' data-state='' id='slide-1'>
-
+  
   <!-- To compile: -->
 
 <!-- require(slidify) -->
@@ -40,7 +40,7 @@
 
 <!-- Date (if required): -->
 
-<!-- ##### Friday September 12, 2014 -->
+<!-- ##### Monday September 15, 2014 -->
 
 <p><aside class="notes"></p>
 
@@ -52,7 +52,7 @@
 
 </section>
 <section class='' data-state='' id='slide-2'>
-
+  
   <p><section></p>
 
 <!-- To start downwards slides -->
@@ -66,6 +66,12 @@
 <li>Go downwards</li>
 </ul>
 
+<p class='fragment'>frag1</p>
+
+<p class='fragment'>frag2</p>
+
+<p>.small</p>
+
 </section>
 <section class='' data-state='' id='slide-4'>
   <h3>Slide header</h3>
@@ -77,7 +83,7 @@
 
 </section>
 <section class='' data-state='' id='slide-5'>
-
+  
   <p><section></p>
 
 <h2>What is functional data analysis?</h2>
@@ -109,11 +115,7 @@
 </section>
 <section class='' data-state='' id='slide-8'>
   <h3>Sparse grid, subset of measurement domain</h3>
-  <!-- (Interactive?) graphic of BMD measurements, highlighting a couple of -->
-
-<!-- different individuals with varying numbers of measurements. -->
-
-<iframe src="f0.html" width=1280 height=720></iframe>
+  <iframe src="f0.html" width=1280 height=720></iframe>
 
 </section>
 <section class='' data-state='' id='slide-9'>
@@ -135,15 +137,6 @@ Y_{i}(t) & = X_{i}(t) + \epsilon_{i}(t)
 \end{aligned}
 \]</li>
 </ul>
-
-<div class="footer">
-<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
-Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
-(2)</i>: 405-423.</p>
-<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
-Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
-(2)</i>: 405-423.</p>
-</div>
 
 </section>
 <section class='' data-state='' id='slide-10'>
@@ -168,7 +161,13 @@ Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
 <section class='' data-state='' id='slide-11'>
   <h3>Estimation of parameters</h3>
   <ul>
-<li>We treat the basis functions \(\psi_{k}(t)\) as fixed</li>
+<li>We treat the basis functions \(\psi_{k}(t)\) as fixed
+\[
+\begin{aligned}
+G(s, t) & = \sum_{k=1}^{\infty}\lambda_{k}\psi_{k}(s)\psi_{k}(t) \\
+X(t) - \mu(t) & = \sum_{k=1}^{\infty}\xi_{k}\psi_{k}(t) \\
+\end{aligned}
+\]</li>
 <li>Two main approaches:
 
 <ul>
@@ -181,7 +180,7 @@ Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
 
 </section>
 <section class='' data-state='' id='slide-12'>
-
+  
   <p><section></p>
 
 <h2>Application to a longitudinal cohort study</h2>
@@ -191,8 +190,39 @@ Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
   <h3>Geelong Osteoporosis Study (GOS)</h3>
   <!-- Slides (perhaps multiple) of GOS description -->
 
+<ul>
+<li>Prospective cohort study</li>
+<li>Originally designed to address
+
+<ul>
+<li>Osteoporosis prevalence</li>
+<li>Age-related BMD change</li>
+<li>Osteoporosis and fracture risk</li>
+</ul></li>
+<li>Also collects
+
+<ul>
+<li>Depressive and anxiety disorders (questionnaires and SCIDs)</li>
+<li>Diet and alcohol</li>
+</ul></li>
+</ul>
+
 </section>
 <section class='' data-state='' id='slide-14'>
+  <h3>GOS Cohort</h3>
+  <ul>
+<li>Age stratified</li>
+<li>Barwon statistical division/electoral roll</li>
+<li>At baseline
+
+<ul>
+<li>1494 women (1993-1997)</li>
+<li>1540 men (2001-2006)</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-15'>
   <h3>The importance of BMD</h3>
   <!-- This is a bit of an 'aside' slide -->
 
@@ -201,14 +231,14 @@ Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
 <li>Much like BMI, this is seemingly arbitrary
 
 <ul>
-<li>Osteoporosis: BMD $&lt;2.5$sd below the reference mean (!)</li>
+<li>Osteoporosis: BMD \(<2.5\) sd below the reference mean (!)</li>
 </ul></li>
 <li>Predicting individual trajectories hopefully leads to improved planning and
 patient management</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-15'>
+<section class='' data-state='' id='slide-16'>
   <h3>Can we use FDA to fit and then predict future BMD trajectories?</h3>
   <!-- Details of process, cross-validation study, metrics used to see if it works -->
 
@@ -222,7 +252,7 @@ patient management</li>
 <li>Accuracy of fitted curves show via simulated data
 
 <ul>
-<li>We don&#39;t have the true curves (like any data)</li>
+<li>We don&#39;t have the true curves (like all applied work!)</li>
 </ul></li>
 <li>Accuracy of future values (predictions/forecasts)
 
@@ -233,7 +263,30 @@ patient management</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-16'>
+<section class='' data-state='' id='slide-17' data-transition='none'>
+  <h3>Individual example</h3>
+  <!-- 74 y.o. seen at baseline and 2 year fu -->
+
+<p><img src="SinglePartNoCurve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-18' data-transition='none'>
+  <h3>Individual example</h3>
+  <!-- 74 y.o. seen at baseline and 2 year fu -->
+
+<p><img src="SinglePartCurve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-19' data-transition='none'>
+  <h3>Individual example</h3>
+  <!-- 74 y.o. seen at baseline and 2 year fu, not seen again until the 4th wave -->
+
+<!-- Look at the predicted curve - how can we measure how close we are? -->
+
+<p><img src="SinglePartCurveIntervals.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-20'>
   <h3>Cross-validation study</h3>
   <ol>
 <li>Withhold the last observation from a subset (test set) of individuals</li>
@@ -253,14 +306,29 @@ individuals</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-17'>
+<section class='' data-state='' id='slide-21'>
   <h3>Results</h3>
   <ul>
-<li>If I have them (!)</li>
+<li>Coverage
+
+<ul>
+<li>mean X%, sd Y%</li>
+</ul></li>
+<li>By wave:
+-</li>
+<li>10% loss &#39;alert&#39;
+
+<ul>
+<li>If predicted to have greater than 10% loss of BMD</li>
+</ul></li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-18'>
+<section class='' data-state='' id='slide-22'>
+  <h3>Width of forecast intervals</h3>
+  
+</section>
+<section class='' data-state='' id='slide-23'>
   <h3>Is this information useful?</h3>
   <!-- Probably more useful is to give intervals and probabilities of events -->
 
@@ -269,7 +337,6 @@ individuals</li>
 <!-- period. Can get this using posterior simulations. -->
 
 <ul>
-<li>I&#39;m talking clinically here</li>
 <li>Patients with osteopenia are advised to have a repeat bone scan every 1-2
 years</li>
 <li>Management could be helped by
@@ -281,17 +348,47 @@ the next 2 years</li>
 </ul></li>
 </ul>
 
+</section>
+<section class='' data-state='' id='slide-24' data-transition='none'>
+  <h3>Example 1</h3>
+  <p><img src="Alert1NoCurve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-25' data-transition='none'>
+  <h3>Example 1</h3>
+  <p><img src="Alert1Curve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-26' data-transition='none'>
+  <h3>Example 1</h3>
+  <p><img src="Alert1CurveIntervals.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-27' data-transition='none'>
+  <h3>Example 2</h3>
+  <p><img src="Alert2NoCurve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-28' data-transition='none'>
+  <h3>Example 2</h3>
+  <p><img src="Alert2Curve.png" alt="image"></p>
+
+</section>
+<section class='' data-state='' id='slide-29' data-transition='none'>
+  <h3>Example 2</h3>
+  <p><img src="Alert2CurveIntervals.png" alt="image"></p>
+
 <p></section></p>
 
 </section>
-<section class='' data-state='' id='slide-19'>
-
+<section class='' data-state='' id='slide-30'>
+  
   <p><section></p>
 
 <h2>Where to from here?</h2>
 
 </section>
-<section class='' data-state='' id='slide-20'>
+<section class='' data-state='' id='slide-31'>
   <h3>What is the impact of an acute event?</h3>
   <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
 
@@ -322,7 +419,7 @@ the next 2 years</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-21'>
+<section class='' data-state='' id='slide-32'>
   <h3>Effect of acute events: possible approach</h3>
   <!-- Definitely early work -->
 
@@ -331,9 +428,9 @@ the next 2 years</li>
 </ul>
 
 <ol>
-<li>Withhold all BMD measurements post-ICU event</li>
-<li>Fit to the remaining data</li>
-<li>Predict the distribution (MCMC) for future observations of the ICU</li>
+<li><p>Withhold all BMD measurements post-ICU event</p></li>
+<li><p>Fit to the remaining data</p></li>
+<li><p>Predict the distribution (MCMC) for future observations of the ICU</p></li>
 </ol>
 
 <ul>
@@ -346,13 +443,12 @@ trajectory</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-22'>
+<section class='' data-state='' id='slide-33'>
   <h3>Are those with an acute event just &#39;different&#39;?</h3>
-  <!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
-
-<!-- either try and 'discover' two clusters and see if more ICU guys fell into -->
-
-<!-- either, or label them and calculate differences? -->
+  <ul>
+<li>Is it just that those with an event have a different trajectory fullstop?</li>
+<li>Unsupervised learning on trajectories and check labels?</li>
+</ul>
 
 <p></section></p>
 
@@ -372,8 +468,8 @@ trajectory</li>
     center: true,
     width: 1280,
     height: 960,
-    theme: Reveal.getQueryHash().theme || 'sky',
-    transition: Reveal.getQueryHash().transition || 'cube',
+    theme: Reveal.getQueryHash().theme || 'sky', 
+    transition: Reveal.getQueryHash().transition || 'cube', 
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
@@ -404,6 +500,6 @@ trajectory</li>
 <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-
+ 
 
 </html>
