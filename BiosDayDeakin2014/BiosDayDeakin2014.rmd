@@ -13,8 +13,7 @@ revealjs    :
  center: "true"
 highlighter	: highlight.js
 hitheme		: tomorrow
-widgets		:
-- mathjax
+widgets		: [mathjax]
 mode		: selfcontained
 theme		: sky
 url		:
@@ -45,28 +44,6 @@ url		:
 
 <section>
 
-<!-- To start downwards slides -->
-
-## About me
-
----
-
-### Slide header
-
-- Go downwards
-
----
-
-### Slide header
-
-- Go downwards again!
-
-</section>
-
----
-
-<section>
-
 ## What is functional data analysis?
 
 <!-- Include R logo? -->
@@ -89,8 +66,6 @@ url		:
 ---
 
 ### Sparse grid, subset of measurement domain
-<!-- (Interactive?) graphic of BMD measurements, highlighting a couple of -->
-<!-- different individuals with varying numbers of measurements. -->
 
 <iframe src="f0.html" width=1280 height=720></iframe>
 
@@ -110,15 +85,6 @@ $$
 	Y_{i}(t) & = X_{i}(t) + \epsilon_{i}(t)
 	\end{aligned}
 $$
-
-<div class="footer">
-<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
-Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
-(2)</i>: 405-423.</p>
-<p> Chiou, J M, H G Muller, and J L Wang. 2003. "Functional Quasi-Likelihood
-Regression Models with Smooth Random Effects." <i>J. R. Statist. Soc. B 65
-(2)</i>: 405-423.</p>
-</div>
 
 ---
 
@@ -143,6 +109,12 @@ $$
 ### Estimation of parameters
 
 - We treat the basis functions $\psi_{k}(t)$ as fixed
+$$
+	\begin{aligned}
+	G(s, t) & = \sum_{k=1}^{\infty}\lambda_{k}\psi_{k}(s)\psi_{k}(t) \\
+	X(t) - \mu(t) & = \sum_{k=1}^{\infty}\xi_{k}\psi_{k}(t) \\
+	\end{aligned}
+$$
 - Two main approaches:
   - Use the BLUP
   - MCMC
@@ -161,13 +133,32 @@ $$
 
 <!-- Slides (perhaps multiple) of GOS description -->
 
+- Prospective cohort study
+- Originally designed to address
+  - Osteoporosis prevalence
+  - Age-related BMD change
+  - Osteoporosis and fracture risk
+- Also collects
+  - Depressive and anxiety disorders (questionnaires and SCIDs)
+  - Diet and alcohol
+
+---
+
+### GOS Cohort
+
+- Age stratified
+- Barwon statistical division/electoral roll
+- At baseline
+  - 1494 women (1993-1997)
+  - 1540 men (2001-2006)
+
 ---
 
 ### The importance of BMD
 <!-- This is a bit of an 'aside' slide -->
 - BMD is used to define osteoporosis
 - Much like BMI, this is seemingly arbitrary
-  - Osteoporosis: BMD $<2.5$sd below the reference mean (!)
+  - Osteoporosis: BMD $<2.5$ sd below the reference mean (!)
 - Predicting individual trajectories hopefully leads to improved planning and
   patient management
 
@@ -180,10 +171,30 @@ $$
 <!-- This could be better as a series of figures, highlighting one trajectory -->
 <!-- and looking at where it fits in. -->
 - Accuracy of fitted curves show via simulated data
-  - We don't have the true curves (like any data)
+  - We don't have the true curves (like all applied work!)
 - Accuracy of future values (predictions/forecasts)
   - We do have these
   - But they're measured with error as well!
+
+---
+
+### Individual example
+<!-- 74 y.o. seen at baseline and 2 year fu -->
+![image](SinglePartNoCurve.png)
+
+---
+
+### Individual example
+<!-- 74 y.o. seen at baseline and 2 year fu -->
+![image](SinglePartCurve.png)
+
+---
+
+### Individual example
+<!-- 74 y.o. seen at baseline and 2 year fu, not seen again until the 4th wave -->
+<!-- Look at the predicted curve - how can we measure how close we are? -->
+
+![image](SinglePartCurveIntervals.png)
 
 ---
 
@@ -195,15 +206,29 @@ $$
    individuals
 4. Rinse and repeat
 
+
 - Data summaries:
   - Coverage of 95% posterior intervals
   - Widths of 95% PIs for forecast lengths $h \in (0, H]$
 
 ---
 
-### Results
+### Results (5 xvals)
 
-- If I have them (!)
+- Coverage
+  - 95.4%
+- By number of future waves:
+  - 97.0%, 93.9%, 100%
+- 10% loss 'alert'
+  - If predicted to have greater than 10% loss of BMD
+  - Needs finessing
+  - 9.9%
+
+---
+
+### Width of forecast intervals
+
+![image](PIWidths.png)
 
 ---
 
@@ -213,13 +238,48 @@ $$
 <!-- happening, e.g. the probability of losing more than 5% BMD in a given -->
 <!-- period. Can get this using posterior simulations. -->
 
-- I'm talking clinically here
 - Patients with osteopenia are advised to have a repeat bone scan every 1-2
   years
 - Management could be helped by
   - Prediction intervals, say 80% and 95%
   - Probabilities of crossing a threshold, e.g. loss of more than 5% BMD over
     the next 2 years
+
+---
+
+### Example 1
+
+![image](Alert1NoCurve.png)
+
+---
+
+### Example 1
+
+![image](Alert1Curve.png)
+
+---
+
+### Example 1
+
+![image](Alert1CurveIntervals.png)
+
+---
+
+### Example 2
+
+![image](Alert2NoCurve.png)
+
+---
+
+### Example 2
+
+![image](Alert2Curve.png)
+
+---
+
+### Example 2
+
+![image](Alert2CurveIntervals.png)
 
 </section>
 
@@ -253,7 +313,9 @@ $$
 - Take the prediction/forecasting approach outlined previously:
 
 1. Withhold all BMD measurements post-ICU event
+
 2. Fit to the remaining data
+
 3. Predict the distribution (MCMC) for future observations of the ICU
 
 - What to do with this distribution?
@@ -264,8 +326,7 @@ $$
 
 ### Are those with an acute event just 'different'?
 
-<!-- Maybe doesn't need its own page, but this is the clustering stuff. We could -->
-<!-- either try and 'discover' two clusters and see if more ICU guys fell into -->
-<!-- either, or label them and calculate differences? -->
+- Is it just that those with an event have a different trajectory fullstop?
+- Unsupervised learning on trajectories and check labels?
 
 </section>
