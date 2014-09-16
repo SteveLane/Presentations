@@ -19,7 +19,7 @@
   <div class="reveal">
     <div class="slides">
       <section class='' data-state='' id='slide-1'>
-  
+
   <!-- To compile: -->
 
 <!-- require(slidify) -->
@@ -40,7 +40,7 @@
 
 <!-- Date (if required): -->
 
-<!-- ##### Monday September 15, 2014 -->
+<!-- ##### Tuesday September 16, 2014 -->
 
 <p><aside class="notes"></p>
 
@@ -52,38 +52,7 @@
 
 </section>
 <section class='' data-state='' id='slide-2'>
-  
-  <p><section></p>
 
-<!-- To start downwards slides -->
-
-<h2>About me</h2>
-
-</section>
-<section class='' data-state='' id='slide-3'>
-  <h3>Slide header</h3>
-  <ul>
-<li>Go downwards</li>
-</ul>
-
-<p class='fragment'>frag1</p>
-
-<p class='fragment'>frag2</p>
-
-<p>.small</p>
-
-</section>
-<section class='' data-state='' id='slide-4'>
-  <h3>Slide header</h3>
-  <ul>
-<li>Go downwards again!</li>
-</ul>
-
-<p></section></p>
-
-</section>
-<section class='' data-state='' id='slide-5'>
-  
   <p><section></p>
 
 <h2>What is functional data analysis?</h2>
@@ -91,7 +60,7 @@
 <!-- Include R logo? -->
 
 </section>
-<section class='' data-state='' id='slide-6'>
+<section class='' data-state='' id='slide-3'>
   <h3>Two scenarios</h3>
   <ul>
 <li>But one theme!</li>
@@ -104,7 +73,7 @@
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-7'>
+<section class='' data-state='' id='slide-4'>
   <h3>Fine grid, full measurement domain</h3>
   <!-- Example from my regression tree paper? Cool interactive graph! -->
 
@@ -113,12 +82,12 @@
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-8'>
+<section class='' data-state='' id='slide-5'>
   <h3>Sparse grid, subset of measurement domain</h3>
   <iframe src="f0.html" width=1280 height=720></iframe>
 
 </section>
-<section class='' data-state='' id='slide-9'>
+<section class='' data-state='' id='slide-6'>
   <h3>(Some) mathematical/statistical details</h3>
   <h4>(for the sparse case)</h4>
 
@@ -139,7 +108,7 @@ Y_{i}(t) & = X_{i}(t) + \epsilon_{i}(t)
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-10'>
+<section class='' data-state='' id='slide-7'>
   <h3>Mixed models representation</h3>
   <ul>
 <li>The subject specific curves are considered as deviations from the mean
@@ -158,7 +127,7 @@ Y_{i}(t_{ij}) & = \mu(t_{ij}) + \sum_{k=1}^{K}\xi_{ik}\psi_{k}(t_{ij}) +
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-11'>
+<section class='' data-state='' id='slide-8'>
   <h3>Estimation of parameters</h3>
   <ul>
 <li>We treat the basis functions \(\psi_{k}(t)\) as fixed
@@ -179,14 +148,14 @@ X(t) - \mu(t) & = \sum_{k=1}^{\infty}\xi_{k}\psi_{k}(t) \\
 <p></section></p>
 
 </section>
-<section class='' data-state='' id='slide-12'>
-  
+<section class='' data-state='' id='slide-9'>
+
   <p><section></p>
 
 <h2>Application to a longitudinal cohort study</h2>
 
 </section>
-<section class='' data-state='' id='slide-13'>
+<section class='' data-state='' id='slide-10'>
   <h3>Geelong Osteoporosis Study (GOS)</h3>
   <!-- Slides (perhaps multiple) of GOS description -->
 
@@ -208,7 +177,7 @@ X(t) - \mu(t) & = \sum_{k=1}^{\infty}\xi_{k}\psi_{k}(t) \\
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-14'>
+<section class='' data-state='' id='slide-11'>
   <h3>GOS Cohort</h3>
   <ul>
 <li>Age stratified</li>
@@ -222,7 +191,7 @@ X(t) - \mu(t) & = \sum_{k=1}^{\infty}\xi_{k}\psi_{k}(t) \\
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-15'>
+<section class='' data-state='' id='slide-12'>
   <h3>The importance of BMD</h3>
   <!-- This is a bit of an 'aside' slide -->
 
@@ -238,7 +207,7 @@ patient management</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-16'>
+<section class='' data-state='' id='slide-13'>
   <h3>Can we use FDA to fit and then predict future BMD trajectories?</h3>
   <!-- Details of process, cross-validation study, metrics used to see if it works -->
 
@@ -263,21 +232,21 @@ patient management</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-17' data-transition='none'>
+<section class='' data-state='' id='slide-14' data-transition='none'>
   <h3>Individual example</h3>
   <!-- 74 y.o. seen at baseline and 2 year fu -->
 
 <p><img src="SinglePartNoCurve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-18' data-transition='none'>
+<section class='' data-state='' id='slide-15' data-transition='none'>
   <h3>Individual example</h3>
   <!-- 74 y.o. seen at baseline and 2 year fu -->
 
 <p><img src="SinglePartCurve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-19' data-transition='none'>
+<section class='' data-state='' id='slide-16' data-transition='none'>
   <h3>Individual example</h3>
   <!-- 74 y.o. seen at baseline and 2 year fu, not seen again until the 4th wave -->
 
@@ -286,7 +255,7 @@ patient management</li>
 <p><img src="SinglePartCurveIntervals.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-20'>
+<section class='' data-state='' id='slide-17'>
   <h3>Cross-validation study</h3>
   <ol>
 <li>Withhold the last observation from a subset (test set) of individuals</li>
@@ -306,29 +275,35 @@ individuals</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-21'>
-  <h3>Results</h3>
+<section class='' data-state='' id='slide-18'>
+  <h3>Results (5 xvals)</h3>
   <ul>
 <li>Coverage
 
 <ul>
-<li>mean X%, sd Y%</li>
+<li>95.4%</li>
 </ul></li>
-<li>By wave:
--</li>
+<li>By number of future waves:
+
+<ul>
+<li>97.0%, 93.9%, 100%</li>
+</ul></li>
 <li>10% loss &#39;alert&#39;
 
 <ul>
 <li>If predicted to have greater than 10% loss of BMD</li>
+<li>Needs finessing</li>
+<li>9.9%</li>
 </ul></li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-22'>
+<section class='' data-state='' id='slide-19'>
   <h3>Width of forecast intervals</h3>
-  
+  <p><img src="PIWidths.png" alt="image"></p>
+
 </section>
-<section class='' data-state='' id='slide-23'>
+<section class='' data-state='' id='slide-20'>
   <h3>Is this information useful?</h3>
   <!-- Probably more useful is to give intervals and probabilities of events -->
 
@@ -349,46 +324,46 @@ the next 2 years</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-24' data-transition='none'>
+<section class='' data-state='' id='slide-21' data-transition='none'>
   <h3>Example 1</h3>
   <p><img src="Alert1NoCurve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-25' data-transition='none'>
+<section class='' data-state='' id='slide-22' data-transition='none'>
   <h3>Example 1</h3>
   <p><img src="Alert1Curve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-26' data-transition='none'>
+<section class='' data-state='' id='slide-23' data-transition='none'>
   <h3>Example 1</h3>
   <p><img src="Alert1CurveIntervals.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-27' data-transition='none'>
+<section class='' data-state='' id='slide-24' data-transition='none'>
   <h3>Example 2</h3>
   <p><img src="Alert2NoCurve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-28' data-transition='none'>
+<section class='' data-state='' id='slide-25' data-transition='none'>
   <h3>Example 2</h3>
   <p><img src="Alert2Curve.png" alt="image"></p>
 
 </section>
-<section class='' data-state='' id='slide-29' data-transition='none'>
+<section class='' data-state='' id='slide-26' data-transition='none'>
   <h3>Example 2</h3>
   <p><img src="Alert2CurveIntervals.png" alt="image"></p>
 
 <p></section></p>
 
 </section>
-<section class='' data-state='' id='slide-30'>
-  
+<section class='' data-state='' id='slide-27'>
+
   <p><section></p>
 
 <h2>Where to from here?</h2>
 
 </section>
-<section class='' data-state='' id='slide-31'>
+<section class='' data-state='' id='slide-28'>
   <h3>What is the impact of an acute event?</h3>
   <!-- ICU stay, are these any different? Give what I'm thinking, then perhaps -->
 
@@ -419,7 +394,7 @@ the next 2 years</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-32'>
+<section class='' data-state='' id='slide-29'>
   <h3>Effect of acute events: possible approach</h3>
   <!-- Definitely early work -->
 
@@ -443,7 +418,7 @@ trajectory</li>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-33'>
+<section class='' data-state='' id='slide-30'>
   <h3>Are those with an acute event just &#39;different&#39;?</h3>
   <ul>
 <li>Is it just that those with an event have a different trajectory fullstop?</li>
@@ -468,8 +443,8 @@ trajectory</li>
     center: true,
     width: 1280,
     height: 960,
-    theme: Reveal.getQueryHash().theme || 'sky', 
-    transition: Reveal.getQueryHash().transition || 'cube', 
+    theme: Reveal.getQueryHash().theme || 'sky',
+    transition: Reveal.getQueryHash().transition || 'cube',
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
@@ -500,6 +475,6 @@ trajectory</li>
 <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <!-- DONE LOADING HIGHLIGHTER JS FILES -->
- 
+
 
 </html>

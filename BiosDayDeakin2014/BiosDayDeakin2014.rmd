@@ -44,34 +44,6 @@ url		:
 
 <section>
 
-<!-- To start downwards slides -->
-
-## About me
-
----
-
-### Slide header
-
-- Go downwards
-
-.fragment frag1
-
-.fragment frag2
-
-.small
-
----
-
-### Slide header
-
-- Go downwards again!
-
-</section>
-
----
-
-<section>
-
 ## What is functional data analysis?
 
 <!-- Include R logo? -->
@@ -241,18 +213,22 @@ $$
 
 ---
 
-### Results
+### Results (5 xvals)
 
 - Coverage
-  - mean X%, sd Y%
-- By wave:
-  -
+  - 95.4%
+- By number of future waves:
+  - 97.0%, 93.9%, 100%
 - 10% loss 'alert'
   - If predicted to have greater than 10% loss of BMD
+  - Needs finessing
+  - 9.9%
 
 ---
 
 ### Width of forecast intervals
+
+![image](PIWidths.png)
 
 ---
 
