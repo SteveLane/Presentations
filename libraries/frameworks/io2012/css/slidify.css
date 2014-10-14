@@ -331,10 +331,11 @@ slide.segue h2{
 slide:not(.segue)  h2{
  font-family: "Open Sans Condensed";
  font-weight: 700;
- color: darkslategray;
+ color: #97004D;
 }
 article p {
   font-family: "Open Sans"
+  color: #3C3837
 }
 
 code {
@@ -353,7 +354,7 @@ pre code {
 }
 
 .title-slide {
-  /* background-color: #CBE7A5;  #EDE0CF; ; #CA9F9D*/
+  background-color: #3C3837;
   background-image:url(../../../../BHBack/image2small.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -370,7 +371,8 @@ pre code {
 
 
 .new-background {
-  background-image:url(../../../../BHBack/image1small.png);
+  background-color: #FFFFFF;
+  background-image:url("../../../../BHBack/image1banner.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
 }
