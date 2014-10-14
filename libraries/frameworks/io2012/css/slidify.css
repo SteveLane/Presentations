@@ -33,12 +33,23 @@
 
 
 /* Styles for Title Slide */
+
+.title-slide hgroup{
+  right: 70px;
+}
+
 .title-slide hgroup > h1{
   font-family: 'Oswald', sans-serif;
+  text-align: right;
 }
 
 .title-slide hgroup > h2{
   font-family: 'Oswald', 'Calibri', sans-serif;
+  text-align: right;
+}
+
+.title-slide hgroup > p{
+  text-align: right;
 }
 
 /* Fonts and Spacing */
@@ -366,7 +377,7 @@ pre code {
 
 .title-slide hgroup > h1, 
 .title-slide hgroup > h2 {
-  color: #535E43 ;  /* ; #EF5150*/
+  color: #97004D;  /* ; #EF5150*/
 }
 
 
