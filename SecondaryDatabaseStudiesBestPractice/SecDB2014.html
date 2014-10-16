@@ -210,6 +210,22 @@ baseline.</span></p>
 </ul></li>
 </ul>
 
+<a href="#" id="contactUs">Contact Us</a>                   
+                <div id="dialog" title="Contact form">
+                    <p>appear now</p>
+                </div>
+<script>
+$(function() {
+  // this initializes the dialog (and uses some common options that I do)
+  $("#dialog").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+
+  // next add the onclick handler
+  $("#contactUs").click(function() {
+    $("#dialog").dialog("open");
+    return false;
+  });
+});
+</script>
 <!-- <button id='new'>See Animation</button> -->
 
 <!-- <div id='myiframe'></div> -->
