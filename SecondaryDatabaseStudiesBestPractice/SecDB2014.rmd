@@ -1,7 +1,8 @@
 ---
-title		: Some title
-subtitle	: Some subtitle
+title		: "'Best practice' for retrospective comparative studies"
+subtitle	: 
 author		: Steve Lane
+job         : Senior Biostatistics Officer
 framework	: io2012
 highlighter	: highlight.js
 hitheme		: tomorrow
@@ -16,9 +17,138 @@ url		:
 
 <!-- To compile: -->
 <!-- require(slidify) -->
-<!-- slidify("filename.rmd") -->
+<!-- slidify("SecDB2014.rmd") -->
 <!-- Post creation need to edit html to adjust height and width. -->
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
 
 ## New slide
 
 - What should I say?!
+
+--- .segue .dark
+
+## What is a secondary database?
+
+--- &twocol
+
+## A secondary database for research is
+
+*** =left
+
+- A collection of data/datasets collected for a purpose other than the current
+  study
+- Examples
+  - Electronic medical record
+  - Administrative databases (insurance claims, PBS, etc.)
+
+*** =right
+
+![boss-img](Images/boss.png)
+
+![ipm-img](Images/ipm.png)
+
+---
+
+## Why?
+
+- No RCTs available
+  - Questionable ethics
+  - Time
+  - Money
+- No prospective observational data
+- Differences in target populations
+- Lack of 'important' outcomes in RCTs
+  - Many look at intermediate outcomes
+
+--- &twocoluser wid1:60% wid2:36%
+
+## Benefits of a prospective RCT/cohort study
+
+*** =left
+
+- Validity
+- Direct measurements (i.e. pre-specified)
+- (in the case of the RCT) Randomisation
+  - We get balance of confounders
+
+<span style="font-weight:bold">Table 1. Characteristics of the patients at
+baseline.</span>
+
+| Variable | Control Group | Intervention Group |
+| --- | --- | --- |
+| Sex, n (%)  | B | C |
+| Age, year (IQR) | D | E |
+| Current smoking, n (%) | F | G |
+
+- We'd like to mimic the benefits of an RCT in a retrospective comparative study
+
+--- .segue .dark
+
+## Challenges in study design
+
+---
+
+## Specification of the protocol
+
+- 'Protocol' is sometimes misconstrued
+- These are **always** fully-specified for an RCT
+  - Inclusion/exclusion criteria
+  - Definition of primary and secondary outcomes
+  - Analytical considerations
+	- These are (generally) easier for RCTs
+
+<!-- <button id='new'>See Animation</button> -->
+<!-- <div id='myiframe'></div> -->
+
+<!-- <script> -->
+<!-- $('#new').click(function(){ -->
+<!--   $('#myiframe') -->
+<!--    .append('<iframe src="http://bl.ocks.org/mbostock/raw/1256572/"></iframe>') -->
+<!-- }); -->
+<!-- </script> -->
+
+<a class="popup-modal" href="#test-modal">Open modal</a>
+
+<div id="test-modal" class="white-popup-block mfp-hide">
+	<h1>Modal dialog</h1>
+	<p>You won't be able to dismiss this by usual means (escape or
+		click button), but you can close it programatically based on
+		user choices or actions.</p>
+	<p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
+</div>
+<script>
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#username',
+		modal: true
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
+</script>
+
+<a href="http://dimsemenov.com/plugins/magnific-popup/site-assets/ajax/test-ajax.html">Load content via ajax</a><br>
+<a class="simple-ajax-popup" href="http://dimsemenov.com/plugins/magnific-popup/site-assets/ajax/test-ajax-2.html">Load another content via ajax</a>
+
+<!-- <a href="#" class="thumbnail"> -->
+<!-- <iframe src="http://www.spirit-statement.org/title/" width="95%"</iframe> -->
+<!-- </a> -->
+
+--- .segue .dark
+
+## Methods of analysis
+
+--- {
+ tpl: thankyou,
+ social: [{title: gplus, href: "http://plus.google.com"}, {title: twitter, href: "http://twitter.com"}]
+}
+
+## Thank You
+
+For more information you can contact.

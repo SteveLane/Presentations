@@ -34,6 +34,7 @@
 
 /* Styles for Title Slide */
 
+/* Fix to align title headings to the right */
 .title-slide hgroup{
   right: 70px;
 }
@@ -41,6 +42,9 @@
 .title-slide hgroup > h1{
   font-family: 'Oswald', sans-serif;
   text-align: right;
+  width: 550px;
+  font-size: 40px;
+  line-height: 1.2;
 }
 
 .title-slide hgroup > h2{
@@ -48,6 +52,7 @@
   text-align: right;
 }
 
+/* Fix to align title name to the right */
 .title-slide hgroup > p{
   text-align: right;
 }
@@ -338,6 +343,8 @@ body {
 slide.segue h2{
  font-family: "Open Sans Condensed";
  font-weight: 700;
+/* Change segue slide text colour */
+ color: #97004D;
 }
 slide:not(.segue)  h2{
  font-family: "Open Sans Condensed";
@@ -386,4 +393,9 @@ pre code {
   background-image:url("../../../../BHBack/image1banner.png");
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+/* Change the dark slide (segue) colour */
+slides > slide.dark {
+  background: #3C3837 !important;
 }
