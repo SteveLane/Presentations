@@ -51,14 +51,17 @@
 
 <!-- Post creation need to edit html to adjust height and width. -->
 
-<p><script
-src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script></p>
+<style>
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
 
-<h2>New slide</h2>
-
-<ul>
-<li>What should I say?!</li>
-</ul>
+<p><iframe
+src="https://coggle.it/diagram/53fff4bc74412ae51c027026/196d2b32cca32f7db53178855a46a3e6c850a582aee32b59ddef2fe1448a7d4e"></iframe></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -80,7 +83,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magni
   </hgroup>
   <article data-timings="">
     
-<div style='float:left;width:48%;' class='centered'>
+<div style='float:left;width:48%;'>
   <ul>
 <li>A collection of data/datasets collected for a purpose other than the current
 study</li>
@@ -135,7 +138,7 @@ study</li>
   </hgroup>
   <article data-timings="">
       
-<div style='float:left;width:60%;' class='centered'>
+<div style='float:left;width:60%;'>
   <ul>
 <li>Validity</li>
 <li>Direct measurements (i.e. pre-specified)</li>
@@ -200,7 +203,16 @@ baseline.</span></p>
     <h2>Specification of the protocol</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Protocol" data-toggle="pill">Protocol</a></li>
+    <li class="tab class"><a href="#STROBE" data-toggle="pill">STROBE</a></li>
+    <li class="tab class"><a href="#SPIRIT" data-toggle="pill">SPIRIT</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Protocol">
+      <ul>
 <li>&#39;Protocol&#39; is sometimes misconstrued</li>
 <li>These are <strong>always</strong> fully-specified for an RCT
 
@@ -212,68 +224,54 @@ baseline.</span></p>
 </ul></li>
 </ul>
 
-<p><a class="btn btn-large btn-danger" rel="popover" data-html=true data-content="http://www.spirit-statement.org/title/" data-original-title="A Title"
-id='example'>Click to toggle popover</a></p>
+    </div>
+    <div class="tab-pane fade in class" id="STROBE">
+      <iframe src="http://www.strobe-statement.org"></iframe>
 
-<!-- Button trigger modal -->
+    </div>
+    <div class="tab-pane fade in class" id="SPIRIT">
+      <iframe src="http://www.spirit-statement.org"></iframe>
 
-<p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button></p>
-
-<!-- Modal -->
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
     </div>
   </div>
 </div>
-
-<!-- Button to trigger modal -->
-
-<p><a href="#myModal2" role="button" class="btn" data-toggle="modal">Launch demo modal</a></p>
-
-<!-- Modal -->
-
-<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-    <h3 id="myModalLabel">Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
-</div>
-
-<!-- <a href="#" class="thumbnail"> -->
-
-<!-- <iframe src="http://www.spirit-statement.org/title/" width="95%"</iframe> -->
-
-<!-- </a> -->
-
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-8" style="background:;">
+<slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Methods of analysis</h2>
+    <h2>Study design</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <ul>
+<li>No different to prospective studies</li>
+<li>Pre-specified hypotheses (within limits)
+
+<ul>
+<li>Specifically: one primary outcome</li>
+</ul></li>
+<li>(Obviously) depends on the question of interest
+
+<ul>
+<li>Cohort/case-control/interrupted time-series</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="Images/Arrows.png" alt="arrows"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Biases</h2>
   </hgroup>
   <article data-timings="">
     
@@ -281,19 +279,264 @@ id='example'>Click to toggle popover</a></p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="thank-you-slide segue nobackground" id="slide-9">
-  <aside class="gdbar right"><img src="assets/img/"></aside>
-  <article class="flexbox vleft auto-fadein">
-    <h2>Thank You</h2>
-    <p>For more information you can contact.</p>
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Misclassification</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>A big issue in secondary data studies</li>
+<li>Data are collected for different purposes</li>
+<li>Recreating a diagnosis/outcome from patient notes may be challenging
+
+<ul>
+<li>Clear classification schemes will help</li>
+<li>These should be pre-specified</li>
+</ul></li>
+</ul>
 
   </article>
-
-  <p class="auto-fadein" data-config-contact="">
-    <span>gplus</span><a href="http://plus.google.com">http://plus.google.com</a><br>
-    <span>twitter</span><a href="http://twitter.com">http://twitter.com</a><br>
-  </p>
+  <!-- Presenter Notes -->
 </slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Confounding</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Independent (causal) risk factor, that is also associated with the exposure of
+interest, but not an intermediate on the causal pathway</li>
+<li>Randomisation gives balance in measured <strong>and</strong> unmeasured confounders</li>
+<li>Confounding by indication
+
+<ul>
+<li>E.g. we wish to compare drug A to drug B</li>
+<li>Drug A is prescribed more than drug B in people who are more ill</li>
+<li>However, severity of the illness also impacts the outcome</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Methods of analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <!-- Straight comparisons are generally not valid, due to the biases and -->
+
+<!-- imbalances already discussed -->
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Common methods</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Stratification
+
+<ul>
+<li>Compare groups A and B in strata X and Y</li>
+</ul></li>
+<li>Regression
+
+<ul>
+<li>Compare groups A and B after adjusting for X and Y</li>
+</ul></li>
+<li>Matching
+
+<ul>
+<li>Compare groups A and B after matching on X and Y</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Stratification</h2>
+  </hgroup>
+  <article data-timings="">
+      
+<div style='float:left;width:60%;'>
+  <ul>
+<li>Common for age and sex
+
+<ul>
+<li>Break age into 10 year groups</li>
+</ul></li>
+<li>Calculate the <a rel="popover"
+data-content="For example, the odds ratio of the outcome comparing two drugs."
+data-original-title="Statistic of interest" id='example'>statistic</a> of
+interest in each each combination of strata
+
+<ul>
+<li>{20-29 y.o. males, 20-29 y.o. females, 30-29 y.o. males, etc.}</li>
+</ul></li>
+<li>Combine them in a &#39;suitable&#39; way
+
+<ul>
+<li>E.g. Mantel-Haenszel gives weight to strata with larger sample sizes</li>
+</ul></li>
+<li>Good first exploratory step</li>
+<li>Acts as a check for (multivariable) regression</li>
+</ul>
+
+</div>    
+<div style='float:right;width:36%;'>
+  <h3><span style="color:#97004D">Problems</span></h3>
+
+<ul>
+<li>Defining suitable strata
+
+<ul>
+<li>Particularly with continuous variables</li>
+</ul></li>
+<li>Sparsity in strata
+
+<ul>
+<li>E.g. not many 90+ y.o. males</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Regression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Simultaneous adjustment for all confounders/covariates</li>
+<li>Present the full model
+
+<ul>
+<li>Not just the effect of interest</li>
+</ul></li>
+<li>Use the literature to support:
+
+<ul>
+<li>Variable specification</li>
+<li>Model specification</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Regression (cont&#39;d)</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <h3><span style="color:#97004D">Variable specification</span></h3>
+
+<ul>
+<li>Should <strong>not</strong> be determined by &#39;univariate&#39; models and p-cutoffs</li>
+<li>Supported by in-depth literature review</li>
+<li>Include irrespective of &#39;statistical significance&#39; at traditional cutoffs
+
+<ul>
+<li>This is arbitrary and leads to biased estimates</li>
+</ul></li>
+<li>&#39;Grouped&#39; procedures work well</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3><span style="color:#97004D">Model specification</span></h3>
+
+<ul>
+<li>Specification to meet the outcome:
+
+<ul>
+<li>Logistic regression for binary (Yes/No, Dead/Alive) outcomes</li>
+<li>Poisson regression for counts</li>
+<li>Cox proportional hazard models for time to event outcomes</li>
+<li>Multilevel/random effect models for clustered data</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Matching</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Matching" data-toggle="pill">Matching</a></li>
+    <li class="tab class"><a href="#Propensities" data-toggle="pill">Propensities</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Matching">
+      <ul>
+<li>&#39;Balance&#39; potential confounders</li>
+<li>Blunt instrument</li>
+<li>With many confounders it will obviously be difficult
+
+<ul>
+<li>Some &#39;relaxation&#39; may be required</li>
+<li>E.g. age +/- 10 years, rather than 5 years</li>
+</ul></li>
+<li>Specialised methods of analysis then required
+
+<ul>
+<li>E.g. conditional logistic regression</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in class" id="Propensities">
+      <ul>
+<li>More sophisticated way of providing balance</li>
+<li>Model the &#39;propensity&#39; to receive treatment/exposure A vs. B</li>
+<li>For analysis, can then use any of the previous
+
+<ul>
+<li>Stratification: stratify on the propensity score</li>
+<li>Regression: Use the propensity score as a weight or as a covariate</li>
+<li>Matching: match on the propensity score</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Thank You</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -342,14 +585,68 @@ id='example'>Click to toggle popover</a></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Methods of analysis'>
+        data-slide=8 title='Study design'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Thank You'>
+        data-slide=9 title='Biases'>
          9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Misclassification'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Confounding'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Methods of analysis'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Common methods'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Stratification'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Regression'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Regression (cont&#39;d)'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Matching'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Thank You'>
+         18
       </a>
     </li>
   </ul>

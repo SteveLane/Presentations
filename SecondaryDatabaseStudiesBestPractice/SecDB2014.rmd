@@ -6,8 +6,7 @@ job         : Senior Biostatistics Officer
 framework	: io2012
 highlighter	: highlight.js
 hitheme		: tomorrow
-widgets		:
-- mathjax
+widgets		: [mathjax, bootstrap]
 mode		: selfcontained
 theme		: sky
 url		:
@@ -20,12 +19,17 @@ url		:
 <!-- slidify("SecDB2014.rmd") -->
 <!-- Post creation need to edit html to adjust height and width. -->
 
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+<style>
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
 
-## New slide
-
-- What should I say?!
+<iframe
+src="https://coggle.it/diagram/53fff4bc74412ae51c027026/196d2b32cca32f7db53178855a46a3e6c850a582aee32b59ddef2fe1448a7d4e"></iframe>
 
 --- .segue .dark
 
@@ -88,9 +92,11 @@ baseline.</span>
 
 ## Challenges in study design
 
----
+--- {tpl: tabs}
 
 ## Specification of the protocol
+
+*** {class: active, id: Protocol}
 
 - 'Protocol' is sometimes misconstrued
 - These are **always** fully-specified for an RCT
@@ -99,56 +105,160 @@ baseline.</span>
   - Analytical considerations
 	- These are (generally) easier for RCTs
 
-<!-- <button id='new'>See Animation</button> -->
-<!-- <div id='myiframe'></div> -->
+*** {class: class, id: STROBE}
 
-<!-- <script> -->
-<!-- $('#new').click(function(){ -->
-<!--   $('#myiframe') -->
-<!--    .append('<iframe src="http://bl.ocks.org/mbostock/raw/1256572/"></iframe>') -->
-<!-- }); -->
-<!-- </script> -->
+<iframe src="http://www.strobe-statement.org"></iframe>
 
-<a class="popup-modal" href="#test-modal">Open modal</a>
+*** {class: class, id: SPIRIT}
 
-<div id="test-modal" class="white-popup-block mfp-hide">
-	<h1>Modal dialog</h1>
-	<p>You won't be able to dismiss this by usual means (escape or
-		click button), but you can close it programatically based on
-		user choices or actions.</p>
-	<p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
-</div>
-<script>
-$(function () {
-	$('.popup-modal').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#username',
-		modal: true
-	});
-	$(document).on('click', '.popup-modal-dismiss', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
-	});
-});
-</script>
+<iframe src="http://www.spirit-statement.org"></iframe>
 
-<a href="http://dimsemenov.com/plugins/magnific-popup/site-assets/ajax/test-ajax.html">Load content via ajax</a><br>
-<a class="simple-ajax-popup" href="http://dimsemenov.com/plugins/magnific-popup/site-assets/ajax/test-ajax-2.html">Load another content via ajax</a>
 
-<!-- <a href="#" class="thumbnail"> -->
-<!-- <iframe src="http://www.spirit-statement.org/title/" width="95%"</iframe> -->
-<!-- </a> -->
+--- &twocol
+
+## Study design
+
+*** =left
+
+- No different to prospective studies
+- Pre-specified hypotheses (within limits)
+  - Specifically: one primary outcome
+- (Obviously) depends on the question of interest
+  - Cohort/case-control/interrupted time-series
+
+*** =right
+
+![arrows](Images/Arrows.png)
+
+--- .segue .dark
+
+## Biases
+
+---
+
+## Misclassification
+
+- A big issue in secondary data studies
+- Data are collected for different purposes
+- Recreating a diagnosis/outcome from patient notes may be challenging
+  - Clear classification schemes will help
+  - These should be pre-specified
+
+---
+
+## Confounding
+
+- Independent (causal) risk factor, that is also associated with the exposure of
+  interest, but not an intermediate on the causal pathway
+- Randomisation gives balance in measured **and** unmeasured confounders
+- Confounding by indication
+  - E.g. we wish to compare drug A to drug B
+  - Drug A is prescribed more than drug B in people who are more ill
+  - However, severity of the illness also impacts the outcome
 
 --- .segue .dark
 
 ## Methods of analysis
 
---- {
- tpl: thankyou,
- social: [{title: gplus, href: "http://plus.google.com"}, {title: twitter, href: "http://twitter.com"}]
-}
+<!-- Straight comparisons are generally not valid, due to the biases and -->
+<!-- imbalances already discussed -->
+
+---
+
+## Common methods
+
+- Stratification
+  - Compare groups A and B in strata X and Y
+- Regression
+  - Compare groups A and B after adjusting for X and Y
+- Matching
+  - Compare groups A and B after matching on X and Y
+
+--- &twocoluser wid1:60% wid2:36%
+
+## Stratification
+
+*** =left
+
+- Common for age and sex
+  - Break age into 10 year groups
+- Calculate the <a rel="popover"
+  data-content="For example, the odds ratio of the outcome comparing two drugs."
+  data-original-title="Statistic of interest" id='example'>statistic</a> of
+  interest in each each combination of strata
+  - {20-29 y.o. males, 20-29 y.o. females, 30-29 y.o. males, etc.}
+- Combine them in a 'suitable' way
+  - E.g. Mantel-Haenszel gives weight to strata with larger sample sizes
+- Good first exploratory step
+- Acts as a check for (multivariable) regression
+
+*** =right
+
+### <span style="color:#97004D">Problems</span>
+
+- Defining suitable strata
+  - Particularly with continuous variables
+- Sparsity in strata
+  - E.g. not many 90+ y.o. males
+
+---
+
+## Regression
+
+- Simultaneous adjustment for all confounders/covariates
+- Present the full model
+  - Not just the effect of interest
+- Use the literature to support:
+  - Variable specification
+  - Model specification
+
+--- &twocol
+
+## Regression (cont'd)
+
+*** =left
+
+### <span style="color:#97004D">Variable specification</span>
+
+- Should **not** be determined by 'univariate' models and p-cutoffs
+- Supported by in-depth literature review
+- Include irrespective of 'statistical significance' at traditional cutoffs
+  - This is arbitrary and leads to biased estimates
+- 'Grouped' procedures work well
+
+*** =right
+
+### <span style="color:#97004D">Model specification</span>
+
+- Specification to meet the outcome:
+  - Logistic regression for binary (Yes/No, Dead/Alive) outcomes
+  - Poisson regression for counts
+  - Cox proportional hazard models for time to event outcomes
+  - Multilevel/random effect models for clustered data
+
+--- {tpl: tabs}
+
+## Matching
+
+*** {class: active, id: Matching}
+
+- 'Balance' potential confounders
+- Blunt instrument
+- With many confounders it will obviously be difficult
+  - Some 'relaxation' may be required
+  - E.g. age +/- 10 years, rather than 5 years
+- Specialised methods of analysis then required
+  - E.g. conditional logistic regression
+
+*** {class: class, id: Propensities}
+
+- More sophisticated way of providing balance
+- Model the 'propensity' to receive treatment/exposure A vs. B
+- For analysis, can then use any of the previous
+  - Stratification: stratify on the propensity score
+  - Regression: Use the propensity score as a weight or as a covariate
+  - Matching: match on the propensity score
+
+--- .segue .dark
 
 ## Thank You
-
-For more information you can contact.
