@@ -105,11 +105,11 @@ baseline.</span>
   - Analytical considerations
 	- These are (generally) easier for RCTs
 
-*** {class: class, id: STROBE}
+*** {id: STROBE}
 
 <iframe src="http://www.strobe-statement.org"></iframe>
 
-*** {class: class, id: SPIRIT}
+*** {id: SPIRIT}
 
 <iframe src="http://www.spirit-statement.org"></iframe>
 
