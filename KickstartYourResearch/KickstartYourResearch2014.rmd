@@ -1,0 +1,179 @@
+---
+title		: "Kickstart your research"
+subtitle	: "Planning your analysis"
+author		: Steve Lane
+job         : Senior Biostatistics Officer
+framework	: io2012
+highlighter	: highlight.js
+hitheme		: tomorrow
+widgets		: [mathjax, bootstrap, quiz]
+mode		: selfcontained
+theme		: sky
+url		:
+ assets: ../assets
+ lib: ../libraries
+--- .new-background
+
+<!-- To compile: -->
+<!-- require(slidify) -->
+<!-- slidify("KickstartYourResearch2014.rmd") -->
+<!-- Post creation need to edit html to adjust height and width. -->
+
+<style>
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
+
+![img](Images/Flow.png)
+
+--- &twocol
+
+## Study design
+
+*** =left
+
+- Pre-specified hypotheses (within limits)
+  - Specifically: one primary outcome
+- (Obviously) depends on the question of interest
+  - Cohort/case-control/interrupted time-series
+
+*** =right
+
+![arrows](Images/Arrows.png)
+
+---
+
+## Experimental or observational?
+
+- Experimental studies
+  - Exposure (intervention) assigned by the researcher
+- Observational studies
+  - Exposure is not assigned by the researcher
+
+<hr size=4px color="#97004D">
+
+- Today's focus is on observational studies
+
+--- &twocol
+
+## Comparative studies
+
+*** =left
+
+- Many studies look at comparing levels of an exposure
+  - E.g. surgical vs. conservative management
+- In observational studies this means <a rel="popover"
+  data-content="Independent (causal) risk factor, that is also associated with
+  the exposure of interest, but not an intermediate on the causal pathway"
+  data-original-title="Confounding" id='example'>confounding</a>
+- Standard methods of minimising confounding:
+  - Stratification
+  - Regression
+  - Matching
+
+*** =right
+
+```{r,echo=FALSE,message=FALSE}
+require(ggplot2)
+x <- runif(100, min = 20, max = 80)
+y <- 3 + 0.25*x - 0.005*(x - 50)^2 + rnorm(100, sd = 2)
+pl <- ggplot(data.frame(x, y), aes(x = x, y = y)) + geom_point() + geom_smooth()
+print(pl)
+```
+
+--- &radio
+
+## Sideways into regression...
+<!-- Make this a quiz slide? -->
+- What does a randomised intervention give us?
+
+1. A normal distribution
+2. A headache
+3. _Balance in confounders_
+4. All of the above
+
+*** .hint
+
+<br>
+As John McEnroe said: You can't be *serious*?
+
+*** .explanation
+
+<ol start=3 type="1">
+<li>Comparative observational studies will <em>almost always</em> require adjustment
+for confounders</li>
+</ol>
+
+<span style="font-weight:bold">Table 1. Characteristics of the patients at
+baseline.</span>
+
+| Variable | Control Group | Intervention Group |
+| --- | --- | --- |
+| Males, n (%)  | 45 (62%) | 48 (60%) |
+| Age, year (IQR) | 63 (42, 80) | 62 (40, 78) |
+| Current smoking, n (%) | 20 (27%) | 23 (29%) |
+
+--- .segue .dark
+
+## What's my outcome?
+
+--- {tpl: tabs}
+
+## Outcome types
+
+*** {class: active, id: Binary}
+
+- Binary outcome studies are characterised by an event occuring (or not)
+  - **within** a prespecified time interval
+
+### <span style="color:#97004D">Standard analyses</span>
+
+- Differences in proportions
+  - Perhaps after propensity score matching
+- Logistic regression
+
+*** {id: Incidences}
+
+- Studies looking at *incidence* involve time
+  - and are presented in terms of *rates* or *risks* per unit time
+
+### <span style="color:#97004D">Standard analyses</span>
+
+- Involve the time aspect
+  - *Time-to-event* analyses
+  - Kaplan-Meier curves
+  - Cox proportional hazards models
+  - Semiparameteric risk models
+
+*** {id: Counts}
+
+- Count outcomes arise when recurring events can happen
+  - and are presented in terms of *rates* per unit time
+  - E.g. ED admissions
+
+### <span style="color:#97004D">Standard analyses</span>
+
+- May (or may not) involve a time aspect
+  - Poisson regression
+
+*** {id: Continuous}
+
+- Continuous outcomes are those that take the form of a *number*
+  - We often present these as *standardised* differences
+
+### <span style="color:#97004D">Standard analyses</span>
+
+- Should be confined to a standardised time interval
+  - Analysis generally takes the form of a linear regression
+- Why a standardised time interval?
+  - Because continuous outcomes often depend on time/duration from the exposure
+  - E.g. quality of life
+- If possible, should always seek a baseline measure of the outcome
+
+--- .segue .dark
+
+## Thank You

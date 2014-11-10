@@ -1,0 +1,24 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{xcolor}
+\definecolor{BH}{HTML}{97004D}
+\begin{document}
+\begin{tikzpicture}[>=latex']
+  \tikzset{block/.style= {draw = BH, ultra thick, rectangle, rounded
+      corners,minimum width=3.5cm,minimum height=2cm}}
+  \node[block] (start) {Analysis plan};
+  \node[block, below left =0.5cm and 2cm of start] (next) {Type of outcome};
+  \node[block, below left =0.5cm and 2cm of next] (next2) {Study design};
+  \node[block, below left =0.5cm and 2cm of next2] (next3) {Research question};
+  
+  \path[draw = blue!50!black, ultra thick, ->, fill = blue!50!black] (start) -- (next);
+  \path[draw = blue!50!black, ultra thick, ->, fill = blue!50!black] (next) edge (next2);
+  \path[draw = blue!50!black, ultra thick, ->, fill = blue!50!black] (next2) edge (next3);
+\end{tikzpicture}
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
