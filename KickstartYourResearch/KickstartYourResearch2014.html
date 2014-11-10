@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kickstart your research</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Kickstart your research">
+  <meta name="author" content="Steve Lane">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="../libraries/widgets/quiz/css/demo.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="../libraries/frameworks/io2012/js/slides" 
+    src="../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Kickstart your research</h1>
+    <h2>Planning your analysis</h2>
+    <p>Steve Lane<br/>Senior Biostatistics Officer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="new-background" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- To compile: -->
+
+<!-- require(slidify) -->
+
+<!-- slidify("KickstartYourResearch2014.rmd") -->
+
+<!-- Post creation need to edit html to adjust height and width. -->
+
+<style>
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
+
+<p><img src="Images/Flow.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Study design</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <ul>
+<li>Pre-specified hypotheses (within limits)
+
+<ul>
+<li>Specifically: one primary outcome</li>
+</ul></li>
+<li>(Obviously) depends on the question of interest
+
+<ul>
+<li>Cohort/case-control/interrupted time-series</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="Images/Arrows.png" alt="arrows"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Experimental or observational?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Experimental studies
+
+<ul>
+<li>Exposure (intervention) assigned by the researcher</li>
+</ul></li>
+<li>Observational studies
+
+<ul>
+<li>Exposure is not assigned by the researcher</li>
+</ul></li>
+</ul>
+
+<hr size=4px color="#97004D">
+
+<ul>
+<li>Today&#39;s focus is on observational studies</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Comparative studies</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <ul>
+<li>Many studies look at comparing levels of an exposure
+
+<ul>
+<li>E.g. surgical vs. conservative management</li>
+</ul></li>
+<li>In observational studies this means <a rel="popover"
+data-content="Independent (causal) risk factor, that is also associated with
+the exposure of interest, but not an intermediate on the causal pathway"
+data-original-title="Confounding" id='example'>confounding</a></li>
+<li>Standard methods of minimising confounding:
+
+<ul>
+<li>Stratification</li>
+<li>Regression</li>
+<li>Matching</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Sideways into regression...</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <!-- Make this a quiz slide? -->
+
+<ul>
+<li>What does a randomised intervention give us?</li>
+</ul>
+
+<ol>
+<li>A normal distribution</li>
+<li>A headache</li>
+<li><em>Balance in confounders</em></li>
+<li>All of the above</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p><br>
+As John McEnroe said: You can&#39;t be <em>serious</em>?</p>
+
+</div>
+<div class="quiz-explanation">
+  <ol start=3 type="1">
+<li>Comparative observational studies will <em>almost always</em> require adjustment
+for confounders</li>
+</ol>
+
+<p><span style="font-weight:bold">Table 1. Characteristics of the patients at
+baseline.</span></p>
+
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Control Group</th>
+<th>Intervention Group</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Males, n (%)</td>
+<td>45 (62%)</td>
+<td>48 (60%)</td>
+</tr>
+<tr>
+<td>Age, year (IQR)</td>
+<td>63 (42, 80)</td>
+<td>62 (40, 78)</td>
+</tr>
+<tr>
+<td>Current smoking, n (%)</td>
+<td>20 (27%)</td>
+<td>23 (29%)</td>
+</tr>
+</tbody></table>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>What&#39;s my outcome?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Outcome types</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Binary" data-toggle="pill">Binary</a></li>
+    <li class="tab "><a href="#Incidences" data-toggle="pill">Incidences</a></li>
+    <li class="tab "><a href="#Counts" data-toggle="pill">Counts</a></li>
+    <li class="tab "><a href="#Continuous" data-toggle="pill">Continuous</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Binary">
+      <ul>
+<li>Binary outcome studies are characterised by an event occuring (or not)
+
+<ul>
+<li><strong>within</strong> a prespecified time interval</li>
+</ul></li>
+</ul>
+
+<h3><span style="color:#97004D">Standard analyses</span></h3>
+
+<ul>
+<li>Differences in proportions
+
+<ul>
+<li>Perhaps after propensity score matching</li>
+</ul></li>
+<li>Logistic regression</li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Incidences">
+      <ul>
+<li>Studies looking at <em>incidence</em> involve time
+
+<ul>
+<li>and are presented in terms of <em>rates</em> or <em>risks</em> per unit time</li>
+</ul></li>
+</ul>
+
+<h3><span style="color:#97004D">Standard analyses</span></h3>
+
+<ul>
+<li>Involve the time aspect
+
+<ul>
+<li><em>Time-to-event</em> analyses</li>
+<li>Kaplan-Meier curves</li>
+<li>Cox proportional hazards models</li>
+<li>Semiparameteric risk models</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Counts">
+      <ul>
+<li>Count outcomes arise when recurring events can happen
+
+<ul>
+<li>and are presented in terms of <em>rates</em> per unit time</li>
+<li>E.g. ED admissions</li>
+</ul></li>
+</ul>
+
+<h3><span style="color:#97004D">Standard analyses</span></h3>
+
+<ul>
+<li>May (or may not) involve a time aspect
+
+<ul>
+<li>Poisson regression</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Continuous">
+      <ul>
+<li>Continuous outcomes are those that take the form of a <em>number</em>
+
+<ul>
+<li>We often present these as <em>standardised</em> differences</li>
+</ul></li>
+</ul>
+
+<h3><span style="color:#97004D">Standard analyses</span></h3>
+
+<ul>
+<li>Should be confined to a standardised time interval
+
+<ul>
+<li>Analysis generally takes the form of a linear regression</li>
+</ul></li>
+<li>Why a standardised time interval?
+
+<ul>
+<li>Because continuous outcomes often depend on time/duration from the exposure</li>
+<li>E.g. quality of life</li>
+</ul></li>
+<li>If possible, should always seek a baseline measure of the outcome</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Thank You</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Study design'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Experimental or observational?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Comparative studies'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Sideways into regression...'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='What&#39;s my outcome?'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Outcome types'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Thank You'>
+         8
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="../libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="../libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="../libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="../libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
