@@ -48,8 +48,10 @@ code {
 }
 */
 
+/* Edited to remove greyed out background */
+
 .quiz-single, .quiz-multiple, .quiz-text {
-  background-color: #F0F0F0;
+  background-color: #FFFFFF;
   padding-left: 15px;
   padding-top: 15px;
 }
