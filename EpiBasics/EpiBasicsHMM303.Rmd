@@ -1,0 +1,412 @@
+---
+title		: "Epidemiology:"
+subtitle	: "Basic concepts"
+author		: Steve Lane
+job         : Senior Biostatistics Officer
+framework	: io2012
+highlighter	: highlight.js
+hitheme		: tomorrow
+widgets		: [mathjax, bootstrap]
+mode		: selfcontained
+theme		: sky
+url		:
+ assets: ../assets
+ lib: ../libraries
+--- .segue .dark
+
+<!-- To compile: -->
+<!-- require(slidify) -->
+<!-- slidify("EpiBasics2015HMM303.Rmd") -->
+<!-- Post creation need to edit html to adjust height and width. -->
+
+<style>
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
+
+## Outline
+
+### Fred 1
+
+### Fred 2
+
+--- .segue .dark
+
+## Epidemiology
+
+---
+
+## What is epidemiology?
+
+- [WHO](http://www.who.int/topics/epidemiology/en/)
+
+> Epidemiology is the study of the distribution and determinants of
+> health-related states or events (including disease), and the application of
+> this study to the control of diseases and other health
+> problems.
+
+- [BMJ](http://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology)
+
+> Epidemiology is the study of how often diseases occur in different groups of
+> people and why. Epidemiological information is used to plan and evaluate
+> strategies to prevent illness and as a guide to the management of patients in
+> whom disease has already developed.
+
+- 'The study of what is upon the people' (Greek)
+
+--- &twocol
+
+## A brief swim back through time
+
+*** =left
+
+### John Snow
+
+![John Snow](images/John_Snow.png)
+
+*** =right
+
+### &hellip; not Jon Snow
+
+![Jon Snow](images/Jon_Snow.png)
+
+--- &twocol
+
+## Modern epidemiologists
+
+*** =left
+
+<figure><img src="images/Austin_Bradford_Hill.png" alt = "Sir Austin Bradford Hill"><figcaption><span style="font-size:50%">"<a
+href="http://commons.wikimedia.org/wiki/File:Austin_Bradford_Hill.jpg#/media/File:Austin_Bradford_Hill.jpg">Sir
+Austin
+Bradford Hill</a>" by <span lang="en" xml:lang="en">Unknown</span> - <a
+rel="nofollow" class="external autonumber"
+href="http://wellcomeimages.org/indexplus/image/L0027006.html">[1]</a>. Licensed
+under <a href="http://creativecommons.org/licenses/by/4.0" title="Creative
+Commons Attribution 4.0">CC BY 4.0</a> via <a
+href="//commons.wikimedia.org/wiki/">Wikimedia Commons</a>.</span></figcaption></figure>
+
+*** =right
+
+<figure><img src="images/Richard_Doll.png" alt="Sir Richard Doll"><figcaption><span
+style="font-size:50%">"<a
+href="http://commons.wikimedia.org/wiki/File:Richard_Doll.jpg#/media/File:Richard_Doll.jpg">Sir
+Richard
+Doll</a>" by <a href="//commons.wikimedia.org/wiki/User:CJ_DUB" title="User:CJ
+DUB">CJ DUB</a> - <span class="int-own-work" lang="en">Own work</span>. Licensed
+under <a href="http://creativecommons.org/licenses/by-sa/2.0/ca/deed.en"
+title="Creative Commons Attribution-Share Alike 2.0 ca">CC BY-SA 2.0 ca</a> via
+<a href="//commons.wikimedia.org/wiki/">Wikimedia
+Commons</a>.</span></figcaption></figure>
+
+--- .dark .segue
+
+## Measuring occurrence
+
+---
+
+## What do we mean by occurrence?
+
+<!-- We often want to know what causes disease, so we need to measure how often -->
+<!-- it occurs. -->
+
+- Prevalence
+  - How many persons *have* the disease at a given point in time
+- Incidence
+  - How many persons *get* the disease within a certain time period
+
+--- {tpl: tabs}
+
+## HIV
+
+*** {class: active, id: Prevalence}
+
+<iframe src="http://bit.ly/1FQ7B6a"></iframe>
+
+*** {id: Incidence-proportion}
+
+<iframe src="http://bit.ly/1G1TvnE"></iframe>
+
+---
+
+## Measuring prevalence
+
+- Prevalence is often not the main goal
+  - Why? It focuses on the *existing* disease state
+- Prevalence is affected both by incidence rate *and* duration of disease
+- But: it can be easy to measure
+  1. Take a sample from your population
+  2. Ask/test if they have the disease of interest
+  3. Calculate prevalence as the number of diseased in the sample
+
+---
+
+## Measuring incidence
+
+- Incidence is often the major focus
+  - Why? It focuses on the *change* in disease state (i.e. new events occurring)
+- But: it is harder to measure
+  1. We need to sample an at risk population
+  2. We need to record the period in which they are at risk
+  3. We need to record who has disease onset (and when)
+  4. Calculate incidence rate as<br>
+  $$
+  \begin{aligned}
+    \text{i.r.} & = \frac{\text{number of disease onsets}}{\sum_{\text{persons}}\text{time at risk}}
+  \end{aligned}
+  $$
+
+---
+
+## Measuring incidence (contd.)
+
+- Time is key in incidence
+  - So different *times* can give the same incidence
+- Example: 1 case per 100 years. This could be find by either
+  - Following 100 people for an average of 1 year, and observing 1 case; or
+  - Following 2 people for 50 years, and observing 1 case.
+- Incidences are not proportions, so don't confuse them with risks!
+
+--- .dark .segue
+
+## Types of studies
+
+<!-- We know what we want to calculate, but how do we get data to calculate it? -->
+
+---
+
+## Next page!
+
+---
+
+## Gapminder
+
+- This is to go somewhere, maybe in the workshop session
+- [Gapminder](http://bit.ly/1INnTTu)
+
+---
+
+## Once a cause is identified...
+
+- Epidemiologic attention turns to defining risk factors for acquisition,
+  progression or recovery, and transmission (Rothman et al., 2008)
+
+---
+
+## References
+
+- Rothman, K. J., Greenland, S., & Lash, T. L. (2008). Modern Epidemiology
+  (Third Edit.). Wolters Kluwer Health/Lippincott Williams & Wilkins.
+
+<!-- The stuff below here is for helping to outline this presentation - it is all old -->
+<!-- stuff -->
+
+--- &twocol
+
+## A secondary database for research is
+
+*** =left
+
+- A collection of data/datasets collected for a purpose other than the current
+  study
+- Examples
+  - Electronic medical record
+  - Administrative databases (insurance claims, PBS, etc.)
+
+*** =right
+
+![boss-img](Images/boss.png)
+
+![ipm-img](Images/ipm.png)
+
+---
+
+## Why?
+
+- No RCTs available
+  - Questionable ethics
+  - Time
+  - Money
+- No prospective observational data
+- Differences in target populations
+- Lack of 'important' outcomes in RCTs
+  - Many look at intermediate outcomes
+
+--- &twocoluser wid1:60% wid2:36%
+
+## Benefits of a prospective RCT/cohort study
+
+*** =left
+
+- Validity
+- Direct measurements (i.e. pre-specified)
+- (in the case of the RCT) Randomisation
+  - We get balance of confounders
+
+<span style="font-weight:bold">Table 1. Characteristics of the patients at
+baseline.</span>
+
+| Variable | Control Group | Intervention Group |
+| --- | --- | --- |
+| Sex, n (%)  | B | C |
+| Age, year (IQR) | D | E |
+| Current smoking, n (%) | F | G |
+
+- We'd like to mimic the benefits of an RCT in a retrospective comparative study
+
+--- .segue .dark
+
+## Challenges in study design
+
+--- &twocol
+
+## Study design
+
+*** =left
+
+- No different to prospective studies
+- Pre-specified hypotheses (within limits)
+  - Specifically: one primary outcome
+- (Obviously) depends on the question of interest
+  - Cohort/case-control/interrupted time-series
+
+*** =right
+
+![arrows](Images/Arrows.png)
+
+--- .segue .dark
+
+## Biases
+
+---
+
+## Misclassification
+
+- A big issue in secondary data studies
+- Data are collected for different purposes
+- Recreating a diagnosis/outcome from patient notes may be challenging
+  - Clear classification schemes will help
+  - These should be pre-specified
+
+---
+
+## Confounding
+
+- Independent (causal) risk factor, that is also associated with the exposure of
+  interest, but not an intermediate on the causal pathway
+- Randomisation gives balance in measured **and** unmeasured confounders
+- Confounding by indication
+  - E.g. we wish to compare drug A to drug B
+  - Drug A is prescribed more than drug B in people who are more ill
+  - However, severity of the illness also impacts the outcome
+
+--- .segue .dark
+
+## Methods of analysis
+
+<!-- Straight comparisons are generally not valid, due to the biases and -->
+<!-- imbalances already discussed -->
+
+---
+
+## Common methods
+
+- Stratification
+  - Compare groups A and B in strata X and Y
+- Regression
+  - Compare groups A and B after adjusting for X and Y
+- Matching
+  - Compare groups A and B after matching on X and Y
+
+--- &twocoluser wid1:60% wid2:36%
+
+## Stratification
+
+*** =left
+
+- Common for age and sex
+  - Break age into 10 year groups
+- Calculate the <a rel="popover"
+  data-content="For example, the odds ratio of the outcome comparing two drugs."
+  data-original-title="Statistic of interest" id='example'>statistic</a> of
+  interest in each each combination of strata
+  - {20-29 y.o. males, 20-29 y.o. females, 30-29 y.o. males, etc.}
+- Combine them in a 'suitable' way
+  - E.g. Mantel-Haenszel gives weight to strata with larger sample sizes
+- Good first exploratory step
+- Acts as a check for (multivariable) regression
+
+*** =right
+
+### <span style="color:#97004D">Problems</span>
+
+- Defining suitable strata
+  - Particularly with continuous variables
+- Sparsity in strata
+  - E.g. not many 90+ y.o. males
+
+---
+
+## Regression
+
+- Simultaneous adjustment for all confounders/covariates
+- Present the full model
+  - Not just the effect of interest
+- Use the literature to support:
+  - Variable specification
+  - Model specification
+
+--- &twocol
+
+## Regression (cont'd)
+
+*** =left
+
+### <span style="color:#97004D">Variable specification</span>
+
+- Should **not** be determined by 'univariate' models and p-cutoffs
+- Supported by in-depth literature review
+- Include irrespective of 'statistical significance' at traditional cutoffs
+  - This is arbitrary and leads to biased estimates
+- 'Grouped' procedures work well
+
+*** =right
+
+### <span style="color:#97004D">Model specification</span>
+
+- Specification to meet the outcome:
+  - Logistic regression for binary (Yes/No, Dead/Alive) outcomes
+  - Poisson regression for counts
+  - Cox proportional hazard models for time to event outcomes
+  - Multilevel/random effect models for clustered data
+
+--- {tpl: tabs}
+
+## Matching
+
+*** {class: active, id: Matching}
+
+- 'Balance' potential confounders
+- Blunt instrument
+- With many confounders it will obviously be difficult
+  - Some 'relaxation' may be required
+  - E.g. age +/- 10 years, rather than 5 years
+- Specialised methods of analysis then required
+  - E.g. conditional logistic regression
+
+*** {class: class, id: Propensities}
+
+- More sophisticated way of providing balance
+- Model the 'propensity' to receive treatment/exposure A vs. B
+- For analysis, can then use any of the previous
+  - Stratification: stratify on the propensity score
+  - Regression: Use the propensity score as a weight or as a covariate
+  - Matching: match on the propensity score
+
+--- .segue .dark
+
+## Thank You
