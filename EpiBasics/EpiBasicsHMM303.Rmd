@@ -407,6 +407,13 @@ baseline.</span>
   - Regression: Use the propensity score as a weight or as a covariate
   - Matching: match on the propensity score
 
+---
+
+## References
+
+- Rothman, K. J., Greenland, S., & Lash, T. L. (2008). Modern Epidemiology
+  (Third Edit.). Wolters Kluwer Health/Lippincott Williams & Wilkins.
+
 --- .segue .dark
 
 ## Thank You
