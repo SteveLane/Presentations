@@ -43,7 +43,15 @@
     <!-- SLIDES -->
     <slide class="segue dark" id="slide-1" style="background:;">
   <article data-timings="">
-    <!-- To compile: -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+            displayAlign: "left"
+    });
+</script>
+    
+
+<!-- To compile: -->
 
 <!-- require(slidify) -->
 
@@ -62,9 +70,17 @@ ul.nav li{ font-size: 18px; line-height: 24px;}
 
 <h2>Outline</h2>
 
-<h3>Fred 1</h3>
+<h3>Introduction</h3>
 
-<h3>Fred 2</h3>
+<h3>Measuring occurrence</h3>
+
+<h3>Types of studies</h3>
+
+<h3>Measures of association</h3>
+
+<h3>Infectious diseases nuances</h3>
+
+<h3>Analysis</h3>
 
   </article>
   <!-- Presenter Notes -->
@@ -300,7 +316,7 @@ Commons</a>.</span></figcaption></figure>
 <ul>
 <li>So different <em>times</em> can give the same incidence</li>
 </ul></li>
-<li>Example: 1 case per 100 years. This could be find by either
+<li>Example: 1 case per 100 years. This could be found by either
 
 <ul>
 <li>Following 100 people for an average of 1 year, and observing 1 case; or</li>
@@ -326,234 +342,438 @@ Commons</a>.</span></figcaption></figure>
 
 <slide class="" id="slide-13" style="background:;">
   <hgroup>
-    <h2>Next page!</h2>
+    <h2>Observational studies</h2>
   </hgroup>
   <article data-timings="">
     
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Cross-sectional" data-toggle="pill">Cross-sectional</a></li>
+    <li class="tab "><a href="#Cohort" data-toggle="pill">Cohort</a></li>
+    <li class="tab "><a href="#Case-control" data-toggle="pill">Case-control</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Cross-sectional">
+      <ul>
+<li>All individuals in a population or representative sample are included at the
+time of measurement
+
+<ul>
+<li>E.g. a questionnaire/survey</li>
+</ul></li>
+<li>Can establish prevalence, but not incidence</li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Cohort">
+      <ul>
+<li>Standard design</li>
+<li>Take a sample from the exposed/unexposed cohort
+
+<ul>
+<li>Follow the individuals and record the event and time of onset of the disease</li>
+</ul></li>
+<li>Often the study design starts with a single cohort
+
+<ul>
+<li>Exposure is then ascertained based on subgroups of the cohort</li>
+<li>These are often identified through lists, e.g. AEC</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Case-control">
+      <ul>
+<li>Hypothetical starting point is the cohort study that would be conducted</li>
+<li>Identify cases and their exposure
+
+<ul>
+<li>As in a cohort study</li>
+</ul></li>
+<li>Sample a <em>control</em> group of subjects from this hypothetical population
+
+<ul>
+<li><strong>Note:</strong> this sampling means we cannot identify prevalence from a
+case-control study</li>
+<li>We also need to sample independently of the exposure</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-14" style="background:;">
   <hgroup>
-    <h2>Gapminder</h2>
+    <h2>Experimental studies</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>This is to go somewhere, maybe in the workshop session</li>
-<li><a href="http://bit.ly/1INnTTu">Gapminder</a></li>
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#General" data-toggle="pill">General</a></li>
+    <li class="tab "><a href="#Classes" data-toggle="pill">Classes</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="General">
+      <ul>
+<li>Generally refers to studies in which the investigator manipulates some
+<em>exposure</em></li>
+<li>That is, exposure is under the control of the investigator</li>
 </ul>
 
+    </div>
+    <div class="tab-pane fade in " id="Classes">
+      <ul>
+<li>Clinical trials
+
+<ul>
+<li>Subjects already with the disease (i.e. clinical)</li>
+</ul></li>
+<li>Field trials
+
+<ul>
+<li>Often preventive trials, subjects are general population members</li>
+<li>Exposure assigned to individuals</li>
+</ul></li>
+<li>Community trials
+
+<ul>
+<li>Again, preventive trials, general population</li>
+<li>Exposure assigned to communities</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="dark segue" id="slide-15" style="background:;">
   <hgroup>
-    <h2>Once a cause is identified...</h2>
+    <h2>Measures of association</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Epidemiologic attention turns to defining risk factors for acquisition,
-progression or recovery, and transmission (Rothman et al., 2008)</li>
-</ul>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-16" style="background:;">
   <hgroup>
-    <h2>References</h2>
+    <h2>Overview</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Rothman, K. J., Greenland, S., &amp; Lash, T. L. (2008). Modern Epidemiology
-(Third Edit.). Wolters Kluwer Health/Lippincott Williams &amp; Wilkins.</li>
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Overview" data-toggle="pill">Overview</a></li>
+    <li class="tab "><a href="#Broad-classes" data-toggle="pill">Broad-classes</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Overview">
+      <ul>
+<li>As already alluded we&#39;re often interested in risk factors for outcomes</li>
+<li>Who gets disease?</li>
+<li>Who dies from disease?</li>
+<li>I.e. the effect on incidence</li>
+<li>Information from, e.g., the previous study types allow us to estimate these
+associations</li>
 </ul>
 
-<!-- The stuff below here is for helping to outline this presentation - it is all old -->
+    </div>
+    <div class="tab-pane fade in " id="Broad-classes">
+      <ul>
+<li>Relative measures
 
-<!-- stuff -->
+<ul>
+<li>Are ratios of occurrences</li>
+<li>Can be thought of as measuring the <em>strength</em> of association between risk
+factors</li>
+</ul></li>
+<li>Absolute measures
 
+<ul>
+<li>Are differences in occurrences</li>
+<li>Can be thought of as measuring the <em>impact</em> of association with risk factors</li>
+<li><strong>Note:</strong> We need prevalence, so case-control designs are out</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-17" style="background:;">
   <hgroup>
-    <h2>A secondary database for research is</h2>
+    <h2>Definitions</h2>
   </hgroup>
   <article data-timings="">
-    
-<div style='float:left;width:48%;'>
-  <ul>
-<li>A collection of data/datasets collected for a purpose other than the current
-study</li>
-<li>Examples
+    <ul>
+<li>Suppose we have two cohorts: exposed and unexposed
 
 <ul>
-<li>Electronic medical record</li>
-<li>Administrative databases (insurance claims, PBS, etc.)</li>
+<li>There are \(N_{1}\) persons in the exposed cohort,</li>
+<li>\(N_{0}\) persons in the unexposed cohort, and</li>
+<li>The cohorts are followed (the at-risk time is) for total time \(T_{1}\) and
+\(T_{0}\) respectively</li>
+</ul></li>
+<li>During this follow up, there are
+
+<ul>
+<li>\(Y_{1}\) cases of disease recorded in the exposed group, and</li>
+<li>\(Y_{0}\) in the unexposed group</li>
 </ul></li>
 </ul>
 
-</div>
-<div style='float:right;width:48%;'>
-  <p><img src="Images/boss.png" alt="boss-img"></p>
-
-<p><img src="Images/ipm.png" alt="ipm-img"></p>
-
-</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-18" style="background:;">
   <hgroup>
-    <h2>Why?</h2>
+    <h2>Relative measures</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>No RCTs available
+    
+<div style='float:left;width:48%;'>
+  <ul>
+<li>Risk ratio
 
 <ul>
-<li>Questionable ethics</li>
-<li>Time</li>
-<li>Money</li>
+<li>Ratio of incidence proportions
+\[
+\frac{Y_{1}/N_{1}}{Y_{0}/N_{0}}
+\]</li>
+<li>Need a fixed time interval</li>
 </ul></li>
-<li>No prospective observational data</li>
-<li>Differences in target populations</li>
-<li>Lack of &#39;important&#39; outcomes in RCTs
+<li>Rate ratio
 
 <ul>
-<li>Many look at intermediate outcomes</li>
+<li>Ratio of incidence rates
+\[
+\frac{Y_{1}/T_{1}}{Y_{0}/T_{0}}
+\]</li>
 </ul></li>
 </ul>
 
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>Odds ratio
+
+<ul>
+<li><a href="#" rel="tooltip" data-original-title="This is the commonly seen
+product of diagonal terms in a 2x2 cross-classification table.">Ratio</a> of
+incidence odds
+\[
+\begin{align}
+& \frac{Y_{1}/N_{1}}{(N_{1} - Y_{1})/N_{1}} \div \frac{Y_{0}/N_{0}}{(N_{0} - Y_{0})/N_{0}} \\
+= & \frac{Y_{1}}{N_{1} - Y_{1}} \div \frac{Y_{0}}{N_{0} - Y_{0}}
+\end{align}
+\]</li>
+</ul></li>
+<li>Hazard ratio (advanced &#12483;)
+
+<ul>
+<li>Basically a rate ratio</li>
+<li>Technically: relates to instantaneous risk</li>
+</ul></li>
+</ul>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-19" style="background:;">
   <hgroup>
-    <h2>Benefits of a prospective RCT/cohort study</h2>
+    <h2>Absolute measures</h2>
   </hgroup>
   <article data-timings="">
-      
-<div style='float:left;width:60%;'>
-  <ul>
-<li>Validity</li>
-<li>Direct measurements (i.e. pre-specified)</li>
-<li>(in the case of the RCT) Randomisation
+    <ul>
+<li>Risk difference
 
 <ul>
-<li>We get balance of confounders</li>
+<li>Difference in incidence proportions
+\[
+\frac{Y_{1}}{N_{1}} - \frac{Y_{0}}{N_{0}}
+\]</li>
+<li>Need a fixed time interval</li>
+</ul></li>
+<li>Rate difference
+
+<ul>
+<li>Difference in incidence rates
+\[
+\frac{Y_{1}}{T_{1}} - \frac{Y_{0}}{T_{0}}
+\]</li>
 </ul></li>
 </ul>
 
-<p><span style="font-weight:bold">Table 1. Characteristics of the patients at
-baseline.</span></p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>The mighty odds ratio&hellip;</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Complete-population" data-toggle="pill">Complete-population</a></li>
+    <li class="tab "><a href="#Sampled-population" data-toggle="pill">Sampled-population</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Complete-population">
+      <h3>&hellip; or why prevalence matters</h3>
+
+<ul>
+<li>Suppose I had information on the complete at-risk population</li>
+</ul>
 
 <table><thead>
 <tr>
-<th>Variable</th>
-<th>Control Group</th>
-<th>Intervention Group</th>
+<th></th>
+<th>Diseased</th>
+<th>Disease-free</th>
+<th>Total</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>Sex, n (%)</td>
-<td>B</td>
-<td>C</td>
+<td>Exposed</td>
+<td>10</td>
+<td>875</td>
+<td>885</td>
 </tr>
 <tr>
-<td>Age, year (IQR)</td>
-<td>D</td>
-<td>E</td>
-</tr>
-<tr>
-<td>Current smoking, n (%)</td>
-<td>F</td>
-<td>G</td>
+<td>Unexposed</td>
+<td>5</td>
+<td>5225</td>
+<td>5230</td>
 </tr>
 </tbody></table>
 
 <ul>
-<li>We&#39;d like to mimic the benefits of an RCT in a retrospective comparative study</li>
-</ul>
-
-</div>    
-<div style='float:right;width:36%;'>
-  
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue dark" id="slide-20" style="background:;">
-  <hgroup>
-    <h2>Challenges in study design</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-21" style="background:;">
-  <hgroup>
-    <h2>Study design</h2>
-  </hgroup>
-  <article data-timings="">
-    
-<div style='float:left;width:48%;'>
-  <ul>
-<li>No different to prospective studies</li>
-<li>Pre-specified hypotheses (within limits)
+<li>The risk ratio would be \(10/885 \div 5/5230 = 11.82\)
 
 <ul>
-<li>Specifically: one primary outcome</li>
-</ul></li>
-<li>(Obviously) depends on the question of interest
-
-<ul>
-<li>Cohort/case-control/interrupted time-series</li>
+<li>A very strong association</li>
 </ul></li>
 </ul>
 
-</div>
-<div style='float:right;width:48%;'>
-  <p><img src="Images/Arrows.png" alt="arrows"></p>
+    </div>
+    <div class="tab-pane fade in " id="Sampled-population">
+      <h3>&hellip; or why prevalence matters</h3>
 
+<ul>
+<li>Now, what if found all the diseased (<a href="#" rel="tooltip"
+data-original-title="For example, through a disease registry.">somehow</a>)
+and sampled \(1\%\) of the disease-free population? Our table may look something
+like this:</li>
+</ul>
+
+<table><thead>
+<tr>
+<th></th>
+<th>Diseased</th>
+<th>Disease-free</th>
+<th>Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Exposed</td>
+<td>10</td>
+<td>9</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Unexposed</td>
+<td>5</td>
+<td>52</td>
+<td>57</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>If we naively calculated the risk ratio, it would be \(6.71\)
+
+<ul>
+<li>Almost half as big as what it should be!</li>
+</ul></li>
+<li><strong>But!</strong> The odds ratio is \((10/9) \div (5/52) = 11.56 \approx 11.82\)</li>
+<li>For <em>rare</em> diseases the odds ratio \(\approx\) risk ratio</li>
+</ul>
+
+    </div>
+  </div>
 </div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-22" style="background:;">
+<slide class="dark segue" id="slide-21" style="background:;">
   <hgroup>
-    <h2>Biases</h2>
+    <h2>Infectious disease epidemiology</h2>
   </hgroup>
   <article data-timings="">
     
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Possible <a href="#" rel="tooltip" data-original-title="Adapted from Rothman et al. (2008)">states</a></h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="images/States.png" alt="InfectiousDiseaseStages"></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-23" style="background:;">
   <hgroup>
-    <h2>Misclassification</h2>
+    <h2>The exposure state</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>A big issue in secondary data studies</li>
-<li>Data are collected for different purposes</li>
-<li>Recreating a diagnosis/outcome from patient notes may be challenging
+<li>Who is at risk of exposure?</li>
+<li>Can often be clear
 
 <ul>
-<li>Clear classification schemes will help</li>
-<li>These should be pre-specified</li>
+<li>Hendra: vets (and others) working with infected horses</li>
+<li>Ebola: contact with infected people</li>
+<li>HIV: unprotected sex, sex with sex workers</li>
+</ul></li>
+<li><strong>But:</strong> can be difficult to <em>treat</em>
+
+<ul>
+<li>E.g. don&#39;t work with horses in Queensland</li>
+<li>Don&#39;t go to nations with ebola</li>
+<li>Use a condom</li>
+</ul></li>
+<li>But may also be unclear
+
+<ul>
+<li>We generally can&#39;t tell the infectious state of the mosquito that bit us</li>
+</ul></li>
+<li>Identifying these <em>at-risk</em> groups means we can identify strategies to reduce
+risk of exposure
+
+<ul>
+<li>Public health, broad scale</li>
 </ul></li>
 </ul>
 
@@ -563,19 +783,162 @@ baseline.</span></p>
 
 <slide class="" id="slide-24" style="background:;">
   <hgroup>
-    <h2>Confounding</h2>
+    <h2>The post-exposure state</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Exposure-General" data-toggle="pill">Exposure-General</a></li>
+    <li class="tab "><a href="#Exposure-Article" data-toggle="pill">Exposure-Article</a></li>
+    <li class="tab "><a href="#Exposure-Discussion" data-toggle="pill">Exposure-Discussion</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Exposure-General">
+      <ul>
+<li>Who is at risk of infection?
+
+<ul>
+<li>Clearly, need to be exposed first!</li>
+</ul></li>
+<li>After exposure, infection could be due to:
+
+<ul>
+<li>Dose-related factors (how much exposure)</li>
+<li>Infectivity factors (how well the agent establishes itself)</li>
+<li>Host-related factors (individual factors, e.g. immunisation)</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Exposure-Article">
+      <iframe src="http://www.nejm.org/doi/full/10.1056/NEJMoa1108524#t=articleTop"></iframe>
+
+    </div>
+    <div class="tab-pane fade in " id="Exposure-Discussion">
+      <ul>
+<li>Who is at risk?
+
+<ul>
+<li>Partners of HIV-positive individuals</li>
+</ul></li>
+<li>What is the aim?
+
+<ul>
+<li>Reduce mother-to-child transmission of HIV</li>
+</ul></li>
+<li>What is the best way of doing this?
+
+<ul>
+<li>Condom usage</li>
+<li><strong>But:</strong> of course condom usage kind of (mostly) stops pregnacy
+occurring&hellip;</li>
+</ul></li>
+<li>What now?
+
+<ul>
+<li>PrEP: Pre-exposure prophylaxis</li>
+<li>For HIV-negative people, this greatly reduces their risk of becoming
+infected</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>The post-infection state</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#Infection-General" data-toggle="pill">Infection-General</a></li>
+    <li class="tab "><a href="#Infection-Article" data-toggle="pill">Infection-Article</a></li>
+    <li class="tab "><a href="#Infection-Discussion" data-toggle="pill">Infection-Discussion</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="Infection-General">
+      <ul>
+<li>Who is at risk of disease?
+
+<ul>
+<li>Clearly, those who have been infected!</li>
+</ul></li>
+<li>Once infected, progression lengths become important
+
+<ul>
+<li>Long progression times imply long cohort studies to determine risk of
+disease</li>
+</ul></li>
+<li>It is also often difficult to identify those with infections
+
+<ul>
+<li>E.g. latent TB or HPV often do not have symptoms</li>
+<li>Take risk profile into account</li>
+</ul></li>
+</ul>
+
+    </div>
+    <div class="tab-pane fade in " id="Infection-Article">
+      <iframe src="http://www.nejm.org/doi/full/10.1056/NEJMoa1104875#t=articleTop"></iframe>
+
+    </div>
+    <div class="tab-pane fade in " id="Infection-Discussion">
+      <ul>
+<li>What is the aim?
+
+<ul>
+<li>Show that a shorter course of antibiotics is just as good as a longer course
+in preventing progression to TB disease</li>
+</ul></li>
+<li>Clearly this is difficult
+
+<ul>
+<li>Identifying subjects/low incidence</li>
+<li>Long follow-up</li>
+<li>Even in the at-risk group, progression is estimated at only 5% within 2
+years</li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="dark segue" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Analysis of epidemiological data</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>After measurement, where to?</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Independent (causal) risk factor, that is also associated with the exposure of
-interest, but not an intermediate on the causal pathway</li>
-<li>Randomisation gives balance in measured <strong>and</strong> unmeasured confounders</li>
-<li>Confounding by indication
+<li>Data editing/cleaning</li>
+<li>Data description/summarising</li>
+<li>Handling of imbalance and confounding
 
 <ul>
-<li>E.g. we wish to compare drug A to drug B</li>
-<li>Drug A is prescribed more than drug B in people who are more ill</li>
-<li>However, severity of the illness also impacts the outcome</li>
+<li>We&#39;re often interested in a certain exposure</li>
+<li>But what if more males are exposed (relatively) than unexposed?</li>
+<li>We need to adjust for this otherwise our estimates of relative effect due to
+exposure will be biased</li>
 </ul></li>
 </ul>
 
@@ -583,25 +946,17 @@ interest, but not an intermediate on the causal pathway</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-25" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
-    <h2>Methods of analysis</h2>
-  </hgroup>
-  <article data-timings="">
-    <!-- Straight comparisons are generally not valid, due to the biases and -->
-
-<!-- imbalances already discussed -->
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-26" style="background:;">
-  <hgroup>
-    <h2>Common methods</h2>
+    <h2>Common methods of analysis</h2>
   </hgroup>
   <article data-timings="">
     <ul>
+<li>For control of confounders/bias
+
+<ul>
+<li>Identify possible strategies for containment</li>
+</ul></li>
 <li>Stratification
 
 <ul>
@@ -623,7 +978,7 @@ interest, but not an intermediate on the causal pathway</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Stratification</h2>
   </hgroup>
@@ -675,7 +1030,7 @@ interest in each each combination of strata
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Regression</h2>
   </hgroup>
@@ -699,7 +1054,7 @@ interest in each each combination of strata
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:;">
+<slide class="" id="slide-31" style="background:;">
   <hgroup>
     <h2>Regression (cont&#39;d)</h2>
   </hgroup>
@@ -739,7 +1094,7 @@ interest in each each combination of strata
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-30" style="background:;">
+<slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Matching</h2>
   </hgroup>
@@ -789,7 +1144,7 @@ interest in each each combination of strata
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:;">
+<slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -803,7 +1158,7 @@ interest in each each combination of strata
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-32" style="background:;">
+<slide class="segue dark" id="slide-34" style="background:;">
   <hgroup>
     <h2>Thank You</h2>
   </hgroup>
@@ -891,122 +1246,134 @@ interest in each each combination of strata
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Next page!'>
+        data-slide=13 title='Observational studies'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Gapminder'>
+        data-slide=14 title='Experimental studies'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Once a cause is identified...'>
+        data-slide=15 title='Measures of association'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='References'>
+        data-slide=16 title='Overview'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='A secondary database for research is'>
+        data-slide=17 title='Definitions'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Why?'>
+        data-slide=18 title='Relative measures'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Benefits of a prospective RCT/cohort study'>
+        data-slide=19 title='Absolute measures'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Challenges in study design'>
+        data-slide=20 title='The mighty odds ratio&hellip;'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Study design'>
+        data-slide=21 title='Infectious disease epidemiology'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Biases'>
+        data-slide=22 title='Possible <a href="#" rel="tooltip" data-original-title="Adapted from Rothman et al. (2008)">states</a>'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Misclassification'>
+        data-slide=23 title='The exposure state'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Confounding'>
+        data-slide=24 title='The post-exposure state'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Methods of analysis'>
+        data-slide=25 title='The post-infection state'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Common methods'>
+        data-slide=26 title='Analysis of epidemiological data'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Stratification'>
+        data-slide=27 title='After measurement, where to?'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Regression'>
+        data-slide=28 title='Common methods of analysis'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Regression (cont&#39;d)'>
+        data-slide=29 title='Stratification'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Matching'>
+        data-slide=30 title='Regression'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='References'>
+        data-slide=31 title='Regression (cont&#39;d)'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Thank You'>
+        data-slide=32 title='Matching'>
          32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='References'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Thank You'>
+         34
       </a>
     </li>
   </ul>

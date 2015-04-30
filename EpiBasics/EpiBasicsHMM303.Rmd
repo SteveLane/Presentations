@@ -578,23 +578,6 @@ Commons</a>.</span></figcaption></figure>
 
 ---
 
-<<<<<<< HEAD
-## Gapminder
-
-- This is to go somewhere, maybe in the workshop session
-- [Gapminder](http://bit.ly/1INnTTu)
-
----
-
-## Once a cause is identified...
-
-- Epidemiologic attention turns to defining risk factors for acquisition,
-  progression or recovery, and transmission (Rothman et al., 2008)
-
----
-
-=======
->>>>>>> master
 ## References
 
 - Rothman, K. J., Greenland, S., & Lash, T. L. (2008). Modern Epidemiology
