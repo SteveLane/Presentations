@@ -578,6 +578,7 @@ Commons</a>.</span></figcaption></figure>
 
 ---
 
+<<<<<<< HEAD
 ## Gapminder
 
 - This is to go somewhere, maybe in the workshop session
@@ -592,6 +593,8 @@ Commons</a>.</span></figcaption></figure>
 
 ---
 
+=======
+>>>>>>> master
 ## References
 
 - Rothman, K. J., Greenland, S., & Lash, T. L. (2008). Modern Epidemiology
