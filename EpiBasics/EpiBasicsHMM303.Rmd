@@ -524,7 +524,7 @@ Commons</a>.</span></figcaption></figure>
 - Simultaneous adjustment for all confounders/covariates
 - Present the full model
   - Not just the effect of interest
-- Use the literature to support:
+- Use the literature to support
   - Variable specification
   - Model specification
 
