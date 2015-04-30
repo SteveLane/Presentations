@@ -301,6 +301,7 @@ Commons</a>.</span></figcaption></figure>
   \[
   \frac{Y_{1}/T_{1}}{Y_{0}/T_{0}}
   \]
+<<<<<<< HEAD
 
 *** =right
 
@@ -352,6 +353,59 @@ Commons</a>.</span></figcaption></figure>
 - The risk ratio would be $10/885 \div 5/5230 = 11.82$
   - A very strong association
 
+=======
+
+*** =right
+
+- Odds ratio
+  - <a href="#" rel="tooltip" data-original-title="This is the commonly seen
+  product of diagonal terms in a 2x2 cross-classification table.">Ratio</a> of
+  incidence odds
+  \[
+  \begin{align}
+  & \frac{Y_{1}/N_{1}}{(N_{1} - Y_{1})/N_{1}} \div \frac{Y_{0}/N_{0}}{(N_{0} - Y_{0})/N_{0}} \\
+  = & \frac{Y_{1}}{N_{1} - Y_{1}} \div \frac{Y_{0}}{N_{0} - Y_{0}}
+  \end{align}
+  \]
+- Hazard ratio (advanced &#12483;)
+  - Basically a rate ratio
+  - Technically: relates to instantaneous risk
+
+---
+
+## Absolute measures
+
+- Risk difference
+  - Difference in incidence proportions
+  \[
+  \frac{Y_{1}}{N_{1}} - \frac{Y_{0}}{N_{0}}
+  \]
+  - Need a fixed time interval
+- Rate difference
+  - Difference in incidence rates
+  \[
+  \frac{Y_{1}}{T_{1}} - \frac{Y_{0}}{T_{0}}
+  \]
+
+--- {tpl: tabs}
+
+## The mighty odds ratio&hellip;
+
+*** {class: active, id: Complete-population}
+
+### &hellip; or why prevalence matters
+
+- Suppose I had information on the complete at-risk population
+
+|  | Diseased | Disease-free | Total |
+|---|---|---|---|
+| Exposed | 10 | 875 | 885 |
+| Unexposed | 5 | 5225 | 5230 |
+
+- The risk ratio would be $10/885 \div 5/5230 = 11.82$
+  - A very strong association
+
+>>>>>>> master
 *** {id: Sampled-population}
 
 ### &hellip; or why prevalence matters
@@ -360,6 +414,7 @@ Commons</a>.</span></figcaption></figure>
   data-original-title="For example, through a disease registry.">somehow</a>)
   and sampled $1\%$ of the disease-free population? Our table may look something
   like this:
+<<<<<<< HEAD
 
 |  | Diseased | Disease-free | Total |
 |---|---|---|---|
@@ -373,6 +428,21 @@ Commons</a>.</span></figcaption></figure>
 
 --- .dark .segue
 
+=======
+
+|  | Diseased | Disease-free | Total |
+|---|---|---|---|
+| Exposed | 10 | 9 | 17 |
+| Unexposed | 5 | 52 | 57 |
+
+- If we naively calculated the risk ratio, it would be $6.71$
+  - Almost half as big as what it should be!
+- **But!** The odds ratio is $(10/9) \div (5/52) = 11.56 \approx 11.82$
+- For *rare* diseases the odds ratio $\approx$ risk ratio
+
+--- .dark .segue
+
+>>>>>>> master
 ## Infectious disease epidemiology
 
 ---
@@ -399,11 +469,19 @@ Commons</a>.</span></figcaption></figure>
 - Identifying these *at-risk* groups means we can identify strategies to reduce
   risk of exposure
   - Public health, broad scale
+<<<<<<< HEAD
 
 --- {tpl: tabs}
 
 ## The post-exposure state
 
+=======
+
+--- {tpl: tabs}
+
+## The post-exposure state
+
+>>>>>>> master
 *** {class: active, id: Exposure-General}
 
 - Who is at risk of infection?
@@ -452,6 +530,7 @@ Commons</a>.</span></figcaption></figure>
 <iframe src="http://www.nejm.org/doi/full/10.1056/NEJMoa1104875#t=articleTop"></iframe>
 
 *** {id: Infection-Discussion}
+<<<<<<< HEAD
 
 - What is the aim?
   - Show that a shorter course of antibiotics is just as good as a longer course
@@ -470,6 +549,26 @@ Commons</a>.</span></figcaption></figure>
 
 ## After measurement, where to?
 
+=======
+
+- What is the aim?
+  - Show that a shorter course of antibiotics is just as good as a longer course
+    in preventing progression to TB disease
+- Clearly this is difficult
+  - Identifying subjects/low incidence
+  - Long follow-up
+  - Even in the at-risk group, progression is estimated at only 5% within 2
+    years
+
+--- .dark .segue
+
+## Analysis of epidemiological data
+
+---
+
+## After measurement, where to?
+
+>>>>>>> master
 - Data editing/cleaning
 - Data description/summarising
 - Handling of imbalance and confounding
@@ -499,10 +598,9 @@ Commons</a>.</span></figcaption></figure>
 
 - Common for age and sex
   - Break age into 10 year groups
-- Calculate the <a rel="popover"
-  data-content="For example, the odds ratio of the outcome comparing two drugs."
-  data-original-title="Statistic of interest" id='example'>statistic</a> of
-  interest in each each combination of strata
+- Calculate the <a href="#" rel="tooltip"
+  data-original-title="For example, the odds ratio of the outcome comparing two
+  drugs.">statistic</a> of interest in each each combination of strata
   - {20-29 y.o. males, 20-29 y.o. females, 30-29 y.o. males, etc.}
 - Combine them in a 'suitable' way
   - E.g. Mantel-Haenszel gives weight to strata with larger sample sizes
