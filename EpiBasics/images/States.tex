@@ -1,0 +1,32 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes}
+\begin{document}
+\begin{tikzpicture}[>=latex']
+  \tikzset{block/.style= {draw, ellipse, align=center,minimum
+      width=3.5cm,minimum height=2.25cm}}
+  \node[draw=none,fill=none] (start) {};
+  \node[block, above right =1.0cm and 2cm of start](noExp) {No exposure};
+  \node[block, below right =1.0cm and 2cm of start](Exp) {Exposure};
+  \node[block, above right =1.0cm and 2cm of Exp](noInf) {No infection};
+  \node[block, below right =1.0cm and 2cm of Exp](Inf) {Infection};
+  \node[block, above right =1.0cm and 2cm of Inf](cure) {Cure};
+  \node[block, below right =1.0cm and 2cm of Inf](disease) {Disease};
+  \node[block, above right =1.0cm and 2cm of disease](death) {Death};
+  
+  \path[draw, ->] (start) edge (noExp);
+  \path[draw, ->] (start) edge (Exp);
+  \path[draw, ->] (Exp) edge (noInf);
+  \path[draw, ->] (Exp) edge (Inf);
+  \path[draw, ->] (Inf) edge (cure);
+  \path[draw, <->] (Inf) edge (disease);
+  \path[draw, ->] (disease) edge (cure);
+  \path[draw, ->] (disease) edge (death);
+
+\end{tikzpicture}
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

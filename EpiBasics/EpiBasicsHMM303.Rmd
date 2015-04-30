@@ -499,10 +499,9 @@ Commons</a>.</span></figcaption></figure>
 
 - Common for age and sex
   - Break age into 10 year groups
-- Calculate the <a rel="popover"
-  data-content="For example, the odds ratio of the outcome comparing two drugs."
-  data-original-title="Statistic of interest" id='example'>statistic</a> of
-  interest in each each combination of strata
+- Calculate the <a href="#" rel="tooltip"
+  data-original-title="For example, the odds ratio of the outcome comparing two
+  drugs.">statistic</a> of interest in each each combination of strata
   - {20-29 y.o. males, 20-29 y.o. females, 30-29 y.o. males, etc.}
 - Combine them in a 'suitable' way
   - E.g. Mantel-Haenszel gives weight to strata with larger sample sizes
