@@ -462,6 +462,35 @@ Commons</a>.</span></figcaption></figure>
   - Even in the at-risk group, progression is estimated at only 5% within 2
     years
 
+--- {tpl: tabs}
+
+## The post-disease state
+
+*** {class: active, id: Disease-General}
+
+- Who is at risk of death (mortality/morbidity)?
+  - Clearly, those who have contracted disease!
+- Early studies look at predictors of mortality/morbidity
+- Later studies look at how we can prevent mortality/morbidity
+  - Experimental trials
+  - Difficult with fast onset of symptoms (ebola) and progression
+
+*** {id: Disease-Article}
+
+- <a
+  href="http://cid.oxfordjournals.org/content/early/2015/04/01/cid.civ202.full">Clinical
+  Predictors of Mortality in Patients With Ebola Virus Disease</a>
+
+*** {id: Disease-Discussion}
+
+- What is the aim?
+  - To investigate possible clinical risk factors of mortality
+- What are some issues?
+  - Fast-moving environment: makes it difficult to gather all information
+  - Duration/time of symptoms
+	  - Hemorrhage often found just before death
+  - Myalgia (muscle pain) is an important predictor
+
 --- .dark .segue
 
 ## Analysis of epidemiological data
